@@ -1,8 +1,8 @@
-# Install script for directory: /home/sam/AST/build/messages_package/messages_package__py
+# Install script for directory: /home/sam/AST_Robot_Warehouse/build/messages_package/messages_package__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/sam/AST/install/messages_package")
+  set(CMAKE_INSTALL_PREFIX "/home/sam/AST_Robot_Warehouse/install/messages_package")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

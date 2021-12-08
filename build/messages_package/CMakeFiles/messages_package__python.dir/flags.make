@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -Wall -Wextra -std=gnu99
 
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"messages_package\" -Dmessages_package__python_EXPORTS
 
-C_INCLUDES = -I/home/sam/AST/build/messages_package/rosidl_generator_c -I/home/sam/AST/build/messages_package/rosidl_generator_py -I/home/sam/anaconda3/include/python3.8 -I/home/sam/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/home/sam/AST/build/messages_package/rosidl_typesupport_c -isystem /opt/ros/foxy/include 
+C_INCLUDES = -I/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c -I/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_py -I/usr/include/python3.8 -I/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c -isystem /opt/ros/foxy/include 
 

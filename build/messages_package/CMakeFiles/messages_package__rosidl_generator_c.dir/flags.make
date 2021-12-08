@@ -6,5 +6,5 @@ C_FLAGS = -fPIC   -Wall -std=gnu11
 
 C_DEFINES = -DRCUTILS_ENABLE_FAULT_INJECTION -DROS_PACKAGE_NAME=\"messages_package\" -Dmessages_package__rosidl_generator_c_EXPORTS
 
-C_INCLUDES = -I/home/sam/AST/build/messages_package/rosidl_generator_c -isystem /opt/ros/foxy/include 
+C_INCLUDES = -I/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c -isystem /opt/ros/foxy/include 
 
