@@ -1,0 +1,4 @@
+Invoking command in '/home/sam/AST/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/turtlesim -- -j12 -l12
+Invoked command in '/home/sam/AST/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/turtlesim -- -j12 -l12
+Invoking command in '/home/sam/AST/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/sam/AST/build/turtlesim
+Invoked command in '/home/sam/AST/build/turtlesim' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/sam/AST/build/turtlesim

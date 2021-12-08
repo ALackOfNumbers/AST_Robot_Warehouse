@@ -1,0 +1,5 @@
+Coordinates charger_location
+---
+int64 current_battery_level
+---
+int64 final_battery_level

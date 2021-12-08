@@ -1,0 +1,28 @@
+[0.249s] Invoking command in '/home/sam/AST/src/warehouse_robot_package': AMENT_PREFIX_PATH=/home/sam/AST/install/messages_package:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/sam/AST/install/messages_package LD_LIBRARY_PATH=/home/sam/AST/install/messages_package/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST/install/messages_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/warehouse_robot_package build --build-base /home/sam/AST/build/warehouse_robot_package/build install --prefix /home/sam/AST/install/warehouse_robot_package --record /home/sam/AST/build/warehouse_robot_package/install.log --single-version-externally-managed
+[0.449s] running egg_info
+[0.449s] writing ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/PKG-INFO
+[0.450s] writing dependency_links to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/dependency_links.txt
+[0.450s] writing entry points to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/entry_points.txt
+[0.450s] writing requirements to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/requires.txt
+[0.450s] writing top-level names to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/top_level.txt
+[0.478s] reading manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'
+[0.479s] writing manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'
+[0.479s] running build
+[0.479s] running build_py
+[0.480s] copying warehouse_robot_package/beacon.py -> /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package
+[0.480s] copying warehouse_robot_package/robot.py -> /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package
+[0.480s] running install
+[0.481s] running install_lib
+[0.482s] copying /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package/beacon.py -> /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package
+[0.482s] copying /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package/robot.py -> /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package
+[0.482s] byte-compiling /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/beacon.py to beacon.cpython-38.pyc
+[0.484s] byte-compiling /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/robot.py to robot.cpython-38.pyc
+[0.484s] running install_data
+[0.485s] copying package.xml -> /home/sam/AST/install/warehouse_robot_package/share/warehouse_robot_package
+[0.485s] running install_egg_info
+[0.487s] removing '/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info' (and everything under it)
+[0.488s] Copying ../../build/warehouse_robot_package/warehouse_robot_package.egg-info to /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info
+[0.488s] running install_scripts
+[0.503s] Installing robot1 = warehouse_robot_package.robot:mainbeacon1 script to /home/sam/AST/install/warehouse_robot_package/lib/warehouse_robot_package
+[0.503s] writing list of installed files to '/home/sam/AST/build/warehouse_robot_package/install.log'
+[0.521s] Invoked command in '/home/sam/AST/src/warehouse_robot_package' returned '0': AMENT_PREFIX_PATH=/home/sam/AST/install/messages_package:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/sam/AST/install/messages_package LD_LIBRARY_PATH=/home/sam/AST/install/messages_package/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST/install/messages_package/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/warehouse_robot_package build --build-base /home/sam/AST/build/warehouse_robot_package/build install --prefix /home/sam/AST/install/warehouse_robot_package --record /home/sam/AST/build/warehouse_robot_package/install.log --single-version-externally-managed

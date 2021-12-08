@@ -1,0 +1,14 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from messages_package/msg/Coordinates.msg
+// generated code does not contain a copyright notice
+
+
+module messages_package {
+  module msg {
+    struct Coordinates {
+      double x;
+
+      double y;
+    };
+  };
+};

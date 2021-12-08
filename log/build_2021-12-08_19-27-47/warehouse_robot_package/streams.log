@@ -1,0 +1,29 @@
+[0.255s] Invoking command in '/home/sam/AST/src/warehouse_robot_package': CMAKE_PREFIX_PATH=/home/sam/AST/install/messages_package:/home/sam/AST/install/turtlesim:/home/sam/AST/install/my_package LD_LIBRARY_PATH=/home/sam/AST/install/messages_package/lib:/home/sam/AST/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST/install/messages_package/lib/python3.8/site-packages:/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST/install/turtlesim/lib/python3.8/site-packages:/home/sam/AST/install/py_pubsub/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/warehouse_robot_package build --build-base /home/sam/AST/build/warehouse_robot_package/build install --prefix /home/sam/AST/install/warehouse_robot_package --record /home/sam/AST/build/warehouse_robot_package/install.log --single-version-externally-managed
+[0.465s] running egg_info
+[0.466s] writing ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/PKG-INFO
+[0.466s] writing dependency_links to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/dependency_links.txt
+[0.466s] writing entry points to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/entry_points.txt
+[0.467s] writing requirements to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/requires.txt
+[0.467s] writing top-level names to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/top_level.txt
+[0.495s] reading manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'
+[0.496s] writing manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'
+[0.496s] running build
+[0.496s] running build_py
+[0.497s] copying warehouse_robot_package/beacon.py -> /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package
+[0.497s] copying warehouse_robot_package/robot.py -> /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package
+[0.497s] running install
+[0.498s] running install_lib
+[0.499s] copying /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package/beacon.py -> /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package
+[0.499s] copying /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package/robot.py -> /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package
+[0.500s] byte-compiling /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/beacon.py to beacon.cpython-38.pyc
+[0.501s] byte-compiling /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/robot.py to robot.cpython-38.pyc
+[0.502s] running install_data
+[0.503s] copying package.xml -> /home/sam/AST/install/warehouse_robot_package/share/warehouse_robot_package
+[0.503s] running install_egg_info
+[0.505s] removing '/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info' (and everything under it)
+[0.505s] Copying ../../build/warehouse_robot_package/warehouse_robot_package.egg-info to /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info
+[0.506s] running install_scripts
+[0.521s] Installing beacon script to /home/sam/AST/install/warehouse_robot_package/lib/warehouse_robot_package
+[0.521s] Installing robot script to /home/sam/AST/install/warehouse_robot_package/lib/warehouse_robot_package
+[0.521s] writing list of installed files to '/home/sam/AST/build/warehouse_robot_package/install.log'
+[0.538s] Invoked command in '/home/sam/AST/src/warehouse_robot_package' returned '0': CMAKE_PREFIX_PATH=/home/sam/AST/install/messages_package:/home/sam/AST/install/turtlesim:/home/sam/AST/install/my_package LD_LIBRARY_PATH=/home/sam/AST/install/messages_package/lib:/home/sam/AST/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib PYTHONPATH=/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST/install/messages_package/lib/python3.8/site-packages:/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST/install/turtlesim/lib/python3.8/site-packages:/home/sam/AST/install/py_pubsub/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages /usr/bin/python3 setup.py egg_info --egg-base ../../build/warehouse_robot_package build --build-base /home/sam/AST/build/warehouse_robot_package/build install --prefix /home/sam/AST/install/warehouse_robot_package --record /home/sam/AST/build/warehouse_robot_package/install.log --single-version-externally-managed

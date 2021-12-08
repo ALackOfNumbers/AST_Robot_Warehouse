@@ -1,0 +1,58 @@
+[0.026s] Invoking command in '/home/sam/AST/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/sam/AST/src/my_package -DCMAKE_INSTALL_PREFIX=/home/sam/AST/install/my_package
+[0.309s] -- The C compiler identification is GNU 9.3.0
+[0.309s] -- The CXX compiler identification is GNU 9.3.0
+[0.309s] -- Check for working C compiler: /usr/bin/cc
+[0.309s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.309s] -- Detecting C compiler ABI info
+[0.309s] -- Detecting C compiler ABI info - done
+[0.309s] -- Detecting C compile features
+[0.310s] -- Detecting C compile features - done
+[0.310s] -- Check for working CXX compiler: /usr/bin/c++
+[0.366s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.367s] -- Detecting CXX compiler ABI info
+[0.436s] -- Detecting CXX compiler ABI info - done
+[0.457s] -- Detecting CXX compile features
+[0.458s] -- Detecting CXX compile features - done
+[0.459s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.484s] -- Found PythonInterp: /home/sam/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") 
+[0.484s] -- Using PYTHON_EXECUTABLE: /home/sam/anaconda3/bin/python3
+[0.728s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.791s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.792s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.792s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/sam/AST/src/my_package/include>
+[0.792s] -- Configured cppcheck exclude dirs and/or files: 
+[0.793s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.793s] -- Configured cpplint exclude dirs and/or files: 
+[0.793s] -- Added test 'lint_cmake' to check CMake code style
+[0.794s] -- Added test 'uncrustify' to check C / C++ code style
+[0.794s] -- Configured uncrustify additional arguments: 
+[0.795s] -- Added test 'xmllint' to check XML markup files
+[0.796s] -- Configuring done
+[0.799s] -- Generating done
+[0.799s] -- Build files have been written to: /home/sam/AST/build/my_package
+[0.802s] Invoked command in '/home/sam/AST/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/sam/AST/src/my_package -DCMAKE_INSTALL_PREFIX=/home/sam/AST/install/my_package
+[0.804s] Invoking command in '/home/sam/AST/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/my_package -- -j12 -l12
+[0.835s] [35m[1mScanning dependencies of target my_node[0m
+[0.843s] [ 50%] [32mBuilding CXX object CMakeFiles/my_node.dir/src/my_node.cpp.o[0m
+[0.868s] [100%] [32m[1mLinking CXX executable my_node[0m
+[0.903s] [100%] Built target my_node
+[0.921s] Invoked command in '/home/sam/AST/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/my_package -- -j12 -l12
+[0.945s] Invoking command in '/home/sam/AST/build/my_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/sam/AST/build/my_package
+[0.951s] -- Install configuration: ""
+[0.951s] -- Installing: /home/sam/AST/install/my_package/lib/my_package/my_node
+[0.951s] -- Installing: /home/sam/AST/install/my_package/share/ament_index/resource_index/package_run_dependencies/my_package
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/ament_index/resource_index/parent_prefix_path/my_package
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/environment/ament_prefix_path.sh
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/environment/ament_prefix_path.dsv
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/environment/path.sh
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/environment/path.dsv
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/local_setup.bash
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/local_setup.sh
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/local_setup.zsh
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/local_setup.dsv
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/my_package/package.dsv
+[0.952s] -- Installing: /home/sam/AST/install/my_package/share/ament_index/resource_index/packages/my_package
+[0.953s] -- Installing: /home/sam/AST/install/my_package/share/my_package/cmake/my_packageConfig.cmake
+[0.953s] -- Installing: /home/sam/AST/install/my_package/share/my_package/cmake/my_packageConfig-version.cmake
+[0.953s] -- Installing: /home/sam/AST/install/my_package/share/my_package/package.xml
+[0.956s] Invoked command in '/home/sam/AST/build/my_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/sam/AST/build/my_package

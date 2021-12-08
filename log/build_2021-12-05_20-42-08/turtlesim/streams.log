@@ -1,0 +1,40 @@
+[0.012s] Invoking command in '/home/sam/AST/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/turtlesim -- -j12 -l12
+[0.048s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[0.057s] [  2%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[0.237s] Error processing idl file: /home/sam/AST/build/turtlesim/rosidl_adapter/turtlesim/action/RotateAbsolute.idl
+[0.237s] Traceback (most recent call last):
+[0.237s]   File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 40, in <module>
+[0.237s]     sys.exit(main())
+[0.237s]   File "/opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c", line 34, in main
+[0.237s]     return generate_c(
+[0.237s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_c/__init__.py", line 37, in generate_c
+[0.238s]     generate_files(
+[0.238s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 96, in generate_files
+[0.238s]     raise(e)
+[0.238s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 87, in generate_files
+[0.238s]     expand_template(
+[0.238s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 128, in expand_template
+[0.238s]     interpreter = em.Interpreter(
+[0.238s] AttributeError: module 'em' has no attribute 'Interpreter'
+[0.244s] Error processing idl file: /home/sam/AST/build/turtlesim/rosidl_adapter/turtlesim/action/RotateAbsolute.idl
+[0.244s] Traceback (most recent call last):
+[0.244s]   File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 40, in <module>
+[0.244s]     sys.exit(main())
+[0.244s]   File "/opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp", line 34, in main
+[0.244s]     return generate_cpp(
+[0.244s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_generator_cpp/__init__.py", line 38, in generate_cpp
+[0.244s]     generate_files(
+[0.245s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 96, in generate_files
+[0.245s]     raise(e)
+[0.245s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 87, in generate_files
+[0.245s]     expand_template(
+[0.245s]   File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_cmake/__init__.py", line 128, in expand_template
+[0.245s]     interpreter = em.Interpreter(
+[0.245s] AttributeError: module 'em' has no attribute 'Interpreter'
+[0.247s] make[2]: *** [CMakeFiles/turtlesim__rosidl_generator_c.dir/build.make:89: rosidl_generator_c/turtlesim/action/rotate_absolute.h] Error 1
+[0.247s] make[1]: *** [CMakeFiles/Makefile2:310: CMakeFiles/turtlesim__rosidl_generator_c.dir/all] Error 2
+[0.247s] make[1]: *** Waiting for unfinished jobs....
+[0.254s] make[2]: *** [CMakeFiles/turtlesim__cpp.dir/build.make:121: rosidl_generator_cpp/turtlesim/action/rotate_absolute.hpp] Error 1
+[0.255s] make[1]: *** [CMakeFiles/Makefile2:646: CMakeFiles/turtlesim__cpp.dir/all] Error 2
+[0.255s] make: *** [Makefile:141: all] Error 2
+[0.258s] Invoked command in '/home/sam/AST/build/turtlesim' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/turtlesim -- -j12 -l12

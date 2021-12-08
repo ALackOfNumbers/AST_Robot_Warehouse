@@ -1,0 +1,4 @@
+[console_scripts]
+beacon = warehouse_robot_package.beacon:main
+robot = warehouse_robot_package.robot:main
+

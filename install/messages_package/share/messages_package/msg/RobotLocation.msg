@@ -1,0 +1,2 @@
+int64 robot_number
+Coordinates robot_location

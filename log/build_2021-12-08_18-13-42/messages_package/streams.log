@@ -1,0 +1,59 @@
+[0.035s] Invoking command in '/home/sam/AST/build/messages_package': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/messages_package -- -j12 -l12
+[0.546s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.546s] -- Found PythonInterp: /home/sam/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") 
+[0.546s] -- Using PYTHON_EXECUTABLE: /home/sam/anaconda3/bin/python3
+[0.547s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.547s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[0.547s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.547s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.547s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.598s] -- Found PythonInterp: /home/sam/anaconda3/bin/python3 (found version "3.8.8") 
+[0.698s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[0.699s]   execute_process(/home/sam/anaconda3/bin/python3 -m rosidl_adapter
+[0.699s]   --package-name messages_package --arguments-file
+[0.699s]   /home/sam/AST/build/messages_package/rosidl_adapter__arguments__messages_package.json
+[0.699s]   --output-dir
+[0.699s]   /home/sam/AST/build/messages_package/rosidl_adapter/messages_package
+[0.699s]   --output-file
+[0.699s]   /home/sam/AST/build/messages_package/rosidl_adapter/messages_package.idls)
+[0.699s]   returned error code 1:
+[0.700s] 
+[0.700s]   Error processing 'Delivery delivery contents' of
+[0.700s]   'messages_package/Delivery_Request': 'parsing string values into type
+[0.700s]   'messages_package/Delivery' is not supported'
+[0.700s] 
+[0.700s]   Traceback (most recent call last):
+[0.700s] 
+[0.700s]     File "/home/sam/anaconda3/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[0.701s]       return _run_code(code, main_globals, None,
+[0.701s]     File "/home/sam/anaconda3/lib/python3.8/runpy.py", line 87, in _run_code
+[0.701s]       exec(code, run_globals)
+[0.701s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[0.701s]       sys.exit(main())
+[0.701s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[0.701s]       abs_idl_file = convert_to_idl(
+[0.702s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 24, in convert_to_idl
+[0.702s]       return convert_srv_to_idl(
+[0.702s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/srv/__init__.py", line 28, in convert_srv_to_idl
+[0.702s]       srv = parse_service_string(package_name, input_file.stem, content)
+[0.702s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 852, in parse_service_string
+[0.702s]       request_message = parse_message_string(
+[0.702s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 515, in parse_message_string
+[0.702s]       fields.append(Field(
+[0.702s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 360, in __init__
+[0.703s]       self.default_value = parse_value_string(
+[0.703s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/parser.py", line 631, in parse_value_string
+[0.703s]       raise NotImplementedError(
+[0.703s] 
+[0.703s]   NotImplementedError: parsing string values into type
+[0.703s]   'messages_package/Delivery' is not supported
+[0.703s] 
+[0.703s] Call Stack (most recent call first):
+[0.704s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[0.704s]   CMakeLists.txt:46 (rosidl_generate_interfaces)
+[0.704s] 
+[0.704s] 
+[0.704s] -- Configuring incomplete, errors occurred!
+[0.704s] See also "/home/sam/AST/build/messages_package/CMakeFiles/CMakeOutput.log".
+[0.707s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.708s] Invoked command in '/home/sam/AST/build/messages_package' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/messages_package -- -j12 -l12

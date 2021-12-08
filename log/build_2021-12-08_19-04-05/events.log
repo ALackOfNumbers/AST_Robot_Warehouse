@@ -1,0 +1,727 @@
+[0.000000] (-) TimerEvent: {}
+[0.001549] (messages_package) JobQueued: {'identifier': 'messages_package', 'dependencies': OrderedDict()}
+[0.001602] (py_pubsub) JobQueued: {'identifier': 'py_pubsub', 'dependencies': OrderedDict()}
+[0.001638] (turtlesim) JobQueued: {'identifier': 'turtlesim', 'dependencies': OrderedDict()}
+[0.001693] (warehouse_robot_package) JobQueued: {'identifier': 'warehouse_robot_package', 'dependencies': OrderedDict([('messages_package', '/home/sam/AST/install/messages_package')])}
+[0.001969] (messages_package) JobStarted: {'identifier': 'messages_package'}
+[0.010256] (py_pubsub) JobStarted: {'identifier': 'py_pubsub'}
+[0.018315] (turtlesim) JobStarted: {'identifier': 'turtlesim'}
+[0.025145] (messages_package) JobProgress: {'identifier': 'messages_package', 'progress': 'cmake'}
+[0.025788] (messages_package) JobProgress: {'identifier': 'messages_package', 'progress': 'build'}
+[0.026370] (messages_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sam/AST/build/messages_package', '--', '-j12', '-l12'], 'cwd': '/home/sam/AST/build/messages_package', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sam'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '2743'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/sam'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/sam/AST/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '2497'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '30519'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'sam'), ('JOURNAL_STREAM', '8:62674'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'sam'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2785,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2785'), ('INVOCATION_ID', 'ec50aeea153d46e693f75589eba0b875'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/sam/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:536386aa-3a41-4c4b-8da3-bbe2b1c3d4c6'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sam/AST/build/messages_package'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sam/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.099619] (-) TimerEvent: {}
+[0.200270] (-) TimerEvent: {}
+[0.295890] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'cmake'}
+[0.296501] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'build'}
+[0.297737] (turtlesim) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sam/AST/build/turtlesim', '--', '-j12', '-l12'], 'cwd': '/home/sam/AST/build/turtlesim', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sam'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '2743'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/sam'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/sam/AST/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '2497'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '30519'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'sam'), ('JOURNAL_STREAM', '8:62674'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'sam'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2785,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2785'), ('INVOCATION_ID', 'ec50aeea153d46e693f75589eba0b875'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/sam/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:536386aa-3a41-4c4b-8da3-bbe2b1c3d4c6'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sam/AST/build/turtlesim'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sam/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.300268] (messages_package) StdoutLine: {'line': b'[  1%] Built target messages_node\n'}
+[0.300833] (-) TimerEvent: {}
+[0.301326] (messages_package) StdoutLine: {'line': b'[  2%] Built target messages_package__cpp\n'}
+[0.301783] (messages_package) StdoutLine: {'line': b'[ 13%] Built target messages_package__rosidl_generator_c\n'}
+[0.303620] (messages_package) StdoutLine: {'line': b'[ 25%] Built target messages_package__rosidl_typesupport_cpp\n'}
+[0.303795] (messages_package) StdoutLine: {'line': b'[ 42%] Built target messages_package__rosidl_typesupport_introspection_cpp\n'}
+[0.303870] (messages_package) StdoutLine: {'line': b'[ 53%] Built target messages_package__rosidl_typesupport_introspection_c\n'}
+[0.304207] (messages_package) StdoutLine: {'line': b'[ 60%] Built target messages_package__rosidl_typesupport_c\n'}
+[0.305124] (messages_package) StdoutLine: {'line': b'[ 72%] Built target messages_package__rosidl_typesupport_fastrtps_cpp\n'}
+[0.305428] (messages_package) StdoutLine: {'line': b'[ 83%] Built target messages_package__rosidl_typesupport_fastrtps_c\n'}
+[0.305890] (messages_package) StdoutLine: {'line': b'[ 83%] Built target messages_package\n'}
+[0.306230] (messages_package) StdoutLine: {'line': b'[ 84%] Built target messages_package__py\n'}
+[0.308111] (messages_package) StdoutLine: {'line': b'[ 95%] Built target messages_package__python\n'}
+[0.308329] (messages_package) StdoutLine: {'line': b'[ 98%] Built target messages_package__rosidl_typesupport_introspection_c__pyext\n'}
+[0.308431] (messages_package) StdoutLine: {'line': b'[ 98%] Built target messages_package__rosidl_typesupport_c__pyext\n'}
+[0.308524] (messages_package) StdoutLine: {'line': b'[100%] Built target messages_package__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.308647] (messages_package) CommandEnded: {'returncode': 0}
+[0.309588] (py_pubsub) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/py_pubsub', 'build', '--build-base', '/home/sam/AST/build/py_pubsub/build', 'install', '--prefix', '/home/sam/AST/install/py_pubsub', '--record', '/home/sam/AST/build/py_pubsub/install.log', '--single-version-externally-managed'], 'cwd': '/home/sam/AST/src/py_pubsub', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sam', 'LC_TIME': 'de_DE.UTF-8', 'SSH_AGENT_PID': '2743', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/sam', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/sam/AST/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2497', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '30519', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'sam', 'JOURNAL_STREAM': '8:62674', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'sam', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2785,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2785', 'INVOCATION_ID': 'ec50aeea153d46e693f75589eba0b875', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'CONDA_PYTHON_EXE': '/home/sam/anaconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:536386aa-3a41-4c4b-8da3-bbe2b1c3d4c6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sam/AST/build/py_pubsub', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/sam/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sam/AST/install/py_pubsub/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'de_DE.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.352950] (turtlesim) StdoutLine: {'line': b'[  1%] Built target turtlesim__cpp\n'}
+[0.355888] (turtlesim) StdoutLine: {'line': b'[ 11%] Built target turtlesim__rosidl_generator_c\n'}
+[0.382888] (turtlesim) StdoutLine: {'line': b'[ 21%] Built target turtlesim__rosidl_typesupport_cpp\n'}
+[0.387167] (turtlesim) StdoutLine: {'line': b'[ 31%] Built target turtlesim__rosidl_typesupport_c\n'}
+[0.388211] (turtlesim) StdoutLine: {'line': b'[ 51%] Built target turtlesim__rosidl_typesupport_introspection_cpp\n'}
+[0.388383] (turtlesim) StdoutLine: {'line': b'[ 51%] Built target turtlesim__rosidl_typesupport_introspection_c\n'}
+[0.393039] (turtlesim) StdoutLine: {'line': b'[ 61%] Built target turtlesim__rosidl_typesupport_fastrtps_cpp\n'}
+[0.400920] (-) TimerEvent: {}
+[0.421944] (turtlesim) StdoutLine: {'line': b'[ 71%] Built target turtlesim__rosidl_typesupport_fastrtps_c\n'}
+[0.440242] (turtlesim) StdoutLine: {'line': b'[ 71%] Built target turtlesim\n'}
+[0.464153] (turtlesim) StdoutLine: {'line': b'[ 72%] Built target turtlesim__py\n'}
+[0.478552] (turtlesim) StdoutLine: {'line': b'[ 74%] Built target draw_square\n'}
+[0.479888] (turtlesim) StdoutLine: {'line': b'[ 76%] Built target turtle_teleop_key\n'}
+[0.484012] (turtlesim) StdoutLine: {'line': b'[ 78%] Built target mimic\n'}
+[0.485747] (messages_package) JobProgress: {'identifier': 'messages_package', 'progress': 'install'}
+[0.495235] (turtlesim) StdoutLine: {'line': b'[ 87%] Built target turtlesim__python\n'}
+[0.498036] (messages_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sam/AST/build/messages_package'], 'cwd': '/home/sam/AST/build/messages_package', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sam'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '2743'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/sam'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/sam/AST/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '2497'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '30519'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'sam'), ('JOURNAL_STREAM', '8:62674'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'sam'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2785,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2785'), ('INVOCATION_ID', 'ec50aeea153d46e693f75589eba0b875'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/sam/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:536386aa-3a41-4c4b-8da3-bbe2b1c3d4c6'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sam/AST/build/messages_package'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sam/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.499689] (turtlesim) StdoutLine: {'line': b'[ 93%] Built target turtlesim_node\n'}
+[0.501224] (-) TimerEvent: {}
+[0.509298] (messages_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.509579] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/messages_package/messages_node\n'}
+[0.509776] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/ament_index/resource_index/rosidl_interfaces/messages_package\n'}
+[0.510056] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package\n'}
+[0.510288] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action\n'}
+[0.510546] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/move_item.h\n'}
+[0.510794] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/charge_robot.h\n'}
+[0.510973] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail\n'}
+[0.511127] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__type_support.h\n'}
+[0.511262] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__struct.h\n'}
+[0.511358] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__functions.c\n'}
+[0.511454] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__struct.h\n'}
+[0.511546] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__functions.h\n'}
+[0.511639] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__struct.h\n'}
+[0.514206] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__functions.c\n'}
+[0.514509] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.h\n'}
+[0.514755] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__functions.h\n'}
+[0.515600] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__functions.c\n'}
+[0.515837] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__functions.h\n'}
+[0.515959] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__type_support.h\n'}
+[0.516116] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/order.h\n'}
+[0.516265] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv\n'}
+[0.516410] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/put_down_item.h\n'}
+[0.516649] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/delivery.h\n'}
+[0.516800] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/pick_up_item.h\n'}
+[0.516945] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail\n'}
+[0.517088] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.h\n'}
+[0.517218] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__functions.h\n'}
+[0.517332] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__functions.h\n'}
+[0.517440] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__struct.h\n'}
+[0.517543] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__struct.h\n'}
+[0.517662] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__functions.c\n'}
+[0.517768] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.h\n'}
+[0.517873] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__type_support.h\n'}
+[0.517978] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__functions.h\n'}
+[0.518105] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__functions.c\n'}
+[0.518615] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__functions.c\n'}
+[0.518791] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__struct.h\n'}
+[0.518921] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg\n'}
+[0.519411] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.519656] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/coordinates.h\n'}
+[0.519888] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/robot_location.h\n'}
+[0.520163] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/robot_distance.h\n'}
+[0.520441] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/item.h\n'}
+[0.520820] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/delivery.h\n'}
+[0.520923] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail\n'}
+[0.521014] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__functions.c\n'}
+[0.521124] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__functions.c\n'}
+[0.521256] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__functions.h\n'}
+[0.521345] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__functions.c\n'}
+[0.521433] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__functions.h\n'}
+[0.521524] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__functions.h\n'}
+[0.521620] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__struct.h\n'}
+[0.521722] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__type_support.h\n'}
+[0.521802] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__functions.c\n'}
+[0.521885] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.h\n'}
+[0.522002] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.h\n'}
+[0.522079] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__struct.h\n'}
+[0.522683] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__struct.h\n'}
+[0.522800] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.h\n'}
+[0.522886] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__struct.h\n'}
+[0.522992] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__functions.h\n'}
+[0.523132] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__type_support.h\n'}
+[0.523239] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__functions.c\n'}
+[0.523320] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__functions.h\n'}
+[0.523396] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__struct.h\n'}
+[0.523471] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/library_path.sh\n'}
+[0.523546] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/library_path.dsv\n'}
+[0.523622] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__rosidl_generator_c.so\n'}
+[0.523710] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package\n'}
+[0.523787] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action\n'}
+[0.523862] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail\n'}
+[0.523969] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524048] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524122] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524197] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv\n'}
+[0.524272] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail\n'}
+[0.524347] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524426] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524501] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524576] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg\n'}
+[0.524649] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.524737] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail\n'}
+[0.524814] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524889] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h\n'}
+[0.524965] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_fastrtps_c.h\n'}
+[0.525040] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_fastrtps_c.h\n'}
+[0.525114] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_fastrtps_c.h\n'}
+[0.525189] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_c.so\n'}
+[0.525263] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package\n'}
+[0.525337] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action\n'}
+[0.525409] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail\n'}
+[0.525490] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.525565] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.525640] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/dds_fastrtps\n'}
+[0.525714] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.525787] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv\n'}
+[0.525861] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail\n'}
+[0.525934] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.526007] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.526080] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/dds_fastrtps\n'}
+[0.526186] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.526342] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg\n'}
+[0.526451] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.526589] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail\n'}
+[0.526693] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.526788] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.526864] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/dds_fastrtps\n'}
+[0.526938] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.527014] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.527088] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.527162] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.527236] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package\n'}
+[0.527342] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action\n'}
+[0.527466] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail\n'}
+[0.527584] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_introspection_c.h\n'}
+[0.527678] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.c\n'}
+[0.527756] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__type_support.c\n'}
+[0.527843] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_introspection_c.h\n'}
+[0.527920] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_introspection_c.h\n'}
+[0.527995] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__type_support.c\n'}
+[0.528081] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv\n'}
+[0.528157] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail\n'}
+[0.528253] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_introspection_c.h\n'}
+[0.528387] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__type_support.c\n'}
+[0.528466] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_introspection_c.h\n'}
+[0.528542] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.c\n'}
+[0.528617] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_introspection_c.h\n'}
+[0.528745] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.c\n'}
+[0.528833] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg\n'}
+[0.528909] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.528983] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail\n'}
+[0.529057] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_introspection_c.h\n'}
+[0.529145] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_c.h\n'}
+[0.529223] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.c\n'}
+[0.529300] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_introspection_c.h\n'}
+[0.529368] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__type_support.c\n'}
+[0.529470] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__type_support.c\n'}
+[0.529547] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_introspection_c.h\n'}
+[0.529625] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.c\n'}
+[0.529690] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_introspection_c.h\n'}
+[0.529764] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.c\n'}
+[0.529830] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_c.so\n'}
+[0.529895] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__rosidl_typesupport_c.so\n'}
+[0.529995] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package\n'}
+[0.530062] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action\n'}
+[0.530139] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/charge_robot.hpp\n'}
+[0.530208] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/order.hpp\n'}
+[0.530287] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/move_item.hpp\n'}
+[0.530353] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail\n'}
+[0.530419] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__struct.hpp\n'}
+[0.530484] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__struct.hpp\n'}
+[0.530549] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__builder.hpp\n'}
+[0.530614] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__traits.hpp\n'}
+[0.530679] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__traits.hpp\n'}
+[0.530763] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__traits.hpp\n'}
+[0.530830] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__builder.hpp\n'}
+[0.530904] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__struct.hpp\n'}
+[0.530987] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__builder.hpp\n'}
+[0.531081] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv\n'}
+[0.531151] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/pick_up_item.hpp\n'}
+[0.531217] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/delivery.hpp\n'}
+[0.531291] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail\n'}
+[0.531382] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__traits.hpp\n'}
+[0.531450] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__struct.hpp\n'}
+[0.531516] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__builder.hpp\n'}
+[0.531581] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__builder.hpp\n'}
+[0.531646] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__traits.hpp\n'}
+[0.531722] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__builder.hpp\n'}
+[0.531790] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__traits.hpp\n'}
+[0.531855] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__struct.hpp\n'}
+[0.531920] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__struct.hpp\n'}
+[0.531985] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/put_down_item.hpp\n'}
+[0.532057] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg\n'}
+[0.532121] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/robot_location.hpp\n'}
+[0.532186] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/item.hpp\n'}
+[0.532251] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/delivery.hpp\n'}
+[0.532483] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/robot_distance.hpp\n'}
+[0.532615] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/coordinates.hpp\n'}
+[0.532732] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail\n'}
+[0.532848] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__traits.hpp\n'}
+[0.532951] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__builder.hpp\n'}
+[0.533054] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__builder.hpp\n'}
+[0.533157] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__struct.hpp\n'}
+[0.533250] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__struct.hpp\n'}
+[0.533320] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__traits.hpp\n'}
+[0.533412] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__builder.hpp\n'}
+[0.533518] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__struct.hpp\n'}
+[0.533624] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__traits.hpp\n'}
+[0.533729] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__struct.hpp\n'}
+[0.533827] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__traits.hpp\n'}
+[0.533895] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__struct.hpp\n'}
+[0.533968] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__traits.hpp\n'}
+[0.534034] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__builder.hpp\n'}
+[0.534100] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__builder.hpp\n'}
+[0.534183] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package\n'}
+[0.534287] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action\n'}
+[0.534373] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail\n'}
+[0.534447] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.534513] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.534578] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.cpp\n'}
+[0.534645] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.534710] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/order__type_support.cpp\n'}
+[0.534775] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/action/detail/move_item__type_support.cpp\n'}
+[0.534840] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv\n'}
+[0.534904] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail\n'}
+[0.534967] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.535032] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__type_support.cpp\n'}
+[0.535097] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.535161] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.cpp\n'}
+[0.535226] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.cpp\n'}
+[0.535293] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.535368] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg\n'}
+[0.535434] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail\n'}
+[0.535500] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.cpp\n'}
+[0.535565] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.535665] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.cpp\n'}
+[0.535754] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__type_support.cpp\n'}
+[0.535822] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.535887] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.535952] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.536022] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.cpp\n'}
+[0.536087] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/item__type_support.cpp\n'}
+[0.536152] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.536220] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_cpp.so\n'}
+[0.536288] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__rosidl_typesupport_cpp.so\n'}
+[0.536366] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/pythonpath.sh\n'}
+[0.536432] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/pythonpath.dsv\n'}
+[0.536497] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/__init__.py\n'}
+[0.536561] (turtlesim) StdoutLine: {'line': b'[ 95%] Built target turtlesim__rosidl_typesupport_introspection_c__pyext\n'}
+[0.536639] (turtlesim) StdoutLine: {'line': b'[ 97%] Built target turtlesim__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.536708] (turtlesim) StdoutLine: {'line': b'[100%] Built target turtlesim__rosidl_typesupport_c__pyext\n'}
+[0.543544] (turtlesim) CommandEnded: {'returncode': 0}
+[0.570962] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg\n'}
+[0.571666] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/__init__.py\n'}
+[0.571802] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_location_s.c\n'}
+[0.571957] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_coordinates.py\n'}
+[0.572092] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_coordinates_s.c\n'}
+[0.572157] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_distance_s.c\n'}
+[0.572216] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_item.py\n'}
+[0.572381] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_distance.py\n'}
+[0.572466] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_delivery.py\n'}
+[0.572530] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_location.py\n'}
+[0.572590] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_item_s.c\n'}
+[0.572649] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_delivery_s.c\n'}
+[0.572734] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv\n'}
+[0.572916] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv/__init__.py\n'}
+[0.573082] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_put_down_item_s.c\n'}
+[0.573243] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_delivery.py\n'}
+[0.573459] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_put_down_item.py\n'}
+[0.573696] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_pick_up_item.py\n'}
+[0.573815] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_pick_up_item_s.c\n'}
+[0.573907] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_delivery_s.c\n'}
+[0.573996] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action\n'}
+[0.574084] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action/__init__.py\n'}
+[0.578538] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action/_order_s.c\n'}
+[0.579069] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action/_charge_robot_s.c\n'}
+[0.579216] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action/_move_item.py\n'}
+[0.579411] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action/_move_item_s.c\n'}
+[0.579668] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action/_order.py\n'}
+[0.579799] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/action/_charge_robot.py\n'}
+[0.579990] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.580160] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.580242] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.580320] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/lib/libmessages_package__python.so\n'}
+[0.580400] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/Coordinates.idl\n'}
+[0.580557] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/Delivery.idl\n'}
+[0.580636] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/Item.idl\n'}
+[0.580746] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/RobotDistance.idl\n'}
+[0.580838] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/RobotLocation.idl\n'}
+[0.580917] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/Delivery.idl\n'}
+[0.581065] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PickUpItem.idl\n'}
+[0.581145] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PutDownItem.idl\n'}
+[0.581221] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/action/ChargeRobot.idl\n'}
+[0.581297] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/action/MoveItem.idl\n'}
+[0.581374] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/action/Order.idl\n'}
+[0.581510] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/Coordinates.msg\n'}
+[0.581592] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/Delivery.msg\n'}
+[0.581869] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/Item.msg\n'}
+[0.582209] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/RobotDistance.msg\n'}
+[0.582508] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/msg/RobotLocation.msg\n'}
+[0.583791] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/Delivery.srv\n'}
+[0.584018] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/Delivery_Request.msg\n'}
+[0.584217] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/Delivery_Response.msg\n'}
+[0.584383] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PickUpItem.srv\n'}
+[0.584564] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PickUpItem_Request.msg\n'}
+[0.584732] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PickUpItem_Response.msg\n'}
+[0.585065] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PutDownItem.srv\n'}
+[0.585288] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PutDownItem_Request.msg\n'}
+[0.585435] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/srv/PutDownItem_Response.msg\n'}
+[0.585585] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/action/ChargeRobot.action\n'}
+[0.585657] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/action/MoveItem.action\n'}
+[0.585765] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/action/Order.action\n'}
+[0.585879] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/ament_index/resource_index/package_run_dependencies/messages_package\n'}
+[0.586018] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/ament_index/resource_index/parent_prefix_path/messages_package\n'}
+[0.586173] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/ament_prefix_path.sh\n'}
+[0.586455] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/ament_prefix_path.dsv\n'}
+[0.586594] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/path.sh\n'}
+[0.586680] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/environment/path.dsv\n'}
+[0.586914] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/local_setup.bash\n'}
+[0.587419] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/local_setup.sh\n'}
+[0.587563] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/local_setup.zsh\n'}
+[0.587667] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/local_setup.dsv\n'}
+[0.587807] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST/install/messages_package/share/messages_package/package.dsv\n'}
+[0.588190] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/ament_index/resource_index/packages/messages_package\n'}
+[0.588618] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cExport.cmake\n'}
+[0.588882] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.589013] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.589185] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.589300] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cExport.cmake\n'}
+[0.589428] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.589548] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cppExport.cmake\n'}
+[0.589640] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.589748] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.589859] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cppExport.cmake\n'}
+[0.589964] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.590097] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/rosidl_cmake-extras.cmake\n'}
+[0.590313] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.590409] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.590505] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.590602] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.590702] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.590784] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.590875] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_packageConfig.cmake\n'}
+[0.590963] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_packageConfig-version.cmake\n'}
+[0.591054] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/messages_package/share/messages_package/package.xml\n'}
+[0.591151] (messages_package) CommandEnded: {'returncode': 0}
+[0.601358] (-) TimerEvent: {}
+[0.628899] (py_pubsub) StdoutLine: {'line': b'running egg_info\n'}
+[0.629640] (py_pubsub) StdoutLine: {'line': b'writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO\n'}
+[0.629888] (py_pubsub) StdoutLine: {'line': b'writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt\n'}
+[0.630076] (py_pubsub) StdoutLine: {'line': b'writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt\n'}
+[0.630299] (py_pubsub) StdoutLine: {'line': b'writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt\n'}
+[0.630466] (py_pubsub) StdoutLine: {'line': b'writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt\n'}
+[0.662964] (py_pubsub) StdoutLine: {'line': b"reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[0.663929] (py_pubsub) StdoutLine: {'line': b"writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[0.664069] (py_pubsub) StdoutLine: {'line': b'running build\n'}
+[0.664155] (py_pubsub) StdoutLine: {'line': b'running build_py\n'}
+[0.664462] (py_pubsub) StdoutLine: {'line': b'running install\n'}
+[0.665482] (py_pubsub) StdoutLine: {'line': b'running install_lib\n'}
+[0.667237] (py_pubsub) StdoutLine: {'line': b'running install_data\n'}
+[0.667972] (py_pubsub) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.670480] (py_pubsub) StdoutLine: {'line': b"removing '/home/sam/AST/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.670852] (py_pubsub) StdoutLine: {'line': b'Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/sam/AST/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info\n'}
+[0.672415] (py_pubsub) StdoutLine: {'line': b'running install_scripts\n'}
+[0.684333] (turtlesim) JobProgress: {'identifier': 'turtlesim', 'progress': 'install'}
+[0.684717] (turtlesim) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sam/AST/build/turtlesim'], 'cwd': '/home/sam/AST/build/turtlesim', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sam'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '2743'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/sam'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/sam/AST/src'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '2497'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '30519'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'sam'), ('JOURNAL_STREAM', '8:62674'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'sam'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2785,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2785'), ('INVOCATION_ID', 'ec50aeea153d46e693f75589eba0b875'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/sam/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:536386aa-3a41-4c4b-8da3-bbe2b1c3d4c6'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sam/AST/build/turtlesim'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sam/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.692714] (py_pubsub) StdoutLine: {'line': b'Installing listener script to /home/sam/AST/install/py_pubsub/lib/py_pubsub\n'}
+[0.692973] (py_pubsub) StdoutLine: {'line': b'Installing talker script to /home/sam/AST/install/py_pubsub/lib/py_pubsub\n'}
+[0.693152] (py_pubsub) StdoutLine: {'line': b"writing list of installed files to '/home/sam/AST/build/py_pubsub/install.log'\n"}
+[0.695379] (turtlesim) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.695943] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/ament_index/resource_index/rosidl_interfaces/turtlesim\n'}
+[0.696158] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim\n'}
+[0.696470] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action\n'}
+[0.696625] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/rotate_absolute.h\n'}
+[0.696789] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail\n'}
+[0.696858] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__type_support.h\n'}
+[0.696946] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__struct.h\n'}
+[0.697153] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__functions.h\n'}
+[0.697593] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__functions.c\n'}
+[0.697754] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv\n'}
+[0.697934] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/teleport_relative.h\n'}
+[0.698074] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/kill.h\n'}
+[0.698210] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/set_pen.h\n'}
+[0.698291] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/spawn.h\n'}
+[0.698426] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/teleport_absolute.h\n'}
+[0.698591] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail\n'}
+[0.698743] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__functions.h\n'}
+[0.698888] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__struct.h\n'}
+[0.698948] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__type_support.h\n'}
+[0.699007] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__type_support.h\n'}
+[0.699086] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__functions.c\n'}
+[0.699143] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__functions.c\n'}
+[0.699298] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__functions.h\n'}
+[0.699433] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__type_support.h\n'}
+[0.699565] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__type_support.h\n'}
+[0.699809] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__functions.h\n'}
+[0.699903] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__struct.h\n'}
+[0.699965] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__functions.h\n'}
+[0.700129] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__struct.h\n'}
+[0.700202] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__functions.c\n'}
+[0.700270] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__struct.h\n'}
+[0.700338] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__functions.c\n'}
+[0.700712] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__functions.h\n'}
+[0.700926] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__struct.h\n'}
+[0.701195] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__functions.c\n'}
+[0.701407] (-) TimerEvent: {}
+[0.701610] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__type_support.h\n'}
+[0.701916] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg\n'}
+[0.702124] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.702239] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/color.h\n'}
+[0.702333] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/pose.h\n'}
+[0.702597] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail\n'}
+[0.702702] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__type_support.h\n'}
+[0.702805] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__struct.h\n'}
+[0.702901] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__functions.h\n'}
+[0.703036] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__type_support.h\n'}
+[0.703320] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__struct.h\n'}
+[0.703408] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__functions.c\n'}
+[0.703470] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__functions.c\n'}
+[0.703530] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__functions.h\n'}
+[0.703650] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/library_path.sh\n'}
+[0.703713] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/library_path.dsv\n'}
+[0.703772] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__rosidl_generator_c.so\n'}
+[0.703852] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim\n'}
+[0.704004] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action\n'}
+[0.704267] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail\n'}
+[0.704412] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_c.h\n'}
+[0.704557] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv\n'}
+[0.704800] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail\n'}
+[0.704882] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_c.h\n'}
+[0.704951] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_c.h\n'}
+[0.705018] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_c.h\n'}
+[0.705083] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_c.h\n'}
+[0.705270] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_c.h\n'}
+[0.705338] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg\n'}
+[0.705400] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.705470] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail\n'}
+[0.705533] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.705707] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_c.h\n'}
+[0.705772] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_c.so\n'}
+[0.705835] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim\n'}
+[0.705897] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action\n'}
+[0.705959] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail\n'}
+[0.706060] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/dds_fastrtps\n'}
+[0.706198] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.706259] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv\n'}
+[0.706318] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail\n'}
+[0.706376] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.706434] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.706599] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.706659] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/dds_fastrtps\n'}
+[0.706720] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.706778] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.706835] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg\n'}
+[0.706893] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.707074] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail\n'}
+[0.707177] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.707248] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.707316] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/dds_fastrtps\n'}
+[0.707384] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.707559] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim\n'}
+[0.707636] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action\n'}
+[0.707705] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail\n'}
+[0.707775] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_c.h\n'}
+[0.707846] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__type_support.c\n'}
+[0.707915] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv\n'}
+[0.708190] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail\n'}
+[0.708272] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_c.h\n'}
+[0.708337] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__type_support.c\n'}
+[0.708396] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__type_support.c\n'}
+[0.708580] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_c.h\n'}
+[0.708642] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_c.h\n'}
+[0.708700] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_c.h\n'}
+[0.708767] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__type_support.c\n'}
+[0.708826] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_c.h\n'}
+[0.709027] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__type_support.c\n'}
+[0.709111] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__type_support.c\n'}
+[0.709192] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg\n'}
+[0.709280] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.709361] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail\n'}
+[0.709588] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_introspection_c.h\n'}
+[0.709682] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__type_support.c\n'}
+[0.709764] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_c.h\n'}
+[0.709844] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__type_support.c\n'}
+[0.709921] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_c.so\n'}
+[0.710000] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__rosidl_typesupport_c.so\n'}
+[0.710222] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim\n'}
+[0.710306] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action\n'}
+[0.710530] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/rotate_absolute.hpp\n'}
+[0.710709] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail\n'}
+[0.710816] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__struct.hpp\n'}
+[0.710883] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__traits.hpp\n'}
+[0.710946] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__builder.hpp\n'}
+[0.711009] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv\n'}
+[0.711064] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/kill.hpp\n'}
+[0.711118] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/set_pen.hpp\n'}
+[0.711254] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/spawn.hpp\n'}
+[0.711322] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail\n'}
+[0.711384] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__struct.hpp\n'}
+[0.711447] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__traits.hpp\n'}
+[0.711511] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__traits.hpp\n'}
+[0.711574] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__struct.hpp\n'}
+[0.711731] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__builder.hpp\n'}
+[0.711821] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__struct.hpp\n'}
+[0.711905] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__traits.hpp\n'}
+[0.711995] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__struct.hpp\n'}
+[0.712240] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__struct.hpp\n'}
+[0.712390] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__builder.hpp\n'}
+[0.712486] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__builder.hpp\n'}
+[0.712575] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__traits.hpp\n'}
+[0.712660] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__builder.hpp\n'}
+[0.712744] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__traits.hpp\n'}
+[0.712978] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__builder.hpp\n'}
+[0.713087] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/teleport_relative.hpp\n'}
+[0.713174] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/teleport_absolute.hpp\n'}
+[0.713255] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg\n'}
+[0.713312] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/color.hpp\n'}
+[0.713485] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/pose.hpp\n'}
+[0.713564] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail\n'}
+[0.713631] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__builder.hpp\n'}
+[0.713695] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__builder.hpp\n'}
+[0.713755] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__struct.hpp\n'}
+[0.713905] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__struct.hpp\n'}
+[0.713971] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__traits.hpp\n'}
+[0.714051] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__traits.hpp\n'}
+[0.714128] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim\n'}
+[0.714199] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action\n'}
+[0.714263] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail\n'}
+[0.714459] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__type_support.cpp\n'}
+[0.714536] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/action/detail/rotate_absolute__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.714606] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv\n'}
+[0.714674] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail\n'}
+[0.714740] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.714804] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__type_support.cpp\n'}
+[0.714881] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.715092] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/spawn__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.715174] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/kill__type_support.cpp\n'}
+[0.715249] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/set_pen__type_support.cpp\n'}
+[0.715326] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.715402] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__type_support.cpp\n'}
+[0.715478] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_absolute__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.715553] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/srv/detail/teleport_relative__type_support.cpp\n'}
+[0.715817] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg\n'}
+[0.715983] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail\n'}
+[0.716078] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__type_support.cpp\n'}
+[0.716163] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/color__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.716367] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__type_support.cpp\n'}
+[0.716440] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/include/turtlesim/msg/detail/pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.716503] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__rosidl_typesupport_introspection_cpp.so\n'}
+[0.716561] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__rosidl_typesupport_cpp.so\n'}
+[0.716618] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/pythonpath.sh\n'}
+[0.716775] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/pythonpath.dsv\n'}
+[0.716846] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/__init__.py\n'}
+[0.724707] (py_pubsub) CommandEnded: {'returncode': 0}
+[0.731872] (py_pubsub) JobEnded: {'identifier': 'py_pubsub', 'rc': 0}
+[0.743450] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/action\n'}
+[0.743604] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/action/__init__.py\n'}
+[0.743759] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/action/_rotate_absolute_s.c\n'}
+[0.744098] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/action/_rotate_absolute.py\n'}
+[0.744179] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg\n'}
+[0.744392] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_color.py\n'}
+[0.744485] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/__init__.py\n'}
+[0.744555] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_pose_s.c\n'}
+[0.744635] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_color_s.c\n'}
+[0.744712] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/msg/_pose.py\n'}
+[0.744902] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv\n'}
+[0.744968] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_set_pen.py\n'}
+[0.745045] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_set_pen_s.c\n'}
+[0.745109] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/__init__.py\n'}
+[0.745184] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_relative.py\n'}
+[0.745429] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_kill.py\n'}
+[0.745598] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_absolute.py\n'}
+[0.745720] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_kill_s.c\n'}
+[0.746005] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_relative_s.c\n'}
+[0.746193] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_spawn_s.c\n'}
+[0.746447] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_teleport_absolute_s.c\n'}
+[0.746858] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/srv/_spawn.py\n'}
+[0.747048] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/turtlesim_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.747366] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/turtlesim_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.747498] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/python3.8/site-packages/turtlesim/turtlesim_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[0.747610] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/libturtlesim__python.so\n'}
+[0.747779] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/action/RotateAbsolute.idl\n'}
+[0.747876] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/msg/Color.idl\n'}
+[0.747967] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/msg/Pose.idl\n'}
+[0.748141] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Kill.idl\n'}
+[0.748254] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/SetPen.idl\n'}
+[0.748320] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Spawn.idl\n'}
+[0.748380] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.idl\n'}
+[0.748439] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportRelative.idl\n'}
+[0.748590] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/action/RotateAbsolute.action\n'}
+[0.748669] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/msg/Color.msg\n'}
+[0.748732] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/msg/Pose.msg\n'}
+[0.748791] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Kill.srv\n'}
+[0.748875] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Kill_Request.msg\n'}
+[0.749025] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Kill_Response.msg\n'}
+[0.749097] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/SetPen.srv\n'}
+[0.749167] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/SetPen_Request.msg\n'}
+[0.749273] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/SetPen_Response.msg\n'}
+[0.749350] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Spawn.srv\n'}
+[0.749561] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Spawn_Request.msg\n'}
+[0.749745] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/Spawn_Response.msg\n'}
+[0.749875] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportAbsolute.srv\n'}
+[0.750096] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Request.msg\n'}
+[0.750291] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportAbsolute_Response.msg\n'}
+[0.750463] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportRelative.srv\n'}
+[0.750615] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportRelative_Request.msg\n'}
+[0.750698] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/srv/TeleportRelative_Response.msg\n'}
+[0.750932] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/turtlesim/turtlesim_node\n'}
+[0.751122] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/turtlesim/turtle_teleop_key\n'}
+[0.751253] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/turtlesim/draw_square\n'}
+[0.751489] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/lib/turtlesim/mimic\n'}
+[0.751638] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/images\n'}
+[0.751760] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/images/dashing.png\n'}
+[0.751980] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/images/bouncy.png\n'}
+[0.752101] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/images/foxy.png\n'}
+[0.752199] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/images/ardent.png\n'}
+[0.752410] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/images/crystal.png\n'}
+[0.752533] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/images/eloquent.png\n'}
+[0.752657] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/launch\n'}
+[0.752773] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/launch/multisim.launch.py\n'}
+[0.752914] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/ament_index/resource_index/package_run_dependencies/turtlesim\n'}
+[0.752992] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/ament_index/resource_index/parent_prefix_path/turtlesim\n'}
+[0.753066] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/ament_prefix_path.sh\n'}
+[0.753173] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/ament_prefix_path.dsv\n'}
+[0.753379] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/path.sh\n'}
+[0.753466] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/environment/path.dsv\n'}
+[0.753549] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/local_setup.bash\n'}
+[0.753636] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/local_setup.sh\n'}
+[0.753718] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/local_setup.zsh\n'}
+[0.753904] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/local_setup.dsv\n'}
+[0.754016] (turtlesim) StdoutLine: {'line': b'-- Installing: /home/sam/AST/install/turtlesim/share/turtlesim/package.dsv\n'}
+[0.754098] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/ament_index/resource_index/packages/turtlesim\n'}
+[0.754226] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_generator_cExport.cmake\n'}
+[0.754297] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.754395] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.754643] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.754942] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport.cmake\n'}
+[0.756492] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.756682] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_generator_cppExport.cmake\n'}
+[0.756789] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.756943] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.757072] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport.cmake\n'}
+[0.757206] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesim__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.757338] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/rosidl_cmake-extras.cmake\n'}
+[0.757547] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.757647] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.757764] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.757912] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.758082] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.758246] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.758452] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesimConfig.cmake\n'}
+[0.758597] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/cmake/turtlesimConfig-version.cmake\n'}
+[0.758721] (turtlesim) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST/install/turtlesim/share/turtlesim/package.xml\n'}
+[0.758822] (turtlesim) CommandEnded: {'returncode': 0}
+[0.783437] (messages_package) JobEnded: {'identifier': 'messages_package', 'rc': 0}
+[0.784222] (warehouse_robot_package) JobStarted: {'identifier': 'warehouse_robot_package'}
+[0.801622] (-) TimerEvent: {}
+[0.902274] (-) TimerEvent: {}
+[1.002564] (-) TimerEvent: {}
+[1.029136] (turtlesim) JobEnded: {'identifier': 'turtlesim', 'rc': 0}
+[1.031196] (warehouse_robot_package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/warehouse_robot_package', 'build', '--build-base', '/home/sam/AST/build/warehouse_robot_package/build', 'install', '--prefix', '/home/sam/AST/install/warehouse_robot_package', '--record', '/home/sam/AST/build/warehouse_robot_package/install.log', '--single-version-externally-managed'], 'cwd': '/home/sam/AST/src/warehouse_robot_package', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sam', 'LC_TIME': 'de_DE.UTF-8', 'SSH_AGENT_PID': '2743', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sam/AST/install/messages_package/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/sam', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/sam/AST/src', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2497', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '30519', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'sam', 'JOURNAL_STREAM': '8:62674', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'sam', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2785,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2785', 'INVOCATION_ID': 'ec50aeea153d46e693f75589eba0b875', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sam/AST/install/messages_package:/opt/ros/foxy', 'CONDA_PYTHON_EXE': '/home/sam/anaconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:536386aa-3a41-4c4b-8da3-bbe2b1c3d4c6', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sam/AST/build/warehouse_robot_package', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/sam/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST/install/messages_package/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'de_DE.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sam/AST/install/messages_package'}, 'shell': False}
+[1.102711] (-) TimerEvent: {}
+[1.203017] (-) TimerEvent: {}
+[1.232920] (warehouse_robot_package) StdoutLine: {'line': b'running egg_info\n'}
+[1.233556] (warehouse_robot_package) StdoutLine: {'line': b'writing ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/PKG-INFO\n'}
+[1.233797] (warehouse_robot_package) StdoutLine: {'line': b'writing dependency_links to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/dependency_links.txt\n'}
+[1.233937] (warehouse_robot_package) StdoutLine: {'line': b'writing entry points to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/entry_points.txt\n'}
+[1.234053] (warehouse_robot_package) StdoutLine: {'line': b'writing requirements to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/requires.txt\n'}
+[1.234165] (warehouse_robot_package) StdoutLine: {'line': b'writing top-level names to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/top_level.txt\n'}
+[1.262402] (warehouse_robot_package) StdoutLine: {'line': b"reading manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'\n"}
+[1.263280] (warehouse_robot_package) StdoutLine: {'line': b"writing manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'\n"}
+[1.263527] (warehouse_robot_package) StdoutLine: {'line': b'running build\n'}
+[1.263604] (warehouse_robot_package) StdoutLine: {'line': b'running build_py\n'}
+[1.263723] (warehouse_robot_package) StdoutLine: {'line': b'copying warehouse_robot_package/beacon.py -> /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package\n'}
+[1.263930] (warehouse_robot_package) StdoutLine: {'line': b'copying warehouse_robot_package/robot.py -> /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package\n'}
+[1.264139] (warehouse_robot_package) StdoutLine: {'line': b'running install\n'}
+[1.264835] (warehouse_robot_package) StdoutLine: {'line': b'running install_lib\n'}
+[1.265857] (warehouse_robot_package) StdoutLine: {'line': b'copying /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package/beacon.py -> /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package\n'}
+[1.266061] (warehouse_robot_package) StdoutLine: {'line': b'copying /home/sam/AST/build/warehouse_robot_package/build/lib/warehouse_robot_package/robot.py -> /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package\n'}
+[1.266620] (warehouse_robot_package) StdoutLine: {'line': b'byte-compiling /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/beacon.py to beacon.cpython-38.pyc\n'}
+[1.268248] (warehouse_robot_package) StdoutLine: {'line': b'byte-compiling /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/robot.py to robot.cpython-38.pyc\n'}
+[1.268627] (warehouse_robot_package) StdoutLine: {'line': b'running install_data\n'}
+[1.269270] (warehouse_robot_package) StdoutLine: {'line': b'copying package.xml -> /home/sam/AST/install/warehouse_robot_package/share/warehouse_robot_package\n'}
+[1.269454] (warehouse_robot_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.271391] (warehouse_robot_package) StdoutLine: {'line': b"removing '/home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[1.271759] (warehouse_robot_package) StdoutLine: {'line': b'Copying ../../build/warehouse_robot_package/warehouse_robot_package.egg-info to /home/sam/AST/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info\n'}
+[1.272685] (warehouse_robot_package) StdoutLine: {'line': b'running install_scripts\n'}
+[1.287097] (warehouse_robot_package) StdoutLine: {'line': b'Installing robot1 = warehouse_robot_package.robot:mainbeacon1 script to /home/sam/AST/install/warehouse_robot_package/lib/warehouse_robot_package\n'}
+[1.287427] (warehouse_robot_package) StdoutLine: {'line': b"writing list of installed files to '/home/sam/AST/build/warehouse_robot_package/install.log'\n"}
+[1.303160] (-) TimerEvent: {}
+[1.305501] (warehouse_robot_package) CommandEnded: {'returncode': 0}
+[1.311521] (warehouse_robot_package) JobEnded: {'identifier': 'warehouse_robot_package', 'rc': 0}
+[1.312060] (-) EventReactorShutdown: {}

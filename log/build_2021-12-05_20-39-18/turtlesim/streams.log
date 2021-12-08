@@ -1,0 +1,77 @@
+[0.012s] Invoking command in '/home/sam/AST/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/sam/AST/src/ros_tutorials/turtlesim -DCMAKE_INSTALL_PREFIX=/home/sam/AST/install/turtlesim
+[0.053s] -- The C compiler identification is GNU 9.3.0
+[0.096s] -- The CXX compiler identification is GNU 9.3.0
+[0.100s] -- Check for working C compiler: /usr/bin/cc
+[0.154s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.154s] -- Detecting C compiler ABI info
+[0.206s] -- Detecting C compiler ABI info - done
+[0.215s] -- Detecting C compile features
+[0.215s] -- Detecting C compile features - done
+[0.217s] -- Check for working CXX compiler: /usr/bin/c++
+[0.278s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.278s] -- Detecting CXX compiler ABI info
+[0.340s] -- Detecting CXX compiler ABI info - done
+[0.349s] -- Detecting CXX compile features
+[0.350s] -- Detecting CXX compile features - done
+[0.351s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.372s] -- Found PythonInterp: /home/sam/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") 
+[0.372s] -- Using PYTHON_EXECUTABLE: /home/sam/anaconda3/bin/python3
+[0.565s] -- Found ament_index_cpp: 1.1.0 (/opt/ros/foxy/share/ament_index_cpp/cmake)
+[0.569s] -- Found geometry_msgs: 2.0.4 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[0.602s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.610s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.678s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[0.702s] -- Found FastRTPS: /opt/ros/foxy/include  
+[0.777s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.884s] -- Found rclcpp: 2.4.0 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.935s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.937s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.938s] -- Looking for pthread.h
+[1.002s] -- Looking for pthread.h - found
+[1.002s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.075s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.075s] -- Looking for pthread_create in pthreads
+[1.135s] -- Looking for pthread_create in pthreads - not found
+[1.135s] -- Looking for pthread_create in pthread
+[1.206s] -- Looking for pthread_create in pthread - found
+[1.208s] -- Found Threads: TRUE  
+[1.345s] -- Found rclcpp_action: 2.4.0 (/opt/ros/foxy/share/rclcpp_action/cmake)
+[1.419s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.431s] -- Found std_srvs: 2.0.4 (/opt/ros/foxy/share/std_srvs/cmake)
+[1.461s] -- Found PythonInterp: /home/sam/anaconda3/bin/python3 (found version "3.8.8") 
+[1.500s] CMake Error at /opt/ros/foxy/share/rosidl_adapter/cmake/rosidl_adapt_interfaces.cmake:60 (message):
+[1.500s]   execute_process(/home/sam/anaconda3/bin/python3 -m rosidl_adapter
+[1.500s]   --package-name turtlesim --arguments-file
+[1.500s]   /home/sam/AST/build/turtlesim/rosidl_adapter__arguments__turtlesim.json
+[1.500s]   --output-dir /home/sam/AST/build/turtlesim/rosidl_adapter/turtlesim
+[1.500s]   --output-file /home/sam/AST/build/turtlesim/rosidl_adapter/turtlesim.idls)
+[1.500s]   returned error code 1:
+[1.500s] 
+[1.500s]   Traceback (most recent call last):
+[1.500s] 
+[1.500s]     File "/home/sam/anaconda3/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+[1.501s]       return _run_code(code, main_globals, None,
+[1.501s]     File "/home/sam/anaconda3/lib/python3.8/runpy.py", line 87, in _run_code
+[1.501s]       exec(code, run_globals)
+[1.501s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__main__.py", line 19, in <module>
+[1.501s]       sys.exit(main())
+[1.501s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/main.py", line 53, in main
+[1.501s]       abs_idl_file = convert_to_idl(
+[1.501s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/__init__.py", line 28, in convert_to_idl
+[1.501s]       from rosidl_adapter.action import convert_action_to_idl
+[1.501s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/action/__init__.py", line 16, in <module>
+[1.501s]       from rosidl_adapter.resource import expand_template
+[1.502s]     File "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_adapter/resource/__init__.py", line 19, in <module>
+[1.502s]       import em
+[1.502s] 
+[1.502s]   ModuleNotFoundError: No module named 'em'
+[1.502s] 
+[1.502s] Call Stack (most recent call first):
+[1.502s]   /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:130 (rosidl_adapt_interfaces)
+[1.502s]   CMakeLists.txt:24 (rosidl_generate_interfaces)
+[1.502s] 
+[1.502s] 
+[1.502s] -- Configuring incomplete, errors occurred!
+[1.503s] See also "/home/sam/AST/build/turtlesim/CMakeFiles/CMakeOutput.log".
+[1.503s] See also "/home/sam/AST/build/turtlesim/CMakeFiles/CMakeError.log".
+[1.509s] Invoked command in '/home/sam/AST/build/turtlesim' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/sam/AST/src/ros_tutorials/turtlesim -DCMAKE_INSTALL_PREFIX=/home/sam/AST/install/turtlesim

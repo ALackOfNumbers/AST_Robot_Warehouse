@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from messages_package/action/MoveItem.action
+// generated code does not contain a copyright notice
+
+#include "messages_package/msg/Coordinates.idl"
+#include "messages_package/msg/Item.idl"
+
+module messages_package {
+  module action {
+    struct MoveItem_Goal {
+      messages_package::msg::Item item;
+
+      messages_package::msg::Coordinates initial_location;
+
+      messages_package::msg::Coordinates final_location;
+    };
+    struct MoveItem_Result {
+      messages_package::msg::Coordinates current_location;
+
+      messages_package::msg::Coordinates target_location;
+    };
+    struct MoveItem_Feedback {
+      boolean success_or_failure;
+
+      string failure_reason;
+    };
+  };
+};

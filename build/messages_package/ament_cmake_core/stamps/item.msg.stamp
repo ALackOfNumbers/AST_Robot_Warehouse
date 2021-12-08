@@ -1,0 +1,4 @@
+string name
+float64 age
+coordinates location
+int64 quantity

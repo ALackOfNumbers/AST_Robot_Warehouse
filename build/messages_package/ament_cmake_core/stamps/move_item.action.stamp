@@ -1,0 +1,9 @@
+item item
+coordinates initial_location
+coordinates final_location
+---
+coordinates current_location
+coordinates target_location
+---
+boolean success_or_failure
+string failure_reason 

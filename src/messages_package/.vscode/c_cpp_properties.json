@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/sam/AST/install/turtlesim/include/**",
+        "/home/sam/AST/src/install/turtlesim/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/sam/AST/src/messages_package/include/**",
+        "/home/sam/AST/src/ros_tutorials/turtlesim/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

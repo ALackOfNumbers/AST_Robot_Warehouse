@@ -1,0 +1,2 @@
+Invoking command in '/home/sam/AST/build/messages_package': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/messages_package -- -j12 -l12
+Invoked command in '/home/sam/AST/build/messages_package' returned '2': CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/messages_package -- -j12 -l12

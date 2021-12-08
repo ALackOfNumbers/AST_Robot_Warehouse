@@ -1,0 +1,58 @@
+[0.031s] Invoking command in '/home/sam/AST/build/messages_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/sam/AST/src/messages_package -DCMAKE_INSTALL_PREFIX=/home/sam/AST/install/messages_package
+[0.314s] -- The C compiler identification is GNU 9.3.0
+[0.315s] -- The CXX compiler identification is GNU 9.3.0
+[0.315s] -- Check for working C compiler: /usr/bin/cc
+[0.315s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.315s] -- Detecting C compiler ABI info
+[0.316s] -- Detecting C compiler ABI info - done
+[0.316s] -- Detecting C compile features
+[0.316s] -- Detecting C compile features - done
+[0.316s] -- Check for working CXX compiler: /usr/bin/c++
+[0.366s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.367s] -- Detecting CXX compiler ABI info
+[0.439s] -- Detecting CXX compiler ABI info - done
+[0.456s] -- Detecting CXX compile features
+[0.456s] -- Detecting CXX compile features - done
+[0.459s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.487s] -- Found PythonInterp: /home/sam/anaconda3/bin/python3 (found suitable version "3.8.8", minimum required is "3") 
+[0.487s] -- Using PYTHON_EXECUTABLE: /home/sam/anaconda3/bin/python3
+[0.703s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[0.768s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.769s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.769s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/sam/AST/src/messages_package/include>
+[0.769s] -- Configured cppcheck exclude dirs and/or files: 
+[0.770s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[0.770s] -- Configured cpplint exclude dirs and/or files: 
+[0.770s] -- Added test 'lint_cmake' to check CMake code style
+[0.771s] -- Added test 'uncrustify' to check C / C++ code style
+[0.771s] -- Configured uncrustify additional arguments: 
+[0.771s] -- Added test 'xmllint' to check XML markup files
+[0.773s] -- Configuring done
+[0.776s] -- Generating done
+[0.776s] -- Build files have been written to: /home/sam/AST/build/messages_package
+[0.779s] Invoked command in '/home/sam/AST/build/messages_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake /home/sam/AST/src/messages_package -DCMAKE_INSTALL_PREFIX=/home/sam/AST/install/messages_package
+[0.781s] Invoking command in '/home/sam/AST/build/messages_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/messages_package -- -j12 -l12
+[0.812s] [35m[1mScanning dependencies of target messages_node[0m
+[0.820s] [ 50%] [32mBuilding CXX object CMakeFiles/messages_node.dir/src/messages_node.cpp.o[0m
+[0.843s] [100%] [32m[1mLinking CXX executable messages_node[0m
+[0.880s] [100%] Built target messages_node
+[0.889s] Invoked command in '/home/sam/AST/build/messages_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/messages_package -- -j12 -l12
+[0.910s] Invoking command in '/home/sam/AST/build/messages_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/sam/AST/build/messages_package
+[0.917s] -- Install configuration: ""
+[0.917s] -- Installing: /home/sam/AST/install/messages_package/lib/messages_package/messages_node
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/ament_index/resource_index/package_run_dependencies/messages_package
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/ament_index/resource_index/parent_prefix_path/messages_package
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/environment/ament_prefix_path.sh
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/environment/ament_prefix_path.dsv
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/environment/path.sh
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/environment/path.dsv
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/local_setup.bash
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/local_setup.sh
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/local_setup.zsh
+[0.918s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/local_setup.dsv
+[0.919s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/package.dsv
+[0.919s] -- Installing: /home/sam/AST/install/messages_package/share/ament_index/resource_index/packages/messages_package
+[0.919s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_packageConfig.cmake
+[0.919s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/cmake/messages_packageConfig-version.cmake
+[0.919s] -- Installing: /home/sam/AST/install/messages_package/share/messages_package/package.xml
+[0.922s] Invoked command in '/home/sam/AST/build/messages_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/sam/AST/build/messages_package

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from messages_package/action/ChargeRobot.action
+// generated code does not contain a copyright notice
+
+#include "messages_package/msg/Coordinates.idl"
+
+module messages_package {
+  module action {
+    struct ChargeRobot_Goal {
+      messages_package::msg::Coordinates charger_location;
+    };
+    struct ChargeRobot_Result {
+      int64 current_battery_level;
+    };
+    struct ChargeRobot_Feedback {
+      int64 final_battery_level;
+    };
+  };
+};

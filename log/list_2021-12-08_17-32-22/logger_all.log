@@ -1,0 +1,118 @@
+[0.316s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'list', '-p', '--base-paths', '/home/sam/AST']
+[0.316s] DEBUG:colcon:Parsed command line arguments: Namespace(base_paths=['/home/sam/AST'], build_base='build', ignore_user_meta=False, log_base=None, log_level=None, main=<bound method ListVerb.main of <colcon_package_information.verb.list.ListVerb object at 0x7f0832e01370>>, metas=['./colcon.meta'], names_only=False, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=None, packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, paths=None, paths_only=True, topological_graph=False, topological_graph_density=False, topological_graph_dot=False, topological_graph_dot_cluster=False, topological_graph_dot_include_skipped=False, topological_graph_legend=False, topological_order=False, verb_extension=<colcon_package_information.verb.list.ListVerb object at 0x7f0832e01370>, verb_name='list', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f0832c86790>)
+[0.337s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.338s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.338s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/sam/AST'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extensions ['ignore', 'ignore_ament_install']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'ignore'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'ignore_ament_install'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extensions ['colcon_pkg']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'colcon_pkg'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extensions ['colcon_meta']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'colcon_meta'
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extensions ['ros']
+[0.338s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'ros'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extensions ['cmake', 'python']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'cmake'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'python'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extensions ['python_setup_py']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST) by extension 'python_setup_py'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/build) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/build) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/build) ignored
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/install) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/install) by extension 'ignore'
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/install) ignored
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/log) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/log) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/log) ignored
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extensions ['ignore', 'ignore_ament_install']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extensions ['ros']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'ros'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extensions ['cmake', 'python']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'cmake'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'python'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extensions ['python_setup_py']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src) by extension 'python_setup_py'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/build) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/build) ignored
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/install) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/install) ignored
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/log) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/log) ignored
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extensions ['ignore', 'ignore_ament_install']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extension 'ignore'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extension 'ignore_ament_install'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extensions ['colcon_pkg']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extension 'colcon_pkg'
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extensions ['colcon_meta']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extension 'colcon_meta'
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extensions ['ros']
+[0.351s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/messages_package) by extension 'ros'
+[0.353s] DEBUG:colcon.colcon_core.package_identification:Package '/home/sam/AST/src/messages_package' with type 'ros.ament_cmake' and name 'messages_package'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extensions ['ignore', 'ignore_ament_install']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extension 'ignore'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extension 'ignore_ament_install'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extensions ['colcon_pkg']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extension 'colcon_pkg'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extensions ['colcon_meta']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extension 'colcon_meta'
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extensions ['ros']
+[0.353s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/py_pubsub) by extension 'ros'
+[0.354s] DEBUG:colcon.colcon_core.package_identification:Package '/home/sam/AST/src/py_pubsub' with type 'ros.ament_python' and name 'py_pubsub'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'ignore_ament_install'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extensions ['colcon_pkg']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'colcon_pkg'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extensions ['colcon_meta']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'colcon_meta'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extensions ['ros']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'ros'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extensions ['cmake', 'python']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'cmake'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'python'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extensions ['python_setup_py']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials) by extension 'python_setup_py'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/ros_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/ros_tutorials) by extension 'ignore'
+[0.354s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/ros_tutorials) ignored
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/roscpp_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/roscpp_tutorials) by extension 'ignore'
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/roscpp_tutorials) ignored
+[0.355s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/rospy_tutorials) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/rospy_tutorials) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/rospy_tutorials) ignored
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extensions ['ignore', 'ignore_ament_install']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extension 'ignore'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extension 'ignore_ament_install'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extensions ['colcon_pkg']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extension 'colcon_pkg'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extensions ['colcon_meta']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extension 'colcon_meta'
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extensions ['ros']
+[0.356s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/ros_tutorials/turtlesim) by extension 'ros'
+[0.357s] DEBUG:colcon.colcon_core.package_identification:Package '/home/sam/AST/src/ros_tutorials/turtlesim' with type 'ros.ament_cmake' and name 'turtlesim'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extensions ['ignore', 'ignore_ament_install']
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extension 'ignore'
+[0.357s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extension 'ignore_ament_install'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extensions ['colcon_pkg']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extension 'colcon_pkg'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extensions ['colcon_meta']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extension 'colcon_meta'
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extensions ['ros']
+[0.358s] Level 1:colcon.colcon_core.package_identification:_identify(/home/sam/AST/src/warehouse_robot_package) by extension 'ros'
+[0.358s] DEBUG:colcon.colcon_core.package_identification:Package '/home/sam/AST/src/warehouse_robot_package' with type 'ros.ament_python' and name 'warehouse_robot_package'
+[0.358s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults

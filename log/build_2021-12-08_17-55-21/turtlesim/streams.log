@@ -1,0 +1,19 @@
+[0.262s] Invoking command in '/home/sam/AST/build/turtlesim': CMAKE_PREFIX_PATH=/opt/ros/foxy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/sam/AST/build/turtlesim -- -j12 -l12
+[0.565s] [  1%] Built target turtlesim__cpp
+[0.566s] [ 11%] Built target turtlesim__rosidl_generator_c
+[0.566s] [ 21%] Built target turtlesim__rosidl_typesupport_introspection_cpp
+[0.566s] [ 31%] Built target turtlesim__rosidl_typesupport_cpp
+[0.566s] [ 41%] Built target turtlesim__rosidl_typesupport_c
+[0.566s] [ 51%] Built target turtlesim__rosidl_typesupport_introspection_c
+[0.566s] [ 61%] Built target turtlesim__rosidl_typesupport_fastrtps_cpp
+[0.566s] [ 71%] Built target turtlesim__rosidl_typesupport_fastrtps_c
+[0.566s] [ 71%] Built target turtlesim
+[0.566s] [ 72%] Built target turtlesim__py
+[0.566s] [ 74%] Built target mimic
+[0.566s] [ 78%] Built target draw_square
+[0.566s] [ 78%] Built target turtle_teleop_key
+[0.566s] [ 84%] Built target turtlesim_node
+[0.567s] [ 93%] Built target turtlesim__python
+[0.567s] [ 95%] Built target turtlesim__rosidl_typesupport_c__pyext
+[0.567s] [ 97%] Built target turtlesim__rosidl_typesupport_introspection_c__pyext
+[0.567s] [100%] Built target turtlesim__rosidl_typesupport_fastrtps_c__pyext

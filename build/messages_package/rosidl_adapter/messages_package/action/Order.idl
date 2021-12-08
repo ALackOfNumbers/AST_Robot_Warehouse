@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from messages_package/action/Order.action
+// generated code does not contain a copyright notice
+
+#include "messages_package/msg/Item.idl"
+
+module messages_package {
+  module action {
+    struct Order_Goal {
+      sequence<messages_package::msg::Item> items;
+    };
+    struct Order_Result {
+      string order_status;
+    };
+    struct Order_Feedback {
+      boolean success_or_failure;
+
+      string failure_reason;
+    };
+  };
+};
