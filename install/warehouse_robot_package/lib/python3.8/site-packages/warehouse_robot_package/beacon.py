@@ -17,14 +17,14 @@ from rclpy.node import Node
 
 from messages_package.msg import RobotDistance
 
-class MinimalPublisher(Node):
+class Beacon(Node):
 
     def __init__(self):
         #Calls the node classes contructor and passes a node name
-        super().__init__('minimal_publisher')
+        super().__init__('beacon_instance')
         #Declares self as a publisher that publishes String messages to the 'topic' topic with a queue size of 10
         #Queue size is a QoS setting that limits the amount of queued messages if a subscriber is not receiving them fast enough
-        self.publisher_ = self.create_publisher(RobotDistance, 'topic', 10)
+        self.publisher_ = self.create_publisher(RobotDistance, 'beacon_distance', 10)
         #Period defined for the timer
         timer_period = 0.5  # seconds
         #Timer is created with a callback that is executed every 0.5 seconds
@@ -50,14 +50,14 @@ def main(args=None):
     #Initializes rclpy
     rclpy.init(args=args)
     #Creates the node
-    minimal_publisher = MinimalPublisher()
+    beacon_instance = Beacon()
     #"Spins" the node to callbacks are called
-    rclpy.spin(minimal_publisher)
+    rclpy.spin(beacon_instance)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    minimal_publisher.destroy_node()
+    beacon_instance.destroy_node()
     rclpy.shutdown()
 
 

@@ -14,5 +14,5 @@ test/test_flake8.py
 test/test_pep257.py
 warehouse_robot_package/__init__.py
 warehouse_robot_package/beacon.py
+warehouse_robot_package/order_console.py
 warehouse_robot_package/robot.py
-warehouse_robot_package/warehouse_robot.py

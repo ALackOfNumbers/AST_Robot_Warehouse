@@ -17,14 +17,14 @@ from rclpy.node import Node
 
 from messages_package.msg import RobotDistance
 
-class MinimalSubscriber(Node):
+class Robot(Node):
 
     def __init__(self):
-        super().__init__('minimal_subscriber')
+        super().__init__('robot_instance')
         #Topic name and message type must match between publisher and subscriber
         self.subscription = self.create_subscription(
             RobotDistance,
-            'topic',
+            'beacon_distance',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
@@ -39,14 +39,14 @@ class MinimalSubscriber(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    minimal_subscriber = MinimalSubscriber()
+    robot_instance = Robot()
 
-    rclpy.spin(minimal_subscriber)
+    rclpy.spin(robot_instance)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    minimal_subscriber.destroy_node()
+    robot_instance.destroy_node()
     rclpy.shutdown()
 
 

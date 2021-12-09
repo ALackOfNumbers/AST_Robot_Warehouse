@@ -12,41 +12,40 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from typing import List
 import rclpy
 from rclpy.node import Node
 
-from messages_package.msg import RobotDistance
+from messages_package import Map
 
-class Robot(Node):
+class OrderConsole(Node):
 
     def __init__(self):
-        super().__init__('robot_instance')
+        super().__init__('order_console_instance')
         #Topic name and message type must match between publisher and subscriber
         self.subscription = self.create_subscription(
-            RobotDistance,
-            'beacon_distance',
+            Map,
+            'map',
             self.listener_callback,
             10)
         self.subscription  # prevent unused variable warning
-        self.serial_number = 5
 
     #Listener callback is called as soon as a message is received
     def listener_callback(self, msg):
-        if msg.robot_number == self.serial_number:
-            self.get_logger().info('Beacon distance: "%s"' % msg.robot_distance)
+        self.get_logger().info('%s' % msg.map_array)
 
 
 def main(args=None):
     rclpy.init(args=args)
 
-    robot_instance = Robot()
+    order_console_instance = OrderConsole()
 
-    rclpy.spin(robot_instance)
+    rclpy.spin(order_console_instance)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically
     # when the garbage collector destroys the node object)
-    robot_instance.destroy_node()
+    order_console_instance.destroy_node()
     rclpy.shutdown()
 
 
