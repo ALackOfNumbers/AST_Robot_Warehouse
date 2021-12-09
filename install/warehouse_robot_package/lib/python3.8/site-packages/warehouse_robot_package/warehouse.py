@@ -16,6 +16,7 @@ import rclpy
 from rclpy.node import Node
 
 #Imports string message type. We will import our own message types from our message package
+from std_msgs.msg import String
 import messages_package.msg as mp
 
 class Warehouse(Node):
@@ -33,11 +34,18 @@ class Warehouse(Node):
         #Iterator used in the callback
         self.i = 0
 
-        self.subscriber_ = self.create_subscription(
-            mp.RobotDistance,
-            'beacon_distance',
-            self.listener_callback,
+        self.subscriber_location = self.create_subscription(
+            mp.RobotLocation,
+            'robot_location',
+            self.listener_callback_location,
             10)
+
+        self.subscriber_state = self.create_subscription(
+            String,
+            'robot_state',
+            self.listener_callback_state,
+            10)
+        
 
     #Callback from the timer
     def timer_callback(self):
@@ -57,8 +65,13 @@ class Warehouse(Node):
         #Increase the iterator value
         self.i += 1
 
-    def listener_callback(self, msg):
-        self.get_logger().info('Beacon distance: "%s"' % msg.robot_distance)
+    def listener_callback_location(self, msg):
+        self.get_logger().info('Robot number: %i"' % msg.robot_number)
+        self.get_logger().info('X coordinate: %f"' % msg.robot_location.x)
+        self.get_logger().info('Y coordinate: %f"' % msg.robot_location.y)
+    
+    def listener_callback_state(self, msg):
+        self.get_logger().info('Robot state: %s' % msg.data)
 
 def main(args=None):
     #Initializes rclpy
