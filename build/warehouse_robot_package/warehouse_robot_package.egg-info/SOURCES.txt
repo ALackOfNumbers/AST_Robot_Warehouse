@@ -16,3 +16,4 @@ warehouse_robot_package/__init__.py
 warehouse_robot_package/beacon.py
 warehouse_robot_package/order_console.py
 warehouse_robot_package/robot.py
+warehouse_robot_package/warehouse.py

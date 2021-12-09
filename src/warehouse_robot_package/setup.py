@@ -20,10 +20,14 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            #Entry point for the publisher
+            #Entry point for the beacon
             'beacon = warehouse_robot_package.beacon:main',
-            #Entry point for the subscriber
+            #Entry point for the robot
             'robot = warehouse_robot_package.robot:main',
+            #Entry point for the order console
+            'order_console = warehouse_robot_package.order_console:main',
+            #Entry point for the warehouse
+            'warehouse = warehouse_robot_package.warehouse:main',
         ],
     },
 )
