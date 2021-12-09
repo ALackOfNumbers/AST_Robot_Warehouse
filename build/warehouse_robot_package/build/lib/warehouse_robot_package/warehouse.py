@@ -33,6 +33,12 @@ class Warehouse(Node):
         #Iterator used in the callback
         self.i = 0
 
+        self.subscriber_ = self.create_subscription(
+            mp.RobotDistance,
+            'beacon_distance',
+            self.listener_callback,
+            10)
+
     #Callback from the timer
     def timer_callback(self):
         #Create message string
@@ -51,6 +57,8 @@ class Warehouse(Node):
         #Increase the iterator value
         self.i += 1
 
+    def listener_callback(self, msg):
+        self.get_logger().info('Beacon distance: "%s"' % msg.robot_distance)
 
 def main(args=None):
     #Initializes rclpy
