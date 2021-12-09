@@ -10,10 +10,14 @@ msg/Delivery.idl
 msg/Delivery.msg
 msg/Item.idl
 msg/Item.msg
+msg/Map.idl
+msg/Map.msg
 msg/RobotDistance.idl
 msg/RobotDistance.msg
 msg/RobotLocation.idl
 msg/RobotLocation.msg
+msg/Row.idl
+msg/Row.msg
 srv/Delivery.idl
 srv/Delivery.srv
 srv/Delivery_Request.msg

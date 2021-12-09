@@ -16,8 +16,7 @@ import rclpy
 from rclpy.node import Node
 
 #Imports string message type. We will import our own message types from our message package
-from messages_package import Map
-
+import messages_package.msg as mp
 
 class Warehouse(Node):
 
@@ -26,9 +25,9 @@ class Warehouse(Node):
         super().__init__('warehouse_instance')
         #Declares self as a publisher that publishes String messages to the 'topic' topic with a queue size of 10
         #Queue size is a QoS setting that limits the amount of queued messafe if a subscriber is not receiving them fast enough
-        self.publisher_ = self.create_publisher(Map, 'map', 10)
+        self.publisher_ = self.create_publisher(mp.Map, 'map', 10)
         #Period defined for the timer
-        timer_period = 0.5  # seconds
+        timer_period = 3  # seconds
         #Timer is created with a callback that is executed every 0.5 seconds
         self.timer = self.create_timer(timer_period, self.timer_callback)
         #Iterator used in the callback
@@ -37,9 +36,14 @@ class Warehouse(Node):
     #Callback from the timer
     def timer_callback(self):
         #Create message string
-        msg = Map()
-        #Add data to the string, which is hello world and the iterator int
-        msg.map_array = '-----\n |R[]|\n| C |\n|D D|\n-----'
+        msg = mp.Map()
+        #Add data to the string
+        row1 = mp.Row(row = '-----')
+        row2 = mp.Row(row = '|R[]|')
+        row3 = mp.Row(row = '| C |')
+        row4 = mp.Row(row = '|D D|')
+        row5 = mp.Row(row = '-----')
+        msg.map_array = [row1,row2,row3,row4,row5]
         #Publish the message
         self.publisher_.publish(msg)
         #Log the message that was published

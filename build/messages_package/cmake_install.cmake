@@ -395,6 +395,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/messages_package/msg" TYPE FILE FILES "/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_adapter/messages_package/msg/Map.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/messages_package/msg" TYPE FILE FILES "/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_adapter/messages_package/msg/Row.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/messages_package/srv" TYPE FILE FILES "/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_adapter/messages_package/srv/Delivery.idl")
 endif()
 
@@ -436,6 +444,14 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/messages_package/msg" TYPE FILE FILES "/home/sam/AST_Robot_Warehouse/src/messages_package/msg/RobotLocation.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/messages_package/msg" TYPE FILE FILES "/home/sam/AST_Robot_Warehouse/src/messages_package/msg/Map.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/messages_package/msg" TYPE FILE FILES "/home/sam/AST_Robot_Warehouse/src/messages_package/msg/Row.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

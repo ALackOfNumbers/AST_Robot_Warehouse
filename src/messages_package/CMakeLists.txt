@@ -50,6 +50,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Item.msg"
   "msg/RobotDistance.msg"
   "msg/RobotLocation.msg"
+  "msg/Map.msg"
+  "msg/Row.msg"
   #Service files
   "srv/Delivery.srv"
   "srv/PickUpItem.srv"

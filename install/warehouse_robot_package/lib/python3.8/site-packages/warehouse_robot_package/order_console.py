@@ -16,7 +16,7 @@ from typing import List
 import rclpy
 from rclpy.node import Node
 
-from messages_package import Map
+import messages_package.msg as mp
 
 class OrderConsole(Node):
 
@@ -24,7 +24,7 @@ class OrderConsole(Node):
         super().__init__('order_console_instance')
         #Topic name and message type must match between publisher and subscriber
         self.subscription = self.create_subscription(
-            Map,
+            mp.Map,
             'map',
             self.listener_callback,
             10)
@@ -32,7 +32,8 @@ class OrderConsole(Node):
 
     #Listener callback is called as soon as a message is received
     def listener_callback(self, msg):
-        self.get_logger().info('%s' % msg.map_array)
+        for row in msg.map_array:
+            self.get_logger().info('%s' %row)
 
 
 def main(args=None):

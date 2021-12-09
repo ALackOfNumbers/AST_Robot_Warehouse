@@ -117,12 +117,18 @@ CMakeFiles/messages_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py
  rosidl_generator_c/messages_package/msg/detail/item__functions.h
  rosidl_generator_c/messages_package/msg/detail/item__struct.h
  rosidl_generator_c/messages_package/msg/detail/item__type_support.h
+ rosidl_generator_c/messages_package/msg/detail/map__functions.h
+ rosidl_generator_c/messages_package/msg/detail/map__struct.h
+ rosidl_generator_c/messages_package/msg/detail/map__type_support.h
  rosidl_generator_c/messages_package/msg/detail/robot_distance__functions.h
  rosidl_generator_c/messages_package/msg/detail/robot_distance__struct.h
  rosidl_generator_c/messages_package/msg/detail/robot_distance__type_support.h
  rosidl_generator_c/messages_package/msg/detail/robot_location__functions.h
  rosidl_generator_c/messages_package/msg/detail/robot_location__struct.h
  rosidl_generator_c/messages_package/msg/detail/robot_location__type_support.h
+ rosidl_generator_c/messages_package/msg/detail/row__functions.h
+ rosidl_generator_c/messages_package/msg/detail/row__struct.h
+ rosidl_generator_c/messages_package/msg/detail/row__type_support.h
  rosidl_generator_c/messages_package/msg/rosidl_generator_c__visibility_control.h
  rosidl_generator_c/messages_package/srv/detail/delivery__functions.h
  rosidl_generator_c/messages_package/srv/detail/delivery__struct.h

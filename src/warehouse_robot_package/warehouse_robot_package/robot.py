@@ -15,7 +15,7 @@
 import rclpy
 from rclpy.node import Node
 
-from messages_package.msg import RobotDistance
+import messages_package.msg as mp
 
 class Robot(Node):
 
@@ -23,7 +23,7 @@ class Robot(Node):
         super().__init__('robot_instance')
         #Topic name and message type must match between publisher and subscriber
         self.subscription = self.create_subscription(
-            RobotDistance,
+            mp.RobotDistance,
             'beacon_distance',
             self.listener_callback,
             10)

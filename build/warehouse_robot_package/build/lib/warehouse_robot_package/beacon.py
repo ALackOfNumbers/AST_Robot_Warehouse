@@ -15,7 +15,7 @@
 import rclpy
 from rclpy.node import Node
 
-from messages_package.msg import RobotDistance
+import messages_package.msg as mp
 
 class Beacon(Node):
 
@@ -24,7 +24,7 @@ class Beacon(Node):
         super().__init__('beacon_instance')
         #Declares self as a publisher that publishes String messages to the 'topic' topic with a queue size of 10
         #Queue size is a QoS setting that limits the amount of queued messages if a subscriber is not receiving them fast enough
-        self.publisher_ = self.create_publisher(RobotDistance, 'beacon_distance', 10)
+        self.publisher_ = self.create_publisher(mp.RobotDistance, 'beacon_distance', 10)
         #Period defined for the timer
         timer_period = 0.5  # seconds
         #Timer is created with a callback that is executed every 0.5 seconds
@@ -35,7 +35,7 @@ class Beacon(Node):
     #Callback from the timer
     def timer_callback(self):
         #Create message
-        msg = RobotDistance()
+        msg = mp.RobotDistance()
         msg.robot_number = 5
         msg.robot_distance = 0.0+self.i
         #Publish the message

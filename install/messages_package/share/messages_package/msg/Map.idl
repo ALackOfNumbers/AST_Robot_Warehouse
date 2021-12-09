@@ -1,0 +1,15 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from messages_package/msg/Map.msg
+// generated code does not contain a copyright notice
+
+#include "messages_package/msg/Row.idl"
+
+module messages_package {
+  module msg {
+    typedef messages_package::msg::Row messages_package__msg__Row;
+    typedef messages_package__msg__Row messages_package__msg__Row__5[5];
+    struct Map {
+      messages_package__msg__Row__5 map_array;
+    };
+  };
+};
