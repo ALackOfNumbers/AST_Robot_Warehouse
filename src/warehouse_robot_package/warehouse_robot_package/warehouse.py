@@ -46,7 +46,6 @@ class Warehouse(Node):
             self.listener_callback_state,
             10)
         
-
     #Callback from the timer
     def timer_callback(self):
         #Create message string
