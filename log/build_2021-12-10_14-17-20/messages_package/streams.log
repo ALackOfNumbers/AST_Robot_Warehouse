@@ -1,0 +1,6 @@
+[0.034s] Invoking command in '/home/kunal/AST_Robot_Warehouse/build/messages_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/kunal/AST_Robot_Warehouse/build/messages_package -- -j16 -l16
+[0.211s] CMake Error: The current CMakeCache.txt directory /home/kunal/AST_Robot_Warehouse/build/messages_package/CMakeCache.txt is different than the directory /home/sam/AST_Robot_Warehouse/build/messages_package where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt
+[0.212s] CMake Error: The source directory "/home/sam/AST_Robot_Warehouse/src/messages_package" does not exist.
+[0.214s] Specify --help for usage, or press the help button on the CMake GUI.
+[0.214s] make: *** [Makefile:3672: cmake_check_build_system] Error 1
+[0.214s] Invoked command in '/home/kunal/AST_Robot_Warehouse/build/messages_package' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/kunal/AST_Robot_Warehouse/build/messages_package -- -j16 -l16

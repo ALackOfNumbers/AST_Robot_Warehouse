@@ -48,8 +48,8 @@ class Robot(Node):
         msg.robot_location = mp.Coordinates(x = 13.58+self.i, y = 27.62+self.i)
         self.publisher_location.publish(msg)
         #Log the message that was published
-        self.get_logger().info('%f'% msg.robot_location.x)
-        self.get_logger().info('%f'% msg.robot_location.y)
+        self.get_logger().info('%f %f'% (msg.robot_location.x,msg.robot_location.y))
+        #self.get_logger().info('%f'% msg.robot_location.y)
 
         msg = String()
         msg.data = 'Idle'

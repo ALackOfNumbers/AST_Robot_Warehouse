@@ -6,5 +6,5 @@ CXX_FLAGS =   -Wall -Wextra -Wpedantic -std=gnu++14
 
 CXX_DEFINES = -DROS_PACKAGE_NAME=\"messages_package\"
 
-CXX_INCLUDES = -I/home/sam/AST_Robot_Warehouse/src/messages_package/include 
+CXX_INCLUDES = -I/home/kunal/AST_Robot_Warehouse/src/messages_package/include 
 
