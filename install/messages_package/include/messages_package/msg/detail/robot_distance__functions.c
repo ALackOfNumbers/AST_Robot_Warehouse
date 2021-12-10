@@ -17,6 +17,7 @@ messages_package__msg__RobotDistance__init(messages_package__msg__RobotDistance 
   }
   // robot_number
   // robot_distance
+  // beacon_number
   return true;
 }
 
@@ -28,6 +29,7 @@ messages_package__msg__RobotDistance__fini(messages_package__msg__RobotDistance 
   }
   // robot_number
   // robot_distance
+  // beacon_number
 }
 
 messages_package__msg__RobotDistance *

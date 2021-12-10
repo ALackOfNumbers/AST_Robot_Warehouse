@@ -8,6 +8,7 @@
     "/home/sam/AST_Robot_Warehouse/src/messages_package:msg/RobotLocation.msg",
     "/home/sam/AST_Robot_Warehouse/src/messages_package:msg/Map.msg",
     "/home/sam/AST_Robot_Warehouse/src/messages_package:msg/Row.msg",
+    "/home/sam/AST_Robot_Warehouse/src/messages_package:msg/RobotState.msg",
     "/home/sam/AST_Robot_Warehouse/src/messages_package:srv/Delivery.srv",
     "/home/sam/AST_Robot_Warehouse/src/messages_package:srv/PickUpItem.srv",
     "/home/sam/AST_Robot_Warehouse/src/messages_package:srv/PutDownItem.srv",

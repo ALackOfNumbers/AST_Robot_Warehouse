@@ -31,7 +31,7 @@ void RobotDistance__rosidl_typesupport_introspection_c__RobotDistance_fini_funct
   messages_package__msg__RobotDistance__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember RobotDistance__rosidl_typesupport_introspection_c__RobotDistance_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember RobotDistance__rosidl_typesupport_introspection_c__RobotDistance_message_member_array[3] = {
   {
     "robot_number",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
@@ -61,13 +61,28 @@ static rosidl_typesupport_introspection_c__MessageMember RobotDistance__rosidl_t
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "beacon_number",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(messages_package__msg__RobotDistance, beacon_number),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers RobotDistance__rosidl_typesupport_introspection_c__RobotDistance_message_members = {
   "messages_package__msg",  // message namespace
   "RobotDistance",  // message name
-  2,  // number of fields
+  3,  // number of fields
   sizeof(messages_package__msg__RobotDistance),
   RobotDistance__rosidl_typesupport_introspection_c__RobotDistance_message_member_array,  // message members
   RobotDistance__rosidl_typesupport_introspection_c__RobotDistance_init_function,  // function to initialize message memory (memory has to be allocated)

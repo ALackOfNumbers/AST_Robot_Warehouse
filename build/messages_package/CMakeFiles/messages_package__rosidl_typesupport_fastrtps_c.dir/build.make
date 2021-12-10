@@ -72,6 +72,7 @@ rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_ty
 rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/messages_package/msg/RobotLocation.idl
 rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/messages_package/msg/Map.idl
 rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/messages_package/msg/Row.idl
+rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/messages_package/msg/RobotState.idl
 rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/messages_package/srv/Delivery.idl
 rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/messages_package/srv/PickUpItem.idl
 rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/messages_package/srv/PutDownItem.idl
@@ -126,6 +127,12 @@ rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__rosidl_typesuppor
 
 rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp
 
 rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_c.h
@@ -254,9 +261,22 @@ CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp.s
 
+CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp
+
+CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp > CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.i
+
+CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.s
+
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.i: cmake_force
@@ -269,7 +289,7 @@ CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.i: cmake_force
@@ -282,7 +302,7 @@ CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.i: cmake_force
@@ -295,7 +315,7 @@ CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.o: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.o -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.i: cmake_force
@@ -308,7 +328,7 @@ CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.o: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.o -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.i: cmake_force
@@ -321,7 +341,7 @@ CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesuppor
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.o: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.o -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp
 
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.i: cmake_force
@@ -341,6 +361,7 @@ messages_package__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_location__type_support_c.cpp.o" \
 "CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/map__type_support_c.cpp.o" \
 "CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp.o" \
+"CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o" \
 "CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o" \
 "CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o" \
 "CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o" \
@@ -358,6 +379,7 @@ libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_packa
 libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_location__type_support_c.cpp.o
 libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/map__type_support_c.cpp.o
 libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp.o
+libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o
 libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o
 libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o
 libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o
@@ -406,7 +428,7 @@ libmessages_package__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu
 libmessages_package__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 libmessages_package__rosidl_typesupport_fastrtps_c.so: /opt/ros/foxy/lib/libfastcdr.so.1.0.13
 libmessages_package__rosidl_typesupport_fastrtps_c.so: CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library libmessages_package__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX shared library libmessages_package__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -432,6 +454,8 @@ CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_ty
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/map__type_support_c.cpp
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp
+CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp
 CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__rosidl_typesupport_fastrtps_c.h

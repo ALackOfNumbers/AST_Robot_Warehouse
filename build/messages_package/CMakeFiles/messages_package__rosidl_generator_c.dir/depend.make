@@ -105,6 +105,15 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_location__functions.c.o: rosidl_generator_c/messages_package/msg/detail/robot_location__struct.h
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_location__functions.c.o: rosidl_generator_c/messages_package/msg/rosidl_generator_c__visibility_control.h
 
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/string.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/string_functions.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: rosidl_generator_c/messages_package/msg/detail/robot_state__functions.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: rosidl_generator_c/messages_package/msg/detail/robot_state__struct.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: rosidl_generator_c/messages_package/msg/rosidl_generator_c__visibility_control.h
+
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.o: rosidl_generator_c/messages_package/msg/detail/row__functions.c
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.o: /opt/ros/foxy/include/rosidl_runtime_c/string.h

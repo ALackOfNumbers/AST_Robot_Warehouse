@@ -222,6 +222,26 @@ rosidl_typesupport_c/visibility_control.h
 rosidl_typesupport_interface/macros.h
 /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/rosidl_typesupport_interface/macros.h
 
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/robot_state__type_support.cpp
+cstddef
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/cstddef
+rosidl_runtime_c/message_type_support_struct.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/rosidl_runtime_c/message_type_support_struct.h
+messages_package/msg/rosidl_typesupport_c__visibility_control.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/messages_package/msg/rosidl_typesupport_c__visibility_control.h
+messages_package/msg/detail/robot_state__struct.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/messages_package/msg/detail/robot_state__struct.h
+rosidl_typesupport_c/identifier.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/rosidl_typesupport_c/identifier.h
+rosidl_typesupport_c/message_type_support_dispatch.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/rosidl_typesupport_c/message_type_support_dispatch.h
+rosidl_typesupport_c/type_support_map.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/rosidl_typesupport_c/type_support_map.h
+rosidl_typesupport_c/visibility_control.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/rosidl_typesupport_c/visibility_control.h
+rosidl_typesupport_interface/macros.h
+/home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/rosidl_typesupport_interface/macros.h
+
 /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/row__type_support.cpp
 cstddef
 /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_typesupport_c/messages_package/msg/cstddef
@@ -703,6 +723,16 @@ stdint.h
 -
 messages_package/msg/detail/coordinates__struct.h
 rosidl_generator_c/messages_package/msg/detail/messages_package/msg/detail/coordinates__struct.h
+
+rosidl_generator_c/messages_package/msg/detail/robot_state__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
+rosidl_runtime_c/string.h
+rosidl_generator_c/messages_package/msg/detail/rosidl_runtime_c/string.h
 
 rosidl_generator_c/messages_package/msg/detail/row__struct.h
 stdbool.h

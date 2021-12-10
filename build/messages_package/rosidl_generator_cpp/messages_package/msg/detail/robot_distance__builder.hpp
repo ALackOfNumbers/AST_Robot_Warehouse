@@ -20,16 +20,32 @@ namespace msg
 namespace builder
 {
 
+class Init_RobotDistance_beacon_number
+{
+public:
+  explicit Init_RobotDistance_beacon_number(::messages_package::msg::RobotDistance & msg)
+  : msg_(msg)
+  {}
+  ::messages_package::msg::RobotDistance beacon_number(::messages_package::msg::RobotDistance::_beacon_number_type arg)
+  {
+    msg_.beacon_number = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::messages_package::msg::RobotDistance msg_;
+};
+
 class Init_RobotDistance_robot_distance
 {
 public:
   explicit Init_RobotDistance_robot_distance(::messages_package::msg::RobotDistance & msg)
   : msg_(msg)
   {}
-  ::messages_package::msg::RobotDistance robot_distance(::messages_package::msg::RobotDistance::_robot_distance_type arg)
+  Init_RobotDistance_beacon_number robot_distance(::messages_package::msg::RobotDistance::_robot_distance_type arg)
   {
     msg_.robot_distance = std::move(arg);
-    return std::move(msg_);
+    return Init_RobotDistance_beacon_number(msg_);
   }
 
 private:

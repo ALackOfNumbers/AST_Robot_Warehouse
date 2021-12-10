@@ -22,6 +22,7 @@ typedef struct messages_package__msg__RobotDistance
 {
   int64_t robot_number;
   double robot_distance;
+  int64_t beacon_number;
 } messages_package__msg__RobotDistance;
 
 // Struct for a sequence of messages_package__msg__RobotDistance.

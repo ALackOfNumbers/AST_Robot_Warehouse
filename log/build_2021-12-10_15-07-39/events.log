@@ -1,0 +1,791 @@
+[0.000000] (-) TimerEvent: {}
+[0.000126] (messages_package) JobQueued: {'identifier': 'messages_package', 'dependencies': OrderedDict()}
+[0.000200] (py_pubsub) JobQueued: {'identifier': 'py_pubsub', 'dependencies': OrderedDict()}
+[0.000289] (warehouse_robot_package) JobQueued: {'identifier': 'warehouse_robot_package', 'dependencies': OrderedDict([('messages_package', '/home/sam/AST_Robot_Warehouse/install/messages_package')])}
+[0.000979] (messages_package) JobStarted: {'identifier': 'messages_package'}
+[0.011182] (py_pubsub) JobStarted: {'identifier': 'py_pubsub'}
+[0.021539] (messages_package) JobProgress: {'identifier': 'messages_package', 'progress': 'cmake'}
+[0.022978] (messages_package) JobProgress: {'identifier': 'messages_package', 'progress': 'build'}
+[0.023060] (messages_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sam/AST_Robot_Warehouse/build/messages_package', '--', '-j12', '-l12'], 'cwd': '/home/sam/AST_Robot_Warehouse/build/messages_package', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sam'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '2246'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sam/AST_Robot_Warehouse/install/turtlesim/lib:/home/sam/AST_Robot_Warehouse/install/messages_package/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/sam'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/sam'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '2004'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '25090'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sam/AST_Robot_Warehouse/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'sam'), ('JOURNAL_STREAM', '8:61603'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'sam'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2288,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2288'), ('INVOCATION_ID', '9ef3f4acf59b409aab0eb02c88e5da3e'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package:/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/py_pubsub:/home/sam/AST_Robot_Warehouse/install/my_package:/home/sam/AST_Robot_Warehouse/install/messages_package:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/sam/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:da2294ef-b1d5-483f-902a-758cffede765'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sam/AST_Robot_Warehouse/build/messages_package'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sam/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/turtlesim/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/my_package:/home/sam/AST_Robot_Warehouse/install/messages_package:/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package:/home/sam/AST_Robot_Warehouse/install/py_pubsub:/opt/ros/foxy')]), 'shell': False}
+[0.057858] (messages_package) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.086279] (messages_package) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.086522] (messages_package) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.099737] (-) TimerEvent: {}
+[0.200073] (-) TimerEvent: {}
+[0.285574] (py_pubsub) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/py_pubsub', 'build', '--build-base', '/home/sam/AST_Robot_Warehouse/build/py_pubsub/build', 'install', '--prefix', '/home/sam/AST_Robot_Warehouse/install/py_pubsub', '--record', '/home/sam/AST_Robot_Warehouse/build/py_pubsub/install.log', '--single-version-externally-managed'], 'cwd': '/home/sam/AST_Robot_Warehouse/src/py_pubsub', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sam', 'LC_TIME': 'de_DE.UTF-8', 'SSH_AGENT_PID': '2246', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sam/AST_Robot_Warehouse/install/turtlesim/lib:/home/sam/AST_Robot_Warehouse/install/messages_package/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/sam', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/sam', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2004', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '25090', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sam/AST_Robot_Warehouse/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'sam', 'JOURNAL_STREAM': '8:61603', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'sam', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2288,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2288', 'INVOCATION_ID': '9ef3f4acf59b409aab0eb02c88e5da3e', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package:/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/py_pubsub:/home/sam/AST_Robot_Warehouse/install/my_package:/home/sam/AST_Robot_Warehouse/install/messages_package:/opt/ros/foxy', 'CONDA_PYTHON_EXE': '/home/sam/anaconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:da2294ef-b1d5-483f-902a-758cffede765', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sam/AST_Robot_Warehouse/build/py_pubsub', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/sam/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/turtlesim/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'de_DE.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/my_package:/home/sam/AST_Robot_Warehouse/install/messages_package'}, 'shell': False}
+[0.296988] (messages_package) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[0.300179] (-) TimerEvent: {}
+[0.355924] (messages_package) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[0.359473] (messages_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.362863] (messages_package) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[0.400298] (-) TimerEvent: {}
+[0.496000] (messages_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500389] (-) TimerEvent: {}
+[0.509749] (py_pubsub) StdoutLine: {'line': b'running egg_info\n'}
+[0.510306] (py_pubsub) StdoutLine: {'line': b'writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO\n'}
+[0.510498] (py_pubsub) StdoutLine: {'line': b'writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt\n'}
+[0.510673] (py_pubsub) StdoutLine: {'line': b'writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt\n'}
+[0.510835] (py_pubsub) StdoutLine: {'line': b'writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt\n'}
+[0.511072] (py_pubsub) StdoutLine: {'line': b'writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt\n'}
+[0.540471] (messages_package) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[0.543998] (py_pubsub) StdoutLine: {'line': b"reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[0.544774] (py_pubsub) StdoutLine: {'line': b"writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[0.544989] (py_pubsub) StdoutLine: {'line': b'running build\n'}
+[0.545108] (py_pubsub) StdoutLine: {'line': b'running build_py\n'}
+[0.545264] (py_pubsub) StdoutLine: {'line': b'running install\n'}
+[0.546744] (py_pubsub) StdoutLine: {'line': b'running install_lib\n'}
+[0.548398] (py_pubsub) StdoutLine: {'line': b'running install_data\n'}
+[0.548856] (py_pubsub) StdoutLine: {'line': b'running install_egg_info\n'}
+[0.550387] (py_pubsub) StdoutLine: {'line': b"removing '/home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[0.550701] (py_pubsub) StdoutLine: {'line': b'Copying ../../build/py_pubsub/py_pubsub.egg-info to /home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/python3.8/site-packages/py_pubsub-0.0.0-py3.8.egg-info\n'}
+[0.551624] (py_pubsub) StdoutLine: {'line': b'running install_scripts\n'}
+[0.570559] (py_pubsub) StdoutLine: {'line': b'Installing listener script to /home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/py_pubsub\n'}
+[0.570777] (py_pubsub) StdoutLine: {'line': b'Installing talker script to /home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/py_pubsub\n'}
+[0.570940] (py_pubsub) StdoutLine: {'line': b"writing list of installed files to '/home/sam/AST_Robot_Warehouse/build/py_pubsub/install.log'\n"}
+[0.592679] (py_pubsub) CommandEnded: {'returncode': 0}
+[0.600569] (-) TimerEvent: {}
+[0.602092] (py_pubsub) JobEnded: {'identifier': 'py_pubsub', 'rc': 0}
+[0.700695] (-) TimerEvent: {}
+[0.737036] (messages_package) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[0.800815] (-) TimerEvent: {}
+[0.863074] (messages_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.890707] (messages_package) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.900924] (-) TimerEvent: {}
+[0.914259] (messages_package) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[0.914506] (messages_package) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[0.935252] (messages_package) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.935395] (messages_package) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[0.935458] (messages_package) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so\n'}
+[0.966779] (messages_package) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[0.967966] (messages_package) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[0.969224] (messages_package) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/sam/AST_Robot_Warehouse/src/messages_package/include>\n'}
+[0.969328] (messages_package) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[0.970339] (messages_package) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[0.970439] (messages_package) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[0.971013] (messages_package) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[0.972112] (messages_package) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[0.972238] (messages_package) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[0.972476] (messages_package) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[0.979612] (messages_package) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.001061] (-) TimerEvent: {}
+[1.057103] (messages_package) StdoutLine: {'line': b'-- Generating done\n'}
+[1.061431] (messages_package) StdoutLine: {'line': b'-- Build files have been written to: /home/sam/AST_Robot_Warehouse/build/messages_package\n'}
+[1.088492] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__cpp\x1b[0m\n'}
+[1.088998] (messages_package) StdoutLine: {'line': b'[  1%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.097133] (messages_package) StdoutLine: {'line': b'[  2%] Built target messages_node\n'}
+[1.097956] (messages_package) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.101162] (-) TimerEvent: {}
+[1.201437] (-) TimerEvent: {}
+[1.301714] (-) TimerEvent: {}
+[1.402042] (-) TimerEvent: {}
+[1.502288] (-) TimerEvent: {}
+[1.602590] (-) TimerEvent: {}
+[1.702903] (-) TimerEvent: {}
+[1.803155] (-) TimerEvent: {}
+[1.903373] (-) TimerEvent: {}
+[2.003650] (-) TimerEvent: {}
+[2.103899] (-) TimerEvent: {}
+[2.204149] (-) TimerEvent: {}
+[2.304427] (-) TimerEvent: {}
+[2.316705] (messages_package) StdoutLine: {'line': b'[  3%] Built target messages_package__cpp\n'}
+[2.338139] (messages_package) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.342805] (messages_package) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[2.343091] (messages_package) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.404543] (-) TimerEvent: {}
+[2.421038] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_generator_c\x1b[0m\n'}
+[2.442805] (messages_package) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/coordinates__functions.c.o\x1b[0m\n'}
+[2.443459] (messages_package) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/delivery__functions.c.o\x1b[0m\n'}
+[2.444639] (messages_package) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/item__functions.c.o\x1b[0m\n'}
+[2.445465] (messages_package) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_location__functions.c.o\x1b[0m\n'}
+[2.445770] (messages_package) StdoutLine: {'line': b'[  9%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/map__functions.c.o\x1b[0m\n'}
+[2.446165] (messages_package) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.o\x1b[0m\n'}
+[2.451848] (messages_package) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_distance__functions.c.o\x1b[0m\n'}
+[2.456248] (messages_package) StdoutLine: {'line': b'[ 12%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o\x1b[0m\n'}
+[2.456598] (messages_package) StdoutLine: {'line': b'[ 13%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o\x1b[0m\n'}
+[2.504642] (-) TimerEvent: {}
+[2.515218] (messages_package) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o\x1b[0m\n'}
+[2.515537] (messages_package) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o\x1b[0m\n'}
+[2.519070] (messages_package) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.o\x1b[0m\n'}
+[2.521837] (messages_package) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.o\x1b[0m\n'}
+[2.529043] (messages_package) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.o\x1b[0m\n'}
+[2.604733] (-) TimerEvent: {}
+[2.659734] (messages_package) StdoutLine: {'line': b'[ 17%] \x1b[32m\x1b[1mLinking C shared library libmessages_package__rosidl_generator_c.so\x1b[0m\n'}
+[2.704832] (-) TimerEvent: {}
+[2.709131] (messages_package) StdoutLine: {'line': b'[ 17%] Built target messages_package__rosidl_generator_c\n'}
+[2.721666] (messages_package) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.721967] (messages_package) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.804911] (-) TimerEvent: {}
+[2.905173] (-) TimerEvent: {}
+[3.005450] (-) TimerEvent: {}
+[3.105709] (-) TimerEvent: {}
+[3.205962] (-) TimerEvent: {}
+[3.245644] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_cpp\x1b[0m\n'}
+[3.270591] (messages_package) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/item__type_support.cpp.o\x1b[0m\n'}
+[3.270856] (messages_package) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/map__type_support.cpp.o\x1b[0m\n'}
+[3.271366] (messages_package) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/coordinates__type_support.cpp.o\x1b[0m\n'}
+[3.271664] (messages_package) StdoutLine: {'line': b'[ 21%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/robot_distance__type_support.cpp.o\x1b[0m\n'}
+[3.271904] (messages_package) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/delivery__type_support.cpp.o\x1b[0m\n'}
+[3.275166] (messages_package) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/robot_location__type_support.cpp.o\x1b[0m\n'}
+[3.277316] (messages_package) StdoutLine: {'line': b'[ 23%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/row__type_support.cpp.o\x1b[0m\n'}
+[3.283614] (messages_package) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/robot_state__type_support.cpp.o\x1b[0m\n'}
+[3.311192] (-) TimerEvent: {}
+[3.411512] (-) TimerEvent: {}
+[3.516371] (-) TimerEvent: {}
+[3.616688] (-) TimerEvent: {}
+[3.717002] (-) TimerEvent: {}
+[3.808866] (messages_package) StdoutLine: {'line': b'[ 24%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/srv/delivery__type_support.cpp.o\x1b[0m\n'}
+[3.817119] (-) TimerEvent: {}
+[3.824335] (messages_package) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/srv/pick_up_item__type_support.cpp.o\x1b[0m\n'}
+[3.852113] (messages_package) StdoutLine: {'line': b'[ 26%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/srv/put_down_item__type_support.cpp.o\x1b[0m\n'}
+[3.875454] (messages_package) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/action/charge_robot__type_support.cpp.o\x1b[0m\n'}
+[3.918065] (-) TimerEvent: {}
+[3.920081] (messages_package) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/action/order__type_support.cpp.o\x1b[0m\n'}
+[3.922576] (messages_package) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/action/move_item__type_support.cpp.o\x1b[0m\n'}
+[3.947175] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_c\x1b[0m\n'}
+[3.978079] (messages_package) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/delivery__type_support.cpp.o\x1b[0m\n'}
+[3.990111] (messages_package) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/coordinates__type_support.cpp.o\x1b[0m\n'}
+[3.994452] (messages_package) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/item__type_support.cpp.o\x1b[0m\n'}
+[4.018233] (-) TimerEvent: {}
+[4.065410] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[4.071523] (messages_package) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/robot_location__type_support.cpp.o\x1b[0m\n'}
+[4.075112] (messages_package) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/robot_distance__type_support.cpp.o\x1b[0m\n'}
+[4.118495] (-) TimerEvent: {}
+[4.119026] (messages_package) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/coordinates__type_support.cpp.o\x1b[0m\n'}
+[4.130306] (messages_package) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/map__type_support.cpp.o\x1b[0m\n'}
+[4.130580] (messages_package) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/delivery__type_support.cpp.o\x1b[0m\n'}
+[4.130946] (messages_package) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/row__type_support.cpp.o\x1b[0m\n'}
+[4.208422] (messages_package) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/robot_state__type_support.cpp.o\x1b[0m\n'}
+[4.218587] (-) TimerEvent: {}
+[4.227475] (messages_package) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/item__type_support.cpp.o\x1b[0m\n'}
+[4.318687] (-) TimerEvent: {}
+[4.329864] (messages_package) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/srv/delivery__type_support.cpp.o\x1b[0m\n'}
+[4.386609] (messages_package) StdoutLine: {'line': b'[ 37%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/srv/pick_up_item__type_support.cpp.o\x1b[0m\n'}
+[4.408947] (messages_package) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/srv/put_down_item__type_support.cpp.o\x1b[0m\n'}
+[4.415359] (messages_package) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/action/charge_robot__type_support.cpp.o\x1b[0m\n'}
+[4.419562] (-) TimerEvent: {}
+[4.469691] (messages_package) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/action/move_item__type_support.cpp.o\x1b[0m\n'}
+[4.470005] (messages_package) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/robot_distance__type_support.cpp.o\x1b[0m\n'}
+[4.471680] (messages_package) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/action/order__type_support.cpp.o\x1b[0m\n'}
+[4.519956] (-) TimerEvent: {}
+[4.525954] (messages_package) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/map__type_support.cpp.o\x1b[0m\n'}
+[4.526465] (messages_package) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/robot_location__type_support.cpp.o\x1b[0m\n'}
+[4.553794] (messages_package) StdoutLine: {'line': b'[ 44%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_package__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.554071] (messages_package) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/row__type_support.cpp.o\x1b[0m\n'}
+[4.587195] (messages_package) StdoutLine: {'line': b'[ 45%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_package__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.588532] (messages_package) StdoutLine: {'line': b'[ 45%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/robot_state__type_support.cpp.o\x1b[0m\n'}
+[4.620075] (-) TimerEvent: {}
+[4.644486] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[4.655517] (messages_package) StdoutLine: {'line': b'[ 45%] Built target messages_package__rosidl_typesupport_cpp\n'}
+[4.700588] (messages_package) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/srv/detail/delivery__type_support.cpp.o\x1b[0m\n'}
+[4.700950] (messages_package) StdoutLine: {'line': b'[ 46%] Built target messages_package__rosidl_typesupport_c\n'}
+[4.704236] (messages_package) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/coordinates__type_support.cpp.o\x1b[0m\n'}
+[4.721184] (messages_package) StdoutLine: {'line': b'[ 47%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/srv/detail/pick_up_item__type_support.cpp.o\x1b[0m\n'}
+[4.721494] (-) TimerEvent: {}
+[4.755587] (messages_package) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/srv/detail/put_down_item__type_support.cpp.o\x1b[0m\n'}
+[4.768404] (messages_package) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/action/detail/charge_robot__type_support.cpp.o\x1b[0m\n'}
+[4.821609] (-) TimerEvent: {}
+[4.856445] (messages_package) StdoutLine: {'line': b'[ 49%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/action/detail/move_item__type_support.cpp.o\x1b[0m\n'}
+[4.921721] (-) TimerEvent: {}
+[5.022160] (-) TimerEvent: {}
+[5.059553] (messages_package) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/delivery__type_support.cpp.o\x1b[0m\n'}
+[5.069313] (messages_package) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/action/detail/order__type_support.cpp.o\x1b[0m\n'}
+[5.090719] (messages_package) StdoutLine: {'line': b'[ 52%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/item__type_support.cpp.o\x1b[0m\n'}
+[5.105365] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[5.122263] (-) TimerEvent: {}
+[5.132684] (messages_package) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/robot_distance__type_support.cpp.o\x1b[0m\n'}
+[5.162891] (messages_package) StdoutLine: {'line': b'[ 54%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/coordinates__type_support.c.o\x1b[0m\n'}
+[5.171053] (messages_package) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/delivery__type_support.c.o\x1b[0m\n'}
+[5.222475] (-) TimerEvent: {}
+[5.254600] (messages_package) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/item__type_support.c.o\x1b[0m\n'}
+[5.283404] (messages_package) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/robot_location__type_support.c.o\x1b[0m\n'}
+[5.305646] (messages_package) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/robot_distance__type_support.c.o\x1b[0m\n'}
+[5.305965] (messages_package) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/map__type_support.c.o\x1b[0m\n'}
+[5.322589] (-) TimerEvent: {}
+[5.337559] (messages_package) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/robot_location__type_support.cpp.o\x1b[0m\n'}
+[5.354206] (messages_package) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/map__type_support.cpp.o\x1b[0m\n'}
+[5.366489] (messages_package) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/row__type_support.c.o\x1b[0m\n'}
+[5.382326] (messages_package) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/robot_state__type_support.c.o\x1b[0m\n'}
+[5.396963] (messages_package) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/srv/detail/delivery__type_support.c.o\x1b[0m\n'}
+[5.422695] (-) TimerEvent: {}
+[5.469970] (messages_package) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/row__type_support.cpp.o\x1b[0m\n'}
+[5.482434] (messages_package) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/srv/detail/pick_up_item__type_support.c.o\x1b[0m\n'}
+[5.485857] (messages_package) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/robot_state__type_support.cpp.o\x1b[0m\n'}
+[5.502002] (messages_package) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/srv/detail/put_down_item__type_support.c.o\x1b[0m\n'}
+[5.514735] (messages_package) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/action/detail/charge_robot__type_support.c.o\x1b[0m\n'}
+[5.522806] (-) TimerEvent: {}
+[5.566998] (messages_package) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/action/detail/move_item__type_support.c.o\x1b[0m\n'}
+[5.608095] (messages_package) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/srv/detail/dds_fastrtps/delivery__type_support.cpp.o\x1b[0m\n'}
+[5.622939] (-) TimerEvent: {}
+[5.631469] (messages_package) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/action/detail/order__type_support.c.o\x1b[0m\n'}
+[5.673209] (messages_package) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/srv/detail/dds_fastrtps/pick_up_item__type_support.cpp.o\x1b[0m\n'}
+[5.673631] (messages_package) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/srv/detail/dds_fastrtps/put_down_item__type_support.cpp.o\x1b[0m\n'}
+[5.724002] (-) TimerEvent: {}
+[5.776546] (messages_package) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking C shared library libmessages_package__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.824119] (-) TimerEvent: {}
+[5.848144] (messages_package) StdoutLine: {'line': b'[ 69%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/action/detail/dds_fastrtps/charge_robot__type_support.cpp.o\x1b[0m\n'}
+[5.861532] (messages_package) StdoutLine: {'line': b'[ 69%] Built target messages_package__rosidl_typesupport_introspection_c\n'}
+[5.876866] (messages_package) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/action/detail/dds_fastrtps/move_item__type_support.cpp.o\x1b[0m\n'}
+[5.898848] (messages_package) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_package__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[5.924235] (-) TimerEvent: {}
+[5.969530] (messages_package) StdoutLine: {'line': b'[ 72%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/action/detail/dds_fastrtps/order__type_support.cpp.o\x1b[0m\n'}
+[6.024566] (-) TimerEvent: {}
+[6.125328] (-) TimerEvent: {}
+[6.125912] (messages_package) StdoutLine: {'line': b'[ 72%] Built target messages_package__rosidl_typesupport_introspection_cpp\n'}
+[6.225434] (-) TimerEvent: {}
+[6.325792] (-) TimerEvent: {}
+[6.426210] (-) TimerEvent: {}
+[6.526708] (-) TimerEvent: {}
+[6.627009] (-) TimerEvent: {}
+[6.727288] (-) TimerEvent: {}
+[6.745611] (messages_package) StdoutLine: {'line': b'[ 73%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_package__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[6.827418] (-) TimerEvent: {}
+[6.833570] (messages_package) StdoutLine: {'line': b'[ 73%] Built target messages_package__rosidl_typesupport_fastrtps_cpp\n'}
+[6.845551] (messages_package) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[6.927527] (-) TimerEvent: {}
+[7.027778] (-) TimerEvent: {}
+[7.128028] (-) TimerEvent: {}
+[7.228295] (-) TimerEvent: {}
+[7.328585] (-) TimerEvent: {}
+[7.428815] (-) TimerEvent: {}
+[7.529112] (-) TimerEvent: {}
+[7.629309] (-) TimerEvent: {}
+[7.729505] (-) TimerEvent: {}
+[7.829716] (-) TimerEvent: {}
+[7.846283] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[7.882833] (messages_package) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__type_support_c.cpp.o\x1b[0m\n'}
+[7.883121] (messages_package) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/delivery__type_support_c.cpp.o\x1b[0m\n'}
+[7.885853] (messages_package) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_distance__type_support_c.cpp.o\x1b[0m\n'}
+[7.886063] (messages_package) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/item__type_support_c.cpp.o\x1b[0m\n'}
+[7.886178] (messages_package) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/map__type_support_c.cpp.o\x1b[0m\n'}
+[7.886290] (messages_package) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp.o\x1b[0m\n'}
+[7.887333] (messages_package) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o\x1b[0m\n'}
+[7.887636] (messages_package) StdoutLine: {'line': b'[ 79%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_location__type_support_c.cpp.o\x1b[0m\n'}
+[7.887829] (messages_package) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o\x1b[0m\n'}
+[7.892530] (messages_package) StdoutLine: {'line': b'[ 81%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o\x1b[0m\n'}
+[7.900056] (messages_package) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o\x1b[0m\n'}
+[7.903491] (messages_package) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.o\x1b[0m\n'}
+[7.929823] (-) TimerEvent: {}
+[8.030285] (-) TimerEvent: {}
+[8.130792] (-) TimerEvent: {}
+[8.231244] (-) TimerEvent: {}
+[8.331678] (-) TimerEvent: {}
+[8.432152] (-) TimerEvent: {}
+[8.532755] (-) TimerEvent: {}
+[8.555808] (messages_package) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.o\x1b[0m\n'}
+[8.558533] (messages_package) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.o\x1b[0m\n'}
+[8.632853] (-) TimerEvent: {}
+[8.733102] (-) TimerEvent: {}
+[8.833366] (-) TimerEvent: {}
+[8.933612] (-) TimerEvent: {}
+[8.977030] (messages_package) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX shared library libmessages_package__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[9.033707] (-) TimerEvent: {}
+[9.064367] (messages_package) StdoutLine: {'line': b'[ 85%] Built target messages_package__rosidl_typesupport_fastrtps_c\n'}
+[9.082650] (messages_package) StdoutLine: {'line': b'[ 85%] Built target messages_package\n'}
+[9.091772] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__py\x1b[0m\n'}
+[9.103194] (messages_package) StdoutLine: {'line': b'[ 85%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[9.133798] (-) TimerEvent: {}
+[9.234083] (-) TimerEvent: {}
+[9.334314] (-) TimerEvent: {}
+[9.434534] (-) TimerEvent: {}
+[9.534801] (-) TimerEvent: {}
+[9.635143] (-) TimerEvent: {}
+[9.735386] (-) TimerEvent: {}
+[9.835644] (-) TimerEvent: {}
+[9.935905] (-) TimerEvent: {}
+[10.036125] (-) TimerEvent: {}
+[10.136420] (-) TimerEvent: {}
+[10.236670] (-) TimerEvent: {}
+[10.336896] (-) TimerEvent: {}
+[10.437094] (-) TimerEvent: {}
+[10.537316] (-) TimerEvent: {}
+[10.637516] (-) TimerEvent: {}
+[10.737751] (-) TimerEvent: {}
+[10.837957] (-) TimerEvent: {}
+[10.938178] (-) TimerEvent: {}
+[11.038408] (-) TimerEvent: {}
+[11.138607] (-) TimerEvent: {}
+[11.238843] (-) TimerEvent: {}
+[11.339066] (-) TimerEvent: {}
+[11.439316] (-) TimerEvent: {}
+[11.539515] (-) TimerEvent: {}
+[11.639741] (-) TimerEvent: {}
+[11.648116] (messages_package) StdoutLine: {'line': b'[ 85%] Built target messages_package__py\n'}
+[11.662376] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__python\x1b[0m\n'}
+[11.703712] (messages_package) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_coordinates_s.c.o\x1b[0m\n'}
+[11.703988] (messages_package) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_delivery_s.c.o\x1b[0m\n'}
+[11.704134] (messages_package) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_distance_s.c.o\x1b[0m\n'}
+[11.704275] (messages_package) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_item_s.c.o\x1b[0m\n'}
+[11.704516] (messages_package) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_location_s.c.o\x1b[0m\n'}
+[11.705028] (messages_package) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_row_s.c.o\x1b[0m\n'}
+[11.705281] (messages_package) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_map_s.c.o\x1b[0m\n'}
+[11.705443] (messages_package) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_state_s.c.o\x1b[0m\n'}
+[11.705749] (messages_package) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_pick_up_item_s.c.o\x1b[0m\n'}
+[11.706342] (messages_package) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_delivery_s.c.o\x1b[0m\n'}
+[11.718238] (messages_package) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/action/_charge_robot_s.c.o\x1b[0m\n'}
+[11.718580] (messages_package) StdoutLine: {'line': b'[ 94%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_put_down_item_s.c.o\x1b[0m\n'}
+[11.739843] (-) TimerEvent: {}
+[11.840175] (-) TimerEvent: {}
+[11.861826] (messages_package) StdoutLine: {'line': b'[ 95%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/action/_move_item_s.c.o\x1b[0m\n'}
+[11.879153] (messages_package) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/action/_order_s.c.o\x1b[0m\n'}
+[11.940303] (-) TimerEvent: {}
+[12.013948] (messages_package) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages_package/libmessages_package__python.so\x1b[0m\n'}
+[12.040393] (-) TimerEvent: {}
+[12.068630] (messages_package) StdoutLine: {'line': b'[ 96%] Built target messages_package__python\n'}
+[12.083177] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[12.083551] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[12.084101] (messages_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target messages_package__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[12.106059] (messages_package) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[12.106254] (messages_package) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[12.112493] (messages_package) StdoutLine: {'line': b'[ 97%] \x1b[32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[12.140501] (-) TimerEvent: {}
+[12.240824] (-) TimerEvent: {}
+[12.326120] (messages_package) StdoutLine: {'line': b'[ 98%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages_package/messages_package_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[12.332537] (messages_package) StdoutLine: {'line': b'[ 99%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/messages_package/messages_package_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[12.334675] (messages_package) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/messages_package/messages_package_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\x1b[0m\n'}
+[12.340912] (-) TimerEvent: {}
+[12.370321] (messages_package) StdoutLine: {'line': b'[100%] Built target messages_package__rosidl_typesupport_c__pyext\n'}
+[12.376968] (messages_package) StdoutLine: {'line': b'[100%] Built target messages_package__rosidl_typesupport_introspection_c__pyext\n'}
+[12.409485] (messages_package) StdoutLine: {'line': b'[100%] Built target messages_package__rosidl_typesupport_fastrtps_c__pyext\n'}
+[12.421072] (messages_package) CommandEnded: {'returncode': 0}
+[12.441039] (-) TimerEvent: {}
+[12.541403] (-) TimerEvent: {}
+[12.629712] (messages_package) JobProgress: {'identifier': 'messages_package', 'progress': 'install'}
+[12.640045] (messages_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sam/AST_Robot_Warehouse/build/messages_package'], 'cwd': '/home/sam/AST_Robot_Warehouse/build/messages_package', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'sam'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '2246'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/sam/AST_Robot_Warehouse/install/turtlesim/lib:/home/sam/AST_Robot_Warehouse/install/messages_package/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/sam'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/sam'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '2004'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '25090'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/sam/AST_Robot_Warehouse/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'sam'), ('JOURNAL_STREAM', '8:61603'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'sam'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2288,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2288'), ('INVOCATION_ID', '9ef3f4acf59b409aab0eb02c88e5da3e'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package:/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/py_pubsub:/home/sam/AST_Robot_Warehouse/install/my_package:/home/sam/AST_Robot_Warehouse/install/messages_package:/opt/ros/foxy'), ('CONDA_PYTHON_EXE', '/home/sam/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('TERMINATOR_UUID', 'urn:uuid:da2294ef-b1d5-483f-902a-758cffede765'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/sam/AST_Robot_Warehouse/build/messages_package'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/sam/anaconda3/bin/conda'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/turtlesim/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/my_package:/home/sam/AST_Robot_Warehouse/install/messages_package:/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package:/home/sam/AST_Robot_Warehouse/install/py_pubsub:/opt/ros/foxy')]), 'shell': False}
+[12.642229] (-) TimerEvent: {}
+[12.651443] (messages_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[12.651794] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/messages_package/messages_node\n'}
+[12.651956] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/rosidl_interfaces/messages_package\n'}
+[12.652096] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package\n'}
+[12.652177] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action\n'}
+[12.652251] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/move_item.h\n'}
+[12.652313] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/charge_robot.h\n'}
+[12.652386] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail\n'}
+[12.652458] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__type_support.h\n'}
+[12.652539] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__struct.h\n'}
+[12.652624] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__functions.c\n'}
+[12.652738] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__struct.h\n'}
+[12.652834] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__functions.h\n'}
+[12.652917] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__struct.h\n'}
+[12.653004] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__functions.c\n'}
+[12.653136] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.h\n'}
+[12.653250] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__functions.h\n'}
+[12.653360] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__functions.c\n'}
+[12.653460] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__functions.h\n'}
+[12.653602] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__type_support.h\n'}
+[12.653729] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/order.h\n'}
+[12.653943] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv\n'}
+[12.654059] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/put_down_item.h\n'}
+[12.654170] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/delivery.h\n'}
+[12.654254] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/pick_up_item.h\n'}
+[12.654363] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail\n'}
+[12.654461] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.h\n'}
+[12.654558] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__functions.h\n'}
+[12.654663] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__functions.h\n'}
+[12.654760] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__struct.h\n'}
+[12.654862] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__struct.h\n'}
+[12.654961] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__functions.c\n'}
+[12.655087] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.h\n'}
+[12.655186] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__type_support.h\n'}
+[12.655282] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__functions.h\n'}
+[12.655381] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__functions.c\n'}
+[12.655482] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__functions.c\n'}
+[12.655567] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__struct.h\n'}
+[12.655700] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg\n'}
+[12.655837] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_generator_c__visibility_control.h\n'}
+[12.655943] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/coordinates.h\n'}
+[12.656023] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/row.h\n'}
+[12.656083] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/map.h\n'}
+[12.656167] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_location.h\n'}
+[12.656239] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_distance.h\n'}
+[12.656297] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_state.h\n'}
+[12.656367] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/item.h\n'}
+[12.656460] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/delivery.h\n'}
+[12.656533] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail\n'}
+[12.656622] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__functions.c\n'}
+[12.656693] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__functions.c\n'}
+[12.656751] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__functions.h\n'}
+[12.656837] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__functions.c\n'}
+[12.656916] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__functions.h\n'}
+[12.656975] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__functions.c\n'}
+[12.657046] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__functions.h\n'}
+[12.657202] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__functions.h\n'}
+[12.657297] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__functions.h\n'}
+[12.657375] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__type_support.h\n'}
+[12.657451] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__struct.h\n'}
+[12.657510] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__type_support.h\n'}
+[12.657592] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__functions.c\n'}
+[12.657682] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.h\n'}
+[12.657770] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__functions.c\n'}
+[12.657857] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.h\n'}
+[12.657929] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__functions.c\n'}
+[12.658001] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__struct.h\n'}
+[12.658073] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__struct.h\n'}
+[12.658143] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__struct.h\n'}
+[12.658201] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.h\n'}
+[12.658271] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__functions.h\n'}
+[12.658342] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__type_support.h\n'}
+[12.658412] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__struct.h\n'}
+[12.658470] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__functions.h\n'}
+[12.658541] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__type_support.h\n'}
+[12.658598] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__type_support.h\n'}
+[12.658682] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__functions.c\n'}
+[12.658762] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__functions.h\n'}
+[12.658820] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__struct.h\n'}
+[12.658878] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__struct.h\n'}
+[12.658941] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__struct.h\n'}
+[12.658998] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/library_path.sh\n'}
+[12.659074] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/library_path.dsv\n'}
+[12.659130] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_generator_c.so\n'}
+[12.659458] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_generator_c.so" to ""\n'}
+[12.659549] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package\n'}
+[12.659633] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action\n'}
+[12.659725] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail\n'}
+[12.659786] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_fastrtps_c.h\n'}
+[12.659863] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_fastrtps_c.h\n'}
+[12.659934] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660012] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv\n'}
+[12.660081] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail\n'}
+[12.660154] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660266] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660359] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660418] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg\n'}
+[12.660502] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[12.660571] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail\n'}
+[12.660632] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660730] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660810] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660888] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_fastrtps_c.h\n'}
+[12.660960] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h\n'}
+[12.661018] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_fastrtps_c.h\n'}
+[12.661087] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_fastrtps_c.h\n'}
+[12.661148] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_fastrtps_c.h\n'}
+[12.661272] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_c.so\n'}
+[12.661737] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[12.661840] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package\n'}
+[12.661932] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action\n'}
+[12.661990] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail\n'}
+[12.662062] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.662131] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.662189] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/dds_fastrtps\n'}
+[12.662297] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.662401] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv\n'}
+[12.662476] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail\n'}
+[12.662558] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.662665] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.662733] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/dds_fastrtps\n'}
+[12.662791] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.662861] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg\n'}
+[12.662937] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[12.663009] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail\n'}
+[12.663080] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663152] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663224] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663295] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663351] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/dds_fastrtps\n'}
+[12.663407] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663463] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663520] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663591] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[12.663648] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_cpp.so\n'}
+[12.664187] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[12.664321] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package\n'}
+[12.664386] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action\n'}
+[12.664448] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail\n'}
+[12.664536] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_introspection_c.h\n'}
+[12.664608] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.c\n'}
+[12.664681] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__type_support.c\n'}
+[12.664774] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_introspection_c.h\n'}
+[12.664853] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_introspection_c.h\n'}
+[12.664930] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__type_support.c\n'}
+[12.665011] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv\n'}
+[12.665109] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail\n'}
+[12.665199] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_introspection_c.h\n'}
+[12.665259] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__type_support.c\n'}
+[12.665358] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_introspection_c.h\n'}
+[12.665445] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.c\n'}
+[12.665531] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_introspection_c.h\n'}
+[12.665617] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.c\n'}
+[12.665729] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg\n'}
+[12.665792] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[12.665865] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail\n'}
+[12.665936] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_introspection_c.h\n'}
+[12.665994] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_introspection_c.h\n'}
+[12.666055] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_c.h\n'}
+[12.666174] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.c\n'}
+[12.666257] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_introspection_c.h\n'}
+[12.666330] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__type_support.c\n'}
+[12.666401] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__type_support.c\n'}
+[12.666473] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__type_support.c\n'}
+[12.666530] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_introspection_c.h\n'}
+[12.666620] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_introspection_c.h\n'}
+[12.666677] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.c\n'}
+[12.666747] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_introspection_c.h\n'}
+[12.666816] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_introspection_c.h\n'}
+[12.666960] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__type_support.c\n'}
+[12.667039] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.c\n'}
+[12.667099] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__type_support.c\n'}
+[12.667331] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_c.so\n'}
+[12.667783] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_c.so" to ""\n'}
+[12.667958] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_c.so\n'}
+[12.668352] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_c.so" to ""\n'}
+[12.668467] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package\n'}
+[12.668526] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action\n'}
+[12.668606] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/charge_robot.hpp\n'}
+[12.668694] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/order.hpp\n'}
+[12.668774] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/move_item.hpp\n'}
+[12.668865] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail\n'}
+[12.668932] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__struct.hpp\n'}
+[12.668990] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__struct.hpp\n'}
+[12.669088] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__builder.hpp\n'}
+[12.669263] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__traits.hpp\n'}
+[12.669401] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__traits.hpp\n'}
+[12.669535] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__traits.hpp\n'}
+[12.669725] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__builder.hpp\n'}
+[12.669876] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__struct.hpp\n'}
+[12.669956] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__builder.hpp\n'}
+[12.670046] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv\n'}
+[12.670117] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/pick_up_item.hpp\n'}
+[12.670174] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/delivery.hpp\n'}
+[12.670290] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail\n'}
+[12.670400] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__traits.hpp\n'}
+[12.670486] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__struct.hpp\n'}
+[12.670677] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__builder.hpp\n'}
+[12.670766] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__builder.hpp\n'}
+[12.670838] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__traits.hpp\n'}
+[12.670912] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__builder.hpp\n'}
+[12.670984] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__traits.hpp\n'}
+[12.671062] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__struct.hpp\n'}
+[12.671128] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__struct.hpp\n'}
+[12.671205] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/put_down_item.hpp\n'}
+[12.671278] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg\n'}
+[12.671347] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_location.hpp\n'}
+[12.671413] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/map.hpp\n'}
+[12.671477] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/item.hpp\n'}
+[12.671548] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/delivery.hpp\n'}
+[12.671655] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_distance.hpp\n'}
+[12.671775] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/coordinates.hpp\n'}
+[12.671872] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail\n'}
+[12.671955] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__traits.hpp\n'}
+[12.672102] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__struct.hpp\n'}
+[12.672277] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__builder.hpp\n'}
+[12.672435] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__builder.hpp\n'}
+[12.672587] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__traits.hpp\n'}
+[12.672719] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__struct.hpp\n'}
+[12.672863] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__struct.hpp\n'}
+[12.672962] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__builder.hpp\n'}
+[12.673078] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__traits.hpp\n'}
+[12.673173] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__traits.hpp\n'}
+[12.673262] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__traits.hpp\n'}
+[12.673351] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__builder.hpp\n'}
+[12.673445] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__struct.hpp\n'}
+[12.673544] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__struct.hpp\n'}
+[12.673634] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__struct.hpp\n'}
+[12.673742] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__traits.hpp\n'}
+[12.673847] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__struct.hpp\n'}
+[12.673946] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__traits.hpp\n'}
+[12.674021] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__builder.hpp\n'}
+[12.674106] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__struct.hpp\n'}
+[12.674196] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__traits.hpp\n'}
+[12.674288] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__builder.hpp\n'}
+[12.674423] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__builder.hpp\n'}
+[12.674531] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__builder.hpp\n'}
+[12.674698] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/row.hpp\n'}
+[12.674784] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_state.hpp\n'}
+[12.674893] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package\n'}
+[12.674984] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action\n'}
+[12.675074] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail\n'}
+[12.675173] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.675273] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.675349] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.cpp\n'}
+[12.675480] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.675598] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__type_support.cpp\n'}
+[12.675711] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__type_support.cpp\n'}
+[12.675829] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv\n'}
+[12.675940] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail\n'}
+[12.676026] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.676107] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__type_support.cpp\n'}
+[12.676164] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.676222] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.cpp\n'}
+[12.676284] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.cpp\n'}
+[12.676359] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.676450] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg\n'}
+[12.676555] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail\n'}
+[12.676631] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__type_support.cpp\n'}
+[12.676734] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.cpp\n'}
+[12.676819] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.676877] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.676953] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.cpp\n'}
+[12.677037] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__type_support.cpp\n'}
+[12.677111] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__type_support.cpp\n'}
+[12.677170] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.677227] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__type_support.cpp\n'}
+[12.677283] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.677340] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.677424] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.677482] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.cpp\n'}
+[12.677538] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__type_support.cpp\n'}
+[12.677595] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.677660] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_introspection_cpp.hpp\n'}
+[12.677745] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_cpp.so\n'}
+[12.678001] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[12.678167] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_cpp.so\n'}
+[12.678623] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_cpp.so" to ""\n'}
+[12.678802] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/pythonpath.sh\n'}
+[12.678920] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/pythonpath.dsv\n'}
+[12.678995] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/__init__.py\n'}
+[12.709376] (messages_package) StdoutLine: {'line': b"Compiling '/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/__init__.py'...\n"}
+[12.714033] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg\n'}
+[12.714219] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/__init__.py\n'}
+[12.714321] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_location_s.c\n'}
+[12.714413] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_row.py\n'}
+[12.714503] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_coordinates.py\n'}
+[12.714644] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_coordinates_s.c\n'}
+[12.714785] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_row_s.c\n'}
+[12.714869] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_distance_s.c\n'}
+[12.715011] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_state_s.c\n'}
+[12.715111] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_item.py\n'}
+[12.715207] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_distance.py\n'}
+[12.715302] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_delivery.py\n'}
+[12.715400] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_location.py\n'}
+[12.715517] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_item_s.c\n'}
+[12.715625] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_map_s.c\n'}
+[12.715785] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_state.py\n'}
+[12.715888] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_delivery_s.c\n'}
+[12.716054] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_map.py\n'}
+[12.716174] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv\n'}
+[12.716282] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/__init__.py\n'}
+[12.716427] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_put_down_item_s.c\n'}
+[12.716584] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_delivery.py\n'}
+[12.716751] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_put_down_item.py\n'}
+[12.716952] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_pick_up_item.py\n'}
+[12.717147] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_pick_up_item_s.c\n'}
+[12.717273] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_delivery_s.c\n'}
+[12.717381] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action\n'}
+[12.717461] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/__init__.py\n'}
+[12.717575] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_order_s.c\n'}
+[12.717750] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_charge_robot_s.c\n'}
+[12.717899] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_move_item.py\n'}
+[12.718009] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_move_item_s.c\n'}
+[12.718081] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_order.py\n'}
+[12.718152] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_charge_robot.py\n'}
+[12.718659] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[12.719382] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[12.719756] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[12.720435] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[12.720774] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[12.721527] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""\n'}
+[12.721648] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__python.so\n'}
+[12.722168] (messages_package) StdoutLine: {'line': b'-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__python.so" to ""\n'}
+[12.722349] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Coordinates.idl\n'}
+[12.722481] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Delivery.idl\n'}
+[12.722597] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Item.idl\n'}
+[12.722689] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotDistance.idl\n'}
+[12.722779] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotLocation.idl\n'}
+[12.722896] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Map.idl\n'}
+[12.722996] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Row.idl\n'}
+[12.723112] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotState.idl\n'}
+[12.723229] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery.idl\n'}
+[12.723365] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem.idl\n'}
+[12.723478] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem.idl\n'}
+[12.723581] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/ChargeRobot.idl\n'}
+[12.723638] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/MoveItem.idl\n'}
+[12.723724] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/Order.idl\n'}
+[12.723832] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Coordinates.msg\n'}
+[12.723931] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Delivery.msg\n'}
+[12.724037] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Item.msg\n'}
+[12.724137] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotDistance.msg\n'}
+[12.724258] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotLocation.msg\n'}
+[12.724359] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Map.msg\n'}
+[12.724465] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Row.msg\n'}
+[12.724558] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotState.msg\n'}
+[12.724624] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery.srv\n'}
+[12.724745] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery_Request.msg\n'}
+[12.724817] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery_Response.msg\n'}
+[12.724909] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem.srv\n'}
+[12.725018] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem_Request.msg\n'}
+[12.725101] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem_Response.msg\n'}
+[12.725292] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem.srv\n'}
+[12.725462] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem_Request.msg\n'}
+[12.725653] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem_Response.msg\n'}
+[12.725816] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/ChargeRobot.action\n'}
+[12.725894] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/MoveItem.action\n'}
+[12.726010] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/Order.action\n'}
+[12.726073] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/package_run_dependencies/messages_package\n'}
+[12.726131] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/parent_prefix_path/messages_package\n'}
+[12.726203] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/ament_prefix_path.sh\n'}
+[12.726294] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/ament_prefix_path.dsv\n'}
+[12.726361] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/path.sh\n'}
+[12.726419] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/path.dsv\n'}
+[12.726478] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.bash\n'}
+[12.726554] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.sh\n'}
+[12.726629] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.zsh\n'}
+[12.726687] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.dsv\n'}
+[12.726753] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/package.dsv\n'}
+[12.726812] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/packages/messages_package\n'}
+[12.726890] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cExport.cmake\n'}
+[12.726949] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cExport-noconfig.cmake\n'}
+[12.727025] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cExport.cmake\n'}
+[12.727106] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[12.727165] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cExport.cmake\n'}
+[12.727228] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[12.727321] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cppExport.cmake\n'}
+[12.727410] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[12.727466] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[12.727544] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cppExport.cmake\n'}
+[12.727599] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[12.727662] (messages_package) StdoutLine: {'line': b'-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/rosidl_cmake-extras.cmake\n'}
+[12.727777] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[12.727879] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[12.727970] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[12.728045] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[12.728106] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[12.728162] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[12.728216] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_packageConfig.cmake\n'}
+[12.728314] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_packageConfig-version.cmake\n'}
+[12.728373] (messages_package) StdoutLine: {'line': b'-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/package.xml\n'}
+[12.730647] (messages_package) CommandEnded: {'returncode': 0}
+[12.742810] (-) TimerEvent: {}
+[12.843241] (-) TimerEvent: {}
+[12.943467] (-) TimerEvent: {}
+[12.958125] (messages_package) JobEnded: {'identifier': 'messages_package', 'rc': 0}
+[12.959337] (warehouse_robot_package) JobStarted: {'identifier': 'warehouse_robot_package'}
+[13.043653] (-) TimerEvent: {}
+[13.144013] (-) TimerEvent: {}
+[13.222713] (warehouse_robot_package) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/warehouse_robot_package', 'build', '--build-base', '/home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build', 'install', '--prefix', '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package', '--record', '/home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/install.log', '--single-version-externally-managed'], 'cwd': '/home/sam/AST_Robot_Warehouse/src/warehouse_robot_package', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'sam', 'LC_TIME': 'de_DE.UTF-8', 'SSH_AGENT_PID': '2246', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/sam/AST_Robot_Warehouse/install/messages_package/lib:/home/sam/AST_Robot_Warehouse/install/turtlesim/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/sam', 'CONDA_SHLVL': '0', 'OLDPWD': '/home/sam', 'DESKTOP_SESSION': 'ubuntu', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '2004', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', '_CE_M': '', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '25090', 'MANDATORY_PATH': '/usr/share/gconf/ubuntu.mandatory.path', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/sam/AST_Robot_Warehouse/install', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'sam', 'JOURNAL_STREAM': '8:61603', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'DEFAULTS_PATH': '/usr/share/gconf/ubuntu.default.path', 'USERNAME': 'sam', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', '_CE_CONDA': '', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/sam/anaconda3/condabin:/home/sam/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/sam-Blade-15-Mid-2019-Base:@/tmp/.ICE-unix/2288,unix/sam-Blade-15-Mid-2019-Base:/tmp/.ICE-unix/2288', 'INVOCATION_ID': '9ef3f4acf59b409aab0eb02c88e5da3e', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package:/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/py_pubsub:/home/sam/AST_Robot_Warehouse/install/my_package:/home/sam/AST_Robot_Warehouse/install/messages_package:/opt/ros/foxy', 'CONDA_PYTHON_EXE': '/home/sam/anaconda3/bin/python', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'TERMINATOR_UUID': 'urn:uuid:da2294ef-b1d5-483f-902a-758cffede765', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sam/AST_Robot_Warehouse/build/warehouse_robot_package', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'CONDA_EXE': '/home/sam/anaconda3/bin/conda', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/turtlesim/lib/python3.8/site-packages:/home/sam/AST_Robot_Warehouse/install/py_pubsub/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'de_DE.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003', 'CMAKE_PREFIX_PATH': '/home/sam/AST_Robot_Warehouse/install/messages_package:/home/sam/AST_Robot_Warehouse/install/turtlesim:/home/sam/AST_Robot_Warehouse/install/my_package'}, 'shell': False}
+[13.244100] (-) TimerEvent: {}
+[13.344395] (-) TimerEvent: {}
+[13.441809] (warehouse_robot_package) StdoutLine: {'line': b'running egg_info\n'}
+[13.442347] (warehouse_robot_package) StdoutLine: {'line': b'writing ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/PKG-INFO\n'}
+[13.442548] (warehouse_robot_package) StdoutLine: {'line': b'writing dependency_links to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/dependency_links.txt\n'}
+[13.442692] (warehouse_robot_package) StdoutLine: {'line': b'writing entry points to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/entry_points.txt\n'}
+[13.442849] (warehouse_robot_package) StdoutLine: {'line': b'writing requirements to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/requires.txt\n'}
+[13.442964] (warehouse_robot_package) StdoutLine: {'line': b'writing top-level names to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/top_level.txt\n'}
+[13.444471] (-) TimerEvent: {}
+[13.475998] (warehouse_robot_package) StdoutLine: {'line': b"reading manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'\n"}
+[13.476792] (warehouse_robot_package) StdoutLine: {'line': b"writing manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'\n"}
+[13.476936] (warehouse_robot_package) StdoutLine: {'line': b'running build\n'}
+[13.477037] (warehouse_robot_package) StdoutLine: {'line': b'running build_py\n'}
+[13.477125] (warehouse_robot_package) StdoutLine: {'line': b'copying warehouse_robot_package/warehouse.py -> /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package\n'}
+[13.477326] (warehouse_robot_package) StdoutLine: {'line': b'copying warehouse_robot_package/beacon.py -> /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package\n'}
+[13.477491] (warehouse_robot_package) StdoutLine: {'line': b'copying warehouse_robot_package/robot.py -> /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package\n'}
+[13.477594] (warehouse_robot_package) StdoutLine: {'line': b'running install\n'}
+[13.478640] (warehouse_robot_package) StdoutLine: {'line': b'running install_lib\n'}
+[13.479614] (warehouse_robot_package) StdoutLine: {'line': b'copying /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package/warehouse.py -> /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package\n'}
+[13.479945] (warehouse_robot_package) StdoutLine: {'line': b'copying /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package/beacon.py -> /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package\n'}
+[13.480031] (warehouse_robot_package) StdoutLine: {'line': b'copying /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package/robot.py -> /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package\n'}
+[13.480413] (warehouse_robot_package) StdoutLine: {'line': b'byte-compiling /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/warehouse.py to warehouse.cpython-38.pyc\n'}
+[13.481768] (warehouse_robot_package) StdoutLine: {'line': b'byte-compiling /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/beacon.py to beacon.cpython-38.pyc\n'}
+[13.482126] (warehouse_robot_package) StdoutLine: {'line': b'byte-compiling /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/robot.py to robot.cpython-38.pyc\n'}
+[13.482614] (warehouse_robot_package) StdoutLine: {'line': b'running install_data\n'}
+[13.483016] (warehouse_robot_package) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.484164] (warehouse_robot_package) StdoutLine: {'line': b"removing '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info' (and everything under it)\n"}
+[13.484345] (warehouse_robot_package) StdoutLine: {'line': b'Copying ../../build/warehouse_robot_package/warehouse_robot_package.egg-info to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info\n'}
+[13.484968] (warehouse_robot_package) StdoutLine: {'line': b'running install_scripts\n'}
+[13.499495] (warehouse_robot_package) StdoutLine: {'line': b'Installing beacon script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package\n'}
+[13.500045] (warehouse_robot_package) StdoutLine: {'line': b'Installing order_console script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package\n'}
+[13.500177] (warehouse_robot_package) StdoutLine: {'line': b'Installing robot script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package\n'}
+[13.500275] (warehouse_robot_package) StdoutLine: {'line': b'Installing warehouse script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package\n'}
+[13.500455] (warehouse_robot_package) StdoutLine: {'line': b"writing list of installed files to '/home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/install.log'\n"}
+[13.522934] (warehouse_robot_package) CommandEnded: {'returncode': 0}
+[13.528518] (warehouse_robot_package) JobEnded: {'identifier': 'warehouse_robot_package', 'rc': 0}
+[13.529380] (-) EventReactorShutdown: {}

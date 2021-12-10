@@ -9,6 +9,8 @@ module messages_package {
       int64 robot_number;
 
       double robot_distance;
+
+      int64 beacon_number;
     };
   };
 };

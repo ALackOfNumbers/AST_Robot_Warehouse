@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_map_s.c.o"
   "CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_distance_s.c.o"
   "CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_location_s.c.o"
+  "CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_state_s.c.o"
   "CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_row_s.c.o"
   "CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_delivery_s.c.o"
   "CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_pick_up_item_s.c.o"

@@ -39,6 +39,7 @@ struct RobotDistance_
     {
       this->robot_number = 0ll;
       this->robot_distance = 0.0;
+      this->beacon_number = 0ll;
     }
   }
 
@@ -50,6 +51,7 @@ struct RobotDistance_
     {
       this->robot_number = 0ll;
       this->robot_distance = 0.0;
+      this->beacon_number = 0ll;
     }
   }
 
@@ -60,6 +62,9 @@ struct RobotDistance_
   using _robot_distance_type =
     double;
   _robot_distance_type robot_distance;
+  using _beacon_number_type =
+    int64_t;
+  _beacon_number_type beacon_number;
 
   // setters for named parameter idiom
   Type & set__robot_number(
@@ -72,6 +77,12 @@ struct RobotDistance_
     const double & _arg)
   {
     this->robot_distance = _arg;
+    return *this;
+  }
+  Type & set__beacon_number(
+    const int64_t & _arg)
+  {
+    this->beacon_number = _arg;
     return *this;
   }
 
@@ -121,6 +132,9 @@ struct RobotDistance_
       return false;
     }
     if (this->robot_distance != other.robot_distance) {
+      return false;
+    }
+    if (this->beacon_number != other.beacon_number) {
       return false;
     }
     return true;

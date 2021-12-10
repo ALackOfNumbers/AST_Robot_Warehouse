@@ -81,6 +81,10 @@ CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/row.
 CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/row__builder.hpp
 CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/row__struct.hpp
 CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/row__traits.hpp
+CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/robot_state.hpp
+CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/robot_state__builder.hpp
+CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/robot_state__struct.hpp
+CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/robot_state__traits.hpp
 CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/srv/delivery.hpp
 CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/srv/detail/delivery__builder.hpp
 CMakeFiles/messages_package__cpp: rosidl_generator_cpp/messages_package/srv/detail/delivery__struct.hpp
@@ -129,6 +133,7 @@ rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messag
 rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messages_package/msg/RobotLocation.idl
 rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messages_package/msg/Map.idl
 rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messages_package/msg/Row.idl
+rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messages_package/msg/RobotState.idl
 rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messages_package/srv/Delivery.idl
 rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messages_package/srv/PickUpItem.idl
 rosidl_generator_cpp/messages_package/msg/coordinates.hpp: rosidl_adapter/messages_package/srv/PutDownItem.idl
@@ -225,6 +230,18 @@ rosidl_generator_cpp/messages_package/msg/detail/row__struct.hpp: rosidl_generat
 
 rosidl_generator_cpp/messages_package/msg/detail/row__traits.hpp: rosidl_generator_cpp/messages_package/msg/coordinates.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/messages_package/msg/detail/row__traits.hpp
+
+rosidl_generator_cpp/messages_package/msg/robot_state.hpp: rosidl_generator_cpp/messages_package/msg/coordinates.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/messages_package/msg/robot_state.hpp
+
+rosidl_generator_cpp/messages_package/msg/detail/robot_state__builder.hpp: rosidl_generator_cpp/messages_package/msg/coordinates.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/messages_package/msg/detail/robot_state__builder.hpp
+
+rosidl_generator_cpp/messages_package/msg/detail/robot_state__struct.hpp: rosidl_generator_cpp/messages_package/msg/coordinates.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/messages_package/msg/detail/robot_state__struct.hpp
+
+rosidl_generator_cpp/messages_package/msg/detail/robot_state__traits.hpp: rosidl_generator_cpp/messages_package/msg/coordinates.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/messages_package/msg/detail/robot_state__traits.hpp
 
 rosidl_generator_cpp/messages_package/srv/delivery.hpp: rosidl_generator_cpp/messages_package/msg/coordinates.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/messages_package/srv/delivery.hpp
@@ -327,6 +344,10 @@ messages_package__cpp: rosidl_generator_cpp/messages_package/msg/row.hpp
 messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/row__builder.hpp
 messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/row__struct.hpp
 messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/row__traits.hpp
+messages_package__cpp: rosidl_generator_cpp/messages_package/msg/robot_state.hpp
+messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/robot_state__builder.hpp
+messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/robot_state__struct.hpp
+messages_package__cpp: rosidl_generator_cpp/messages_package/msg/detail/robot_state__traits.hpp
 messages_package__cpp: rosidl_generator_cpp/messages_package/srv/delivery.hpp
 messages_package__cpp: rosidl_generator_cpp/messages_package/srv/detail/delivery__builder.hpp
 messages_package__cpp: rosidl_generator_cpp/messages_package/srv/detail/delivery__struct.hpp

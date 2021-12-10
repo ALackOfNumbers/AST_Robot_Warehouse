@@ -77,6 +77,7 @@ rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_p
 rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_package/msg/RobotLocation.idl
 rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_package/msg/Map.idl
 rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_package/msg/Row.idl
+rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_package/msg/RobotState.idl
 rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_package/srv/Delivery.idl
 rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_package/srv/PickUpItem.idl
 rosidl_generator_c/messages_package/msg/coordinates.h: rosidl_adapter/messages_package/srv/PutDownItem.idl
@@ -174,6 +175,18 @@ rosidl_generator_c/messages_package/msg/detail/row__struct.h: rosidl_generator_c
 rosidl_generator_c/messages_package/msg/detail/row__type_support.h: rosidl_generator_c/messages_package/msg/coordinates.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/msg/detail/row__type_support.h
 
+rosidl_generator_c/messages_package/msg/robot_state.h: rosidl_generator_c/messages_package/msg/coordinates.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/msg/robot_state.h
+
+rosidl_generator_c/messages_package/msg/detail/robot_state__functions.h: rosidl_generator_c/messages_package/msg/coordinates.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/msg/detail/robot_state__functions.h
+
+rosidl_generator_c/messages_package/msg/detail/robot_state__struct.h: rosidl_generator_c/messages_package/msg/coordinates.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/msg/detail/robot_state__struct.h
+
+rosidl_generator_c/messages_package/msg/detail/robot_state__type_support.h: rosidl_generator_c/messages_package/msg/coordinates.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/msg/detail/robot_state__type_support.h
+
 rosidl_generator_c/messages_package/srv/delivery.h: rosidl_generator_c/messages_package/msg/coordinates.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/srv/delivery.h
 
@@ -266,6 +279,9 @@ rosidl_generator_c/messages_package/msg/detail/map__functions.c: rosidl_generato
 
 rosidl_generator_c/messages_package/msg/detail/row__functions.c: rosidl_generator_c/messages_package/msg/coordinates.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/msg/detail/row__functions.c
+
+rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c: rosidl_generator_c/messages_package/msg/coordinates.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c
 
 rosidl_generator_c/messages_package/srv/detail/delivery__functions.c: rosidl_generator_c/messages_package/msg/coordinates.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/messages_package/srv/detail/delivery__functions.c
@@ -376,9 +392,22 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/msg/detail/row__functions.c -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.s
 
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: CMakeFiles/messages_package__rosidl_generator_c.dir/flags.make
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o: rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o   -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c
+
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c > CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.i
+
+CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.s
+
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o: CMakeFiles/messages_package__rosidl_generator_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o: rosidl_generator_c/messages_package/srv/detail/delivery__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o   -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.i: cmake_force
@@ -391,7 +420,7 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o: CMakeFiles/messages_package__rosidl_generator_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o: rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o   -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.i: cmake_force
@@ -404,7 +433,7 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o: CMakeFiles/messages_package__rosidl_generator_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o: rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o   -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.i: cmake_force
@@ -417,7 +446,7 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.o: CMakeFiles/messages_package__rosidl_generator_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.o: rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.o   -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.i: cmake_force
@@ -430,7 +459,7 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.o: CMakeFiles/messages_package__rosidl_generator_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.o: rosidl_generator_c/messages_package/action/detail/move_item__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.o   -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/action/detail/move_item__functions.c
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.i: cmake_force
@@ -443,7 +472,7 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.o: CMakeFiles/messages_package__rosidl_generator_c.dir/flags.make
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.o: rosidl_generator_c/messages_package/action/detail/order__functions.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.o   -c /home/sam/AST_Robot_Warehouse/build/messages_package/rosidl_generator_c/messages_package/action/detail/order__functions.c
 
 CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.i: cmake_force
@@ -463,6 +492,7 @@ messages_package__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_location__functions.c.o" \
 "CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/map__functions.c.o" \
 "CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.o" \
+"CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o" \
 "CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o" \
 "CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o" \
 "CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o" \
@@ -480,6 +510,7 @@ libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_
 libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_location__functions.c.o
 libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/map__functions.c.o
 libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.o
+libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o
 libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o
 libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o
 libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o
@@ -510,7 +541,7 @@ libmessages_package__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_runtime_
 libmessages_package__rosidl_generator_c.so: /opt/ros/foxy/lib/librcpputils.so
 libmessages_package__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libmessages_package__rosidl_generator_c.so: CMakeFiles/messages_package__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C shared library libmessages_package__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking C shared library libmessages_package__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/messages_package__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -550,6 +581,10 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/m
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/row__functions.h
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/row__struct.h
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/row__type_support.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/robot_state.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/robot_state__functions.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/robot_state__struct.h
+CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/robot_state__type_support.h
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/srv/delivery.h
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/srv/detail/delivery__functions.h
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/srv/detail/delivery__struct.h
@@ -581,6 +616,7 @@ CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/m
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/robot_location__functions.c
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/map__functions.c
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/row__functions.c
+CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/srv/detail/delivery__functions.c
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c
 CMakeFiles/messages_package__rosidl_generator_c.dir/depend: rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c

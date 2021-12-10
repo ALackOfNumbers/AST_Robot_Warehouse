@@ -1,0 +1,584 @@
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.8.so
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/sam/AST_Robot_Warehouse/src/messages_package/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sam/AST_Robot_Warehouse/build/messages_package
+[35m[1mScanning dependencies of target messages_package__cpp[0m
+[  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[  2%] Built target messages_node
+[  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  3%] Built target messages_package__cpp
+[  4%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[  5%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[  6%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_generator_c[0m
+[  7%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/coordinates__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/delivery__functions.c.o[0m
+[  8%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/item__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_location__functions.c.o[0m
+[  9%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/map__functions.c.o[0m
+[ 10%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/row__functions.c.o[0m
+[ 11%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_distance__functions.c.o[0m
+[ 12%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/msg/detail/robot_state__functions.c.o[0m
+[ 13%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/delivery__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/pick_up_item__functions.c.o[0m
+[ 14%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/srv/detail/put_down_item__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/charge_robot__functions.c.o[0m
+[ 15%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/order__functions.c.o[0m
+[ 16%] [32mBuilding C object CMakeFiles/messages_package__rosidl_generator_c.dir/rosidl_generator_c/messages_package/action/detail/move_item__functions.c.o[0m
+[ 17%] [32m[1mLinking C shared library libmessages_package__rosidl_generator_c.so[0m
+[ 17%] Built target messages_package__rosidl_generator_c
+[ 18%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 18%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_cpp[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/item__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/map__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/coordinates__type_support.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/robot_distance__type_support.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/delivery__type_support.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/robot_location__type_support.cpp.o[0m
+[ 23%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/row__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/msg/robot_state__type_support.cpp.o[0m
+[ 24%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/srv/delivery__type_support.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/srv/pick_up_item__type_support.cpp.o[0m
+[ 26%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/srv/put_down_item__type_support.cpp.o[0m
+[ 27%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/action/charge_robot__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/action/order__type_support.cpp.o[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/messages_package/action/move_item__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_c[0m
+[ 28%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/delivery__type_support.cpp.o[0m
+[ 29%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/coordinates__type_support.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/item__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_introspection_cpp[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/robot_location__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/robot_distance__type_support.cpp.o[0m
+[ 31%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/coordinates__type_support.cpp.o[0m
+[ 32%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/map__type_support.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/delivery__type_support.cpp.o[0m
+[ 34%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/row__type_support.cpp.o[0m
+[ 35%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/msg/robot_state__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/item__type_support.cpp.o[0m
+[ 36%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/srv/delivery__type_support.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/srv/pick_up_item__type_support.cpp.o[0m
+[ 38%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/srv/put_down_item__type_support.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/action/charge_robot__type_support.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/action/move_item__type_support.cpp.o[0m
+[ 39%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/robot_distance__type_support.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_c.dir/rosidl_typesupport_c/messages_package/action/order__type_support.cpp.o[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/map__type_support.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/robot_location__type_support.cpp.o[0m
+[ 44%] [32m[1mLinking CXX shared library libmessages_package__rosidl_typesupport_cpp.so[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/row__type_support.cpp.o[0m
+[ 45%] [32m[1mLinking CXX shared library libmessages_package__rosidl_typesupport_c.so[0m
+[ 45%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/msg/detail/robot_state__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_fastrtps_cpp[0m
+[ 45%] Built target messages_package__rosidl_typesupport_cpp
+[ 46%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/srv/detail/delivery__type_support.cpp.o[0m
+[ 46%] Built target messages_package__rosidl_typesupport_c
+[ 46%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/coordinates__type_support.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/srv/detail/pick_up_item__type_support.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/srv/detail/put_down_item__type_support.cpp.o[0m
+[ 48%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/action/detail/charge_robot__type_support.cpp.o[0m
+[ 49%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/action/detail/move_item__type_support.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/delivery__type_support.cpp.o[0m
+[ 51%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/messages_package/action/detail/order__type_support.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/item__type_support.cpp.o[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_introspection_c[0m
+[ 53%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/robot_distance__type_support.cpp.o[0m
+[ 54%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/coordinates__type_support.c.o[0m
+[ 55%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/delivery__type_support.c.o[0m
+[ 56%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/item__type_support.c.o[0m
+[ 57%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/robot_location__type_support.c.o[0m
+[ 57%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/robot_distance__type_support.c.o[0m
+[ 58%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/map__type_support.c.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/robot_location__type_support.cpp.o[0m
+[ 59%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/map__type_support.cpp.o[0m
+[ 60%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/row__type_support.c.o[0m
+[ 60%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/msg/detail/robot_state__type_support.c.o[0m
+[ 61%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/srv/detail/delivery__type_support.c.o[0m
+[ 62%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/row__type_support.cpp.o[0m
+[ 63%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/srv/detail/pick_up_item__type_support.c.o[0m
+[ 64%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/msg/detail/dds_fastrtps/robot_state__type_support.cpp.o[0m
+[ 64%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/srv/detail/put_down_item__type_support.c.o[0m
+[ 65%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/action/detail/charge_robot__type_support.c.o[0m
+[ 66%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/action/detail/move_item__type_support.c.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/srv/detail/dds_fastrtps/delivery__type_support.cpp.o[0m
+[ 67%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/messages_package/action/detail/order__type_support.c.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/srv/detail/dds_fastrtps/pick_up_item__type_support.cpp.o[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/srv/detail/dds_fastrtps/put_down_item__type_support.cpp.o[0m
+[ 69%] [32m[1mLinking C shared library libmessages_package__rosidl_typesupport_introspection_c.so[0m
+[ 69%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/action/detail/dds_fastrtps/charge_robot__type_support.cpp.o[0m
+[ 69%] Built target messages_package__rosidl_typesupport_introspection_c
+[ 70%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/action/detail/dds_fastrtps/move_item__type_support.cpp.o[0m
+[ 71%] [32m[1mLinking CXX shared library libmessages_package__rosidl_typesupport_introspection_cpp.so[0m
+[ 72%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/messages_package/action/detail/dds_fastrtps/order__type_support.cpp.o[0m
+[ 72%] Built target messages_package__rosidl_typesupport_introspection_cpp
+[ 73%] [32m[1mLinking CXX shared library libmessages_package__rosidl_typesupport_fastrtps_cpp.so[0m
+[ 73%] Built target messages_package__rosidl_typesupport_fastrtps_cpp
+[ 74%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_fastrtps_c[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/coordinates__type_support_c.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/delivery__type_support_c.cpp.o[0m
+[ 76%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_distance__type_support_c.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/item__type_support_c.cpp.o[0m
+[ 78%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/map__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/row__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_state__type_support_c.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/msg/detail/robot_location__type_support_c.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/pick_up_item__type_support_c.cpp.o[0m
+[ 81%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/delivery__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/srv/detail/put_down_item__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/charge_robot__type_support_c.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/move_item__type_support_c.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/messages_package/action/detail/order__type_support_c.cpp.o[0m
+[ 85%] [32m[1mLinking CXX shared library libmessages_package__rosidl_typesupport_fastrtps_c.so[0m
+[ 85%] Built target messages_package__rosidl_typesupport_fastrtps_c
+[ 85%] Built target messages_package
+[35m[1mScanning dependencies of target messages_package__py[0m
+[ 85%] [34m[1mGenerating Python code for ROS interfaces[0m
+[ 85%] Built target messages_package__py
+[35m[1mScanning dependencies of target messages_package__python[0m
+[ 88%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_coordinates_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_delivery_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_distance_s.c.o[0m
+[ 88%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_item_s.c.o[0m
+[ 89%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_location_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_row_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_map_s.c.o[0m
+[ 91%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/msg/_robot_state_s.c.o[0m
+[ 92%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_pick_up_item_s.c.o[0m
+[ 93%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_delivery_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/action/_charge_robot_s.c.o[0m
+[ 94%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/srv/_put_down_item_s.c.o[0m
+[ 95%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/action/_move_item_s.c.o[0m
+[ 96%] [32mBuilding C object CMakeFiles/messages_package__python.dir/rosidl_generator_py/messages_package/action/_order_s.c.o[0m
+[ 96%] [32m[1mLinking C shared library rosidl_generator_py/messages_package/libmessages_package__python.so[0m
+[ 96%] Built target messages_package__python
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_c__pyext[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_introspection_c__pyext[0m
+[35m[1mScanning dependencies of target messages_package__rosidl_typesupport_fastrtps_c__pyext[0m
+[ 97%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_c.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[ 97%] [32mBuilding C object CMakeFiles/messages_package__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[ 98%] [32m[1mLinking C shared library rosidl_generator_py/messages_package/messages_package_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so[0m
+[ 99%] [32m[1mLinking C shared library rosidl_generator_py/messages_package/messages_package_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so[0m
+[100%] [32m[1mLinking CXX shared library rosidl_generator_py/messages_package/messages_package_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so[0m
+[100%] Built target messages_package__rosidl_typesupport_c__pyext
+[100%] Built target messages_package__rosidl_typesupport_introspection_c__pyext
+[100%] Built target messages_package__rosidl_typesupport_fastrtps_c__pyext
+-- Install configuration: ""
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/messages_package/messages_node
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/rosidl_interfaces/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/move_item.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/charge_robot.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/order.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/put_down_item.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/delivery.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/pick_up_item.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__struct.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_generator_c__visibility_control.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/coordinates.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/row.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/map.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_location.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_distance.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_state.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/item.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/delivery.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__type_support.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__functions.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__functions.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__struct.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__struct.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/library_path.sh
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/library_path.dsv
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_generator_c.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_c.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_fastrtps_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/dds_fastrtps
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/dds_fastrtps
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_fastrtps_cpp.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/dds_fastrtps
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_fastrtps_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__type_support.c
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.c
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/rosidl_typesupport_introspection_c__visibility_control.h
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_introspection_c.h
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__type_support.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_c.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/charge_robot.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/order.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/move_item.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__builder.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/pick_up_item.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/delivery.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/put_down_item.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_location.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/map.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/item.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/delivery.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_distance.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/coordinates.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__struct.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__traits.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__builder.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/row.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/robot_state.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/charge_robot__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/order__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/action/detail/move_item__type_support.cpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/pick_up_item__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/put_down_item__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/srv/detail/delivery__rosidl_typesupport_introspection_cpp.hpp
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_distance__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/row__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_state__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/robot_location__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/item__type_support.cpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/delivery__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/include/messages_package/msg/detail/map__rosidl_typesupport_introspection_cpp.hpp
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__rosidl_typesupport_cpp.so" to ""
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/pythonpath.sh
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/pythonpath.dsv
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/__init__.py
+Compiling '/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/__init__.py'...
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/__init__.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_location_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_row.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_coordinates.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_coordinates_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_row_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_distance_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_state_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_item.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_distance.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_delivery.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_location.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_item_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_map_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_robot_state.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_delivery_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/msg/_map.py
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/__init__.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_put_down_item_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_delivery.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_put_down_item.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_pick_up_item.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_pick_up_item_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/srv/_delivery_s.c
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/__init__.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_order_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_charge_robot_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_move_item.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_move_item_s.c
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_order.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/action/_charge_robot.py
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/python3.8/site-packages/messages_package/messages_package_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so" to ""
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__python.so
+-- Set runtime path of "/home/sam/AST_Robot_Warehouse/install/messages_package/lib/libmessages_package__python.so" to ""
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Coordinates.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Delivery.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Item.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotDistance.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotLocation.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Map.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Row.idl
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotState.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/ChargeRobot.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/MoveItem.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/Order.idl
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Coordinates.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Delivery.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Item.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotDistance.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotLocation.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Map.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/Row.msg
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/msg/RobotState.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery.srv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery_Request.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/Delivery_Response.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem.srv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem_Request.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PickUpItem_Response.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem.srv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem_Request.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/srv/PutDownItem_Response.msg
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/ChargeRobot.action
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/MoveItem.action
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/action/Order.action
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/package_run_dependencies/messages_package
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/parent_prefix_path/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/ament_prefix_path.sh
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/path.sh
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/environment/path.dsv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.bash
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.sh
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.zsh
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/local_setup.dsv
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/package.dsv
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/ament_index/resource_index/packages/messages_package
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cExport.cmake
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cExport-noconfig.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cExport.cmake
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cExport-noconfig.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_generator_cppExport.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_package__rosidl_typesupport_cppExport-noconfig.cmake
+-- Installing: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/rosidl_cmake-extras.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_packageConfig.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/cmake/messages_packageConfig-version.cmake
+-- Up-to-date: /home/sam/AST_Robot_Warehouse/install/messages_package/share/messages_package/package.xml

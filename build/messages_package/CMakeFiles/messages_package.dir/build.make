@@ -60,6 +60,7 @@ CMakeFiles/messages_package: /home/sam/AST_Robot_Warehouse/src/messages_package/
 CMakeFiles/messages_package: /home/sam/AST_Robot_Warehouse/src/messages_package/msg/RobotLocation.msg
 CMakeFiles/messages_package: /home/sam/AST_Robot_Warehouse/src/messages_package/msg/Map.msg
 CMakeFiles/messages_package: /home/sam/AST_Robot_Warehouse/src/messages_package/msg/Row.msg
+CMakeFiles/messages_package: /home/sam/AST_Robot_Warehouse/src/messages_package/msg/RobotState.msg
 CMakeFiles/messages_package: /home/sam/AST_Robot_Warehouse/src/messages_package/srv/Delivery.srv
 CMakeFiles/messages_package: rosidl_cmake/srv/Delivery_Request.msg
 CMakeFiles/messages_package: rosidl_cmake/srv/Delivery_Response.msg

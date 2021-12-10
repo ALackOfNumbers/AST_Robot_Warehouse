@@ -68,6 +68,15 @@ bool messages_package__msg__robot_distance__convert_from_py(PyObject * _pymsg, v
     ros_message->robot_distance = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // beacon_number
+    PyObject * field = PyObject_GetAttrString(_pymsg, "beacon_number");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->beacon_number = PyLong_AsLongLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -106,6 +115,17 @@ PyObject * messages_package__msg__robot_distance__convert_to_py(void * raw_ros_m
     field = PyFloat_FromDouble(ros_message->robot_distance);
     {
       int rc = PyObject_SetAttrString(_pymessage, "robot_distance", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // beacon_number
+    PyObject * field = NULL;
+    field = PyLong_FromLongLong(ros_message->beacon_number);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "beacon_number", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

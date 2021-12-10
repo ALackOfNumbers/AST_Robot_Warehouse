@@ -16,6 +16,8 @@ msg/RobotDistance.idl
 msg/RobotDistance.msg
 msg/RobotLocation.idl
 msg/RobotLocation.msg
+msg/RobotState.idl
+msg/RobotState.msg
 msg/Row.idl
 msg/Row.msg
 srv/Delivery.idl

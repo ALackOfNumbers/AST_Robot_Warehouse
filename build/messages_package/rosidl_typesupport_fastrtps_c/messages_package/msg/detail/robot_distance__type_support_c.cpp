@@ -59,6 +59,11 @@ static bool _RobotDistance__cdr_serialize(
     cdr << ros_message->robot_distance;
   }
 
+  // Field name: beacon_number
+  {
+    cdr << ros_message->beacon_number;
+  }
+
   return true;
 }
 
@@ -79,6 +84,11 @@ static bool _RobotDistance__cdr_deserialize(
   // Field name: robot_distance
   {
     cdr >> ros_message->robot_distance;
+  }
+
+  // Field name: beacon_number
+  {
+    cdr >> ros_message->beacon_number;
   }
 
   return true;
@@ -107,6 +117,12 @@ size_t get_serialized_size_messages_package__msg__RobotDistance(
   // field.name robot_distance
   {
     size_t item_size = sizeof(ros_message->robot_distance);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name beacon_number
+  {
+    size_t item_size = sizeof(ros_message->beacon_number);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -142,6 +158,13 @@ size_t max_serialized_size_messages_package__msg__RobotDistance(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: robot_distance
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: beacon_number
   {
     size_t array_size = 1;
 

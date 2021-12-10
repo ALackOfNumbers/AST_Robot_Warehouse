@@ -22,6 +22,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/messages_package/msg/_robot_distance_s.c"
   "../rosidl_generator_py/messages_package/msg/_robot_location.py"
   "../rosidl_generator_py/messages_package/msg/_robot_location_s.c"
+  "../rosidl_generator_py/messages_package/msg/_robot_state.py"
+  "../rosidl_generator_py/messages_package/msg/_robot_state_s.c"
   "../rosidl_generator_py/messages_package/msg/_row.py"
   "../rosidl_generator_py/messages_package/msg/_row_s.c"
   "../rosidl_generator_py/messages_package/srv/__init__.py"

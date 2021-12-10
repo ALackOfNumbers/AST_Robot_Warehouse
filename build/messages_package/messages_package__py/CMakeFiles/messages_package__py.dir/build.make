@@ -63,6 +63,7 @@ messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messag
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_robot_location.py
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_map.py
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_row.py
+messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_robot_state.py
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/srv/_delivery.py
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/srv/_pick_up_item.py
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/srv/_put_down_item.py
@@ -79,6 +80,7 @@ messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messag
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_robot_location_s.c
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_map_s.c
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_row_s.c
+messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/msg/_robot_state_s.c
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/srv/_delivery_s.c
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/srv/_pick_up_item_s.c
 messages_package__py/CMakeFiles/messages_package__py: rosidl_generator_py/messages_package/srv/_put_down_item_s.c
@@ -107,6 +109,7 @@ rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_f
 rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/messages_package/msg/RobotLocation.idl
 rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/messages_package/msg/Map.idl
 rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/messages_package/msg/Row.idl
+rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/messages_package/msg/RobotState.idl
 rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/messages_package/srv/Delivery.idl
 rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/messages_package/srv/PickUpItem.idl
 rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/messages_package/srv/PutDownItem.idl
@@ -149,6 +152,9 @@ rosidl_generator_py/messages_package/msg/_map.py: rosidl_generator_py/messages_p
 
 rosidl_generator_py/messages_package/msg/_row.py: rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/messages_package/msg/_row.py
+
+rosidl_generator_py/messages_package/msg/_robot_state.py: rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/messages_package/msg/_robot_state.py
 
 rosidl_generator_py/messages_package/srv/_delivery.py: rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/messages_package/srv/_delivery.py
@@ -198,6 +204,9 @@ rosidl_generator_py/messages_package/msg/_map_s.c: rosidl_generator_py/messages_
 rosidl_generator_py/messages_package/msg/_row_s.c: rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/messages_package/msg/_row_s.c
 
+rosidl_generator_py/messages_package/msg/_robot_state_s.c: rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/messages_package/msg/_robot_state_s.c
+
 rosidl_generator_py/messages_package/srv/_delivery_s.c: rosidl_generator_py/messages_package/_messages_package_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/messages_package/srv/_delivery_s.c
 
@@ -227,6 +236,7 @@ messages_package__py: rosidl_generator_py/messages_package/msg/_robot_distance.p
 messages_package__py: rosidl_generator_py/messages_package/msg/_robot_location.py
 messages_package__py: rosidl_generator_py/messages_package/msg/_map.py
 messages_package__py: rosidl_generator_py/messages_package/msg/_row.py
+messages_package__py: rosidl_generator_py/messages_package/msg/_robot_state.py
 messages_package__py: rosidl_generator_py/messages_package/srv/_delivery.py
 messages_package__py: rosidl_generator_py/messages_package/srv/_pick_up_item.py
 messages_package__py: rosidl_generator_py/messages_package/srv/_put_down_item.py
@@ -243,6 +253,7 @@ messages_package__py: rosidl_generator_py/messages_package/msg/_robot_distance_s
 messages_package__py: rosidl_generator_py/messages_package/msg/_robot_location_s.c
 messages_package__py: rosidl_generator_py/messages_package/msg/_map_s.c
 messages_package__py: rosidl_generator_py/messages_package/msg/_row_s.c
+messages_package__py: rosidl_generator_py/messages_package/msg/_robot_state_s.c
 messages_package__py: rosidl_generator_py/messages_package/srv/_delivery_s.c
 messages_package__py: rosidl_generator_py/messages_package/srv/_pick_up_item_s.c
 messages_package__py: rosidl_generator_py/messages_package/srv/_put_down_item_s.c

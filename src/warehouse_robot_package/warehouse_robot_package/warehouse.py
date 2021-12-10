@@ -1,22 +1,9 @@
-# Copyright 2016 Open Source Robotics Foundation, Inc.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 import rclpy
 from rclpy.node import Node
+from rclpy.callback_groups import ReentrantCallbackGroup
+from rclpy.executors import MultiThreadedExecutor
 
-#Imports string message type. We will import our own message types from our message package
-from std_msgs.msg import String
+#Import custom messages
 import messages_package.msg as mp
 
 class Warehouse(Node):
@@ -24,30 +11,50 @@ class Warehouse(Node):
     def __init__(self):
         #Calls the node classes contructor and passes a node name
         super().__init__('warehouse_instance')
-        #Declares self as a publisher that publishes String messages to the 'topic' topic with a queue size of 10
-        #Queue size is a QoS setting that limits the amount of queued messafe if a subscriber is not receiving them fast enough
-        self.publisher_ = self.create_publisher(mp.Map, 'map', 10)
-        #Period defined for the timer
-        timer_period = 3  # seconds
-        #Timer is created with a callback that is executed every 0.5 seconds
-        self.timer = self.create_timer(timer_period, self.timer_callback)
-        #Iterator used in the callback
-        self.i = 0
 
+        #Create a callback group
+        self.callback_group = ReentrantCallbackGroup()
+
+        #Create subscriber for the robot locations
         self.subscriber_location = self.create_subscription(
             mp.RobotLocation,
             'robot_location',
             self.listener_callback_location,
-            10)
+            10,
+            callback_group=self.callback_group)
 
+        #Create subscriber for the robot states
         self.subscriber_state = self.create_subscription(
-            String,
+            mp.RobotState,
             'robot_state',
             self.listener_callback_state,
-            10)
+            10,
+            callback_group=self.callback_group)
+
+        #Create a publisher for the map
+        self.publisher_ = self.create_publisher(mp.Map, 'map', 10)
+
+        #Period defined for the timer
+        timer_period = 3  # seconds
+        #Timer is created with a callback that is executed every 0.5 seconds
+        self.timer = self.create_timer(timer_period, self.timer_callback,callback_group=self.callback_group)
+
+        #Iterator used in the callback
+        self.i = 0
+
+        
         
     #Callback from the timer
     def timer_callback(self):
+        '''
+        The timer callback updates and publishes the map
+        '''
+
+        #TODO Update the map
+
+        #TODO Publish the map
+
+        #Publish test message
         #Create message string
         msg = mp.Map()
         #Add data to the string
@@ -64,21 +71,25 @@ class Warehouse(Node):
         #Increase the iterator value
         self.i += 1
 
+    #Listener callback for the robot locations
     def listener_callback_location(self, msg):
-        self.get_logger().info('Robot number: %i"' % msg.robot_number)
-        self.get_logger().info('X coordinate: %f"' % msg.robot_location.x)
-        self.get_logger().info('Y coordinate: %f"' % msg.robot_location.y)
-    
+        self.get_logger().info('Robot number: %i,X coordinate: %f,Y coordinate: %f' % (msg.robot_number,msg.robot_location.x,msg.robot_location.y))
+
+    #Listener callback for the robot states
     def listener_callback_state(self, msg):
-        self.get_logger().info('Robot state: %s' % msg.data)
+        self.get_logger().info('Robot: %i State: %s' % (msg.robot_number,msg.robot_state))
 
 def main(args=None):
-    #Initializes rclpy
+    #Initialize rclpy
     rclpy.init(args=args)
+
     #Creates the node
     warehouse_instance = Warehouse()
-    #"Spins" the node to callbacks are called
-    rclpy.spin(warehouse_instance)
+    #Create a multithreading executor
+    executor = MultiThreadedExecutor()
+
+    #"Spins" the node so callbacks are called
+    rclpy.spin(warehouse_instance, executor)
 
     # Destroy the node explicitly
     # (optional - otherwise it will be done automatically

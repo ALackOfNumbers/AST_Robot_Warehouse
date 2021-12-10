@@ -187,7 +187,7 @@ CMakeFiles/messages_package__python.dir/all: CMakeFiles/messages_package__rosidl
 CMakeFiles/messages_package__python.dir/all: messages_package__py/CMakeFiles/messages_package__py.dir/all
 	$(MAKE) -f CMakeFiles/messages_package__python.dir/build.make CMakeFiles/messages_package__python.dir/depend
 	$(MAKE) -f CMakeFiles/messages_package__python.dir/build.make CMakeFiles/messages_package__python.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13 "Built target messages_package__python"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target messages_package__python"
 .PHONY : CMakeFiles/messages_package__python.dir/all
 
 # Build rule for subdir invocation for target.
@@ -580,12 +580,12 @@ CMakeFiles/messages_package__rosidl_typesupport_introspection_cpp.dir/clean:
 messages_package__py/CMakeFiles/messages_package__py.dir/all: CMakeFiles/messages_package.dir/all
 	$(MAKE) -f messages_package__py/CMakeFiles/messages_package__py.dir/build.make messages_package__py/CMakeFiles/messages_package__py.dir/depend
 	$(MAKE) -f messages_package__py/CMakeFiles/messages_package__py.dir/build.make messages_package__py/CMakeFiles/messages_package__py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num=3 "Built target messages_package__py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles --progress-num= "Built target messages_package__py"
 .PHONY : messages_package__py/CMakeFiles/messages_package__py.dir/all
 
 # Build rule for subdir invocation for target.
 messages_package__py/CMakeFiles/messages_package__py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles 85
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles 84
 	$(MAKE) -f CMakeFiles/Makefile2 messages_package__py/CMakeFiles/messages_package__py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sam/AST_Robot_Warehouse/build/messages_package/CMakeFiles 0
 .PHONY : messages_package__py/CMakeFiles/messages_package__py.dir/rule

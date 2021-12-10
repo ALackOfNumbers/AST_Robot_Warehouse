@@ -126,6 +126,9 @@ CMakeFiles/messages_package__rosidl_typesupport_introspection_c__pyext.dir/rosid
  rosidl_generator_c/messages_package/msg/detail/robot_location__functions.h
  rosidl_generator_c/messages_package/msg/detail/robot_location__struct.h
  rosidl_generator_c/messages_package/msg/detail/robot_location__type_support.h
+ rosidl_generator_c/messages_package/msg/detail/robot_state__functions.h
+ rosidl_generator_c/messages_package/msg/detail/robot_state__struct.h
+ rosidl_generator_c/messages_package/msg/detail/robot_state__type_support.h
  rosidl_generator_c/messages_package/msg/detail/row__functions.h
  rosidl_generator_c/messages_package/msg/detail/row__struct.h
  rosidl_generator_c/messages_package/msg/detail/row__type_support.h

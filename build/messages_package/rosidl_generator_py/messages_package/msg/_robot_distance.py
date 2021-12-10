@@ -55,16 +55,19 @@ class RobotDistance(metaclass=Metaclass_RobotDistance):
     __slots__ = [
         '_robot_number',
         '_robot_distance',
+        '_beacon_number',
     ]
 
     _fields_and_field_types = {
         'robot_number': 'int64',
         'robot_distance': 'double',
+        'beacon_number': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -73,6 +76,7 @@ class RobotDistance(metaclass=Metaclass_RobotDistance):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.robot_number = kwargs.get('robot_number', int())
         self.robot_distance = kwargs.get('robot_distance', float())
+        self.beacon_number = kwargs.get('beacon_number', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -106,6 +110,8 @@ class RobotDistance(metaclass=Metaclass_RobotDistance):
         if self.robot_number != other.robot_number:
             return False
         if self.robot_distance != other.robot_distance:
+            return False
+        if self.beacon_number != other.beacon_number:
             return False
         return True
 
@@ -141,3 +147,18 @@ class RobotDistance(metaclass=Metaclass_RobotDistance):
                 isinstance(value, float), \
                 "The 'robot_distance' field must be of type 'float'"
         self._robot_distance = value
+
+    @property
+    def beacon_number(self):
+        """Message field 'beacon_number'."""
+        return self._beacon_number
+
+    @beacon_number.setter
+    def beacon_number(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'beacon_number' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'beacon_number' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._beacon_number = value

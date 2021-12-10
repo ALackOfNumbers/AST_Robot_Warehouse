@@ -1,2 +1,3 @@
 int64 robot_number
 float64 robot_distance
+int64 beacon_number
