@@ -66,6 +66,17 @@ class Warehouse(Node):
         #Create a client for the charge_robot action
         self._action_client_charge_robot = ActionClient(self, mpaction.ChargeRobot, 'charge_robot')
 
+        #Create a client for the move_item action
+        self._action_client_move_item = ActionClient(self, mpaction.MoveItem, 'move_item')
+
+        #Create a server for the order action
+        self._action_server_order = ActionServer(
+            self,
+            mpaction.Order,
+            'order',
+            self.callback_order,
+            callback_group=self.callback_group)
+
         #Iterator used in the callback
         self.i = 0
 
@@ -163,6 +174,66 @@ class Warehouse(Node):
     def feedback_callback_charge_robot(self, feedback_msg):
         self.get_logger().info('Current robot battery level: %i'% feedback_msg.feedback.current_battery_level)
 
+    #Send goal for the move item action
+    def send_goal_move_item(self, item, start_location, end_location):
+        goal_msg = mpaction.MoveItem.Goal()
+        goal_msg.item = item
+        goal_msg.initial_location = start_location
+        goal_msg.final_location = end_location
+
+        self._action_client_move_item.wait_for_server()
+
+        self._send_goal_future_move_item = self._action_client_move_item.send_goal_async(goal_msg, feedback_callback=self.feedback_callback_move_item)
+
+        self._send_goal_future_move_item.add_done_callback(self.goal_response_callback_move_item)   
+
+    #Goal response callback for move item action
+    def goal_response_callback_move_item(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().info('Move item rejected')
+            return
+
+        self.get_logger().info('Move item accepted')
+
+        self._get_result_future = goal_handle.get_result_async()
+        self._get_result_future.add_done_callback(self.get_result_callback_move_item)
+
+    #Result callback for the move item action
+    def get_result_callback_move_item(self, future):
+        result = future.result().result
+        self.get_logger().info('Item moved: %s Failure reason: %s'% (result.success_or_failure,result.failure_reason))
+        #rclpy.shutdown()
+
+    #Feedback callback for move item action
+    def feedback_callback_move_item(self, feedback_msg):
+        self.get_logger().info('Current robot location: %i,%i Target robot location: %i,%i'% (feedback_msg.feedback.current_location.x,feedback_msg.feedback.current_location.y,feedback_msg.feedback.target_location.x,feedback_msg.feedback.target_location.y))
+
+    #Callback for the order action
+    def callback_order(self, goal_handle):
+        self.get_logger().info('Processing order...')
+
+        feedback_msg = mpaction.Order.Feedback()
+        feedback_msg.order_status = 'Assigning robot'
+        goal_handle.publish_feedback(feedback_msg)
+
+        #TODO Get available robot
+
+        feedback_msg.order_status = 'Robot assigned'
+        goal_handle.publish_feedback(feedback_msg)
+        
+        #TODO Loop move items from shelves to dispatch
+        feedback_msg.order_status = 'Taking items to dispatch'
+        goal_handle.publish_feedback(feedback_msg)
+
+        goal_handle.succeed()
+
+        result = mpaction.Order.Result()
+        result.success_or_failure = True
+        result.failure_reason = 'None'
+        self.get_logger().info('Order shipped: %s Failure reason: %s'%(result.success_or_failure,result.failure_reason))
+        return result
+
 def main(args=None):
     #Initialize rclpy
     rclpy.init(args=args)
@@ -174,6 +245,11 @@ def main(args=None):
 
     #Test charge robot action
     warehouse_instance.send_goal_charge_robot(mpmsg.Coordinates(x=7.0,y = 18.0))
+
+    #Test move item action
+    location = mpmsg.Coordinates(x=6.0,y=9.0)
+    location2 = mpmsg.Coordinates(x=15.0,y=32.0)
+    warehouse_instance.send_goal_move_item(mpmsg.Item(name='Cheese',age=7.0,location=location,quantity=10),location,location2)
 
     #"Spins" the node so callbacks are called
     rclpy.spin(warehouse_instance, executor)

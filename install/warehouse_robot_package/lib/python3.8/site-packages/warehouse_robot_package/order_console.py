@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.action import ActionClient
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 import time 
@@ -30,6 +31,9 @@ class OrderConsole(Node):
         while not self.client_delivery.wait_for_service(timeout_sec=5.0):
             self.get_logger().info('Service not available, waiting again...')
         self.req = mpsrv.Delivery.Request()
+
+        #Create a client for the order action
+        self._action_client_order = ActionClient(self, mpaction.Order, 'order')
 
 
     #Listener callback for the map
@@ -72,6 +76,38 @@ class OrderConsole(Node):
         self.req.delivery_contents.time = float(current_time)
         self.future_delivery = self.client_delivery.call_async(self.req)
 
+    #Send goal for the order action
+    def send_goal_order(self, items):
+        goal_msg = mpaction.Order.Goal()
+        goal_msg.items = items
+
+        self._action_client_order.wait_for_server()
+
+        self._send_goal_future_order = self._action_client_order.send_goal_async(goal_msg, feedback_callback=self.feedback_callback_order)
+
+        self._send_goal_future_order.add_done_callback(self.goal_response_callback_order)   
+
+    #Goal response callback for order action
+    def goal_response_callback_order(self, future):
+        goal_handle = future.result()
+        if not goal_handle.accepted:
+            self.get_logger().info('Order rejected')
+            return
+
+        self.get_logger().info('Order accepted')
+
+        self._get_result_future = goal_handle.get_result_async()
+        self._get_result_future.add_done_callback(self.get_result_callback_order)
+
+    #Result callback for the order action
+    def get_result_callback_order(self, future):
+        result = future.result().result
+        self.get_logger().info('Order shipped: %s Failure reason: %s'% (result.success_or_failure,result.failure_reason))
+        #rclpy.shutdown()
+
+    #Feedback callback for order action
+    def feedback_callback_order(self, feedback_msg):
+        self.get_logger().info('Order status: %s'% feedback_msg.feedback.order_status)
 
 def main(args=None):
     #Initializes rclpy
@@ -81,6 +117,11 @@ def main(args=None):
     order_console_instance = OrderConsole()
     #Create a multithreading executor
     executor = MultiThreadedExecutor()
+
+    #TODO allow multiple orders
+    #Send a single order 
+    item = mpmsg.Item(name='Chicken',age=time.time(),location=mpmsg.Coordinates(x=8.0,y=2.0),quantity=2)
+    order_console_instance.send_goal_order([item])
 
     #TODO allow multiple deliveries
     #Send the request once

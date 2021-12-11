@@ -26,6 +26,8 @@ class Robot(Node):
         self.current_battery = 60
         #Define the robot's critical battery level
         self.critical_battery = 30
+        #Define the robot's location
+        self.location = [1,1]
 
         #Create a callback group
         self.callback_group = ReentrantCallbackGroup()
@@ -68,11 +70,19 @@ class Robot(Node):
         self.req_put_down_item = mpsrv.PutDownItem.Request()
 
         #Create a server for the charge_robot action
-        self._action_server = ActionServer(
+        self._action_server_charge_robot = ActionServer(
             self,
             mpaction.ChargeRobot,
             'charge_robot',
             self.callback_charge_robot,
+            callback_group=self.callback_group)
+
+        #Create a server for the move_item action
+        self._action_server_move_item = ActionServer(
+            self,
+            mpaction.MoveItem,
+            'move_item',
+            self.callback_move_item,
             callback_group=self.callback_group)
 
         #Iterator used in the callback
@@ -143,7 +153,7 @@ class Robot(Node):
         
         #Charge until battery is full
         while self.current_battery < 100:
-            self.get_logger().info('Current battery level: %i'%(feedback_msg.current_battery_level))
+            #self.get_logger().info('Current battery level: %i'%(feedback_msg.current_battery_level))
             goal_handle.publish_feedback(feedback_msg)
             self.current_battery += 10
             feedback_msg.current_battery_level = self.current_battery
@@ -154,6 +164,39 @@ class Robot(Node):
         result = mpaction.ChargeRobot.Result()
         result.final_battery_level = self.current_battery
         self.get_logger().info('Final battery level: %i'%(result.final_battery_level))
+        return result
+
+    #Callback for the move_item action
+    def callback_move_item(self, goal_handle):
+
+        #TODO Check the current battery and abort goal if battery is below critical
+
+        self.get_logger().info('Going to starting location...')
+
+        feedback_msg = mpaction.MoveItem.Feedback()
+        feedback_msg.current_location = mpmsg.Coordinates(x=float(self.location[0]),y=float(self.location[1]))
+        feedback_msg.target_location = goal_handle.request.initial_location
+        goal_handle.publish_feedback(feedback_msg)
+        self.get_logger().info('Target location: %i,%i'%(feedback_msg.target_location.x,feedback_msg.target_location.y))
+
+        #TODO Move to the initial location by polling current location from the beacon. Update the target location when the initial location is reached.
+        
+        feedback_msg.target_location = goal_handle.request.final_location
+        goal_handle.publish_feedback(feedback_msg)
+        self.get_logger().info('Target location: %i,%i'%(feedback_msg.target_location.x,feedback_msg.target_location.y))
+
+        #TODO Robot picks up the item using the service
+
+        #TODO Move robot to the final location
+
+        #TODO Robot places the item using the service
+
+        goal_handle.succeed()
+
+        result = mpaction.MoveItem.Result()
+        result.success_or_failure = True
+        result.failure_reason = 'None'
+        self.get_logger().info('Item moved: %s Failure: %s'%(result.success_or_failure,result.failure_reason))
         return result
 
 def main(args=None):
