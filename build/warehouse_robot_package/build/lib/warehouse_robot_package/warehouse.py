@@ -66,9 +66,9 @@ class Warehouse(Node):
         self.i += 1
 
     def listener_callback_location(self, msg):
-        self.get_logger().info('Robot number: %i"' % msg.robot_number)
-        self.get_logger().info('X coordinate: %f"' % msg.robot_location.x)
-        self.get_logger().info('Y coordinate: %f"' % msg.robot_location.y)
+        #self.get_logger().info('Robot number: %i"' % msg.robot_number)
+        #self.get_logger().info('X coordinate: %f"' % msg.robot_location.x)
+        self.get_logger().info('Robot number: %i,X coordinate: %f,Y coordinate: %f' % (msg.robot_number,msg.robot_location.x,msg.robot_location.y))
     
     def listener_callback_state(self, msg):
         self.get_logger().info('Robot state: %s' % msg.data)
