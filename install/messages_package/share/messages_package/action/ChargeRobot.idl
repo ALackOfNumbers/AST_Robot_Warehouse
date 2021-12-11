@@ -10,10 +10,10 @@ module messages_package {
       messages_package::msg::Coordinates charger_location;
     };
     struct ChargeRobot_Result {
-      int64 current_battery_level;
+      int64 final_battery_level;
     };
     struct ChargeRobot_Feedback {
-      int64 final_battery_level;
+      int64 current_battery_level;
     };
   };
 };

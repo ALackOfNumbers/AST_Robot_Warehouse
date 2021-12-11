@@ -46,12 +46,6 @@ struct is_message<messages_package::action::MoveItem_Goal>
 
 }  // namespace rosidl_generator_traits
 
-// Include directives for member types
-// Member 'current_location'
-// Member 'target_location'
-// already included above
-// #include "messages_package/msg/detail/coordinates__traits.hpp"
-
 namespace rosidl_generator_traits
 {
 
@@ -69,17 +63,23 @@ inline const char * name<messages_package::action::MoveItem_Result>()
 
 template<>
 struct has_fixed_size<messages_package::action::MoveItem_Result>
-  : std::integral_constant<bool, has_fixed_size<messages_package::msg::Coordinates>::value> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct has_bounded_size<messages_package::action::MoveItem_Result>
-  : std::integral_constant<bool, has_bounded_size<messages_package::msg::Coordinates>::value> {};
+  : std::integral_constant<bool, false> {};
 
 template<>
 struct is_message<messages_package::action::MoveItem_Result>
   : std::true_type {};
 
 }  // namespace rosidl_generator_traits
+
+// Include directives for member types
+// Member 'current_location'
+// Member 'target_location'
+// already included above
+// #include "messages_package/msg/detail/coordinates__traits.hpp"
 
 namespace rosidl_generator_traits
 {
@@ -98,11 +98,11 @@ inline const char * name<messages_package::action::MoveItem_Feedback>()
 
 template<>
 struct has_fixed_size<messages_package::action::MoveItem_Feedback>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_fixed_size<messages_package::msg::Coordinates>::value> {};
 
 template<>
 struct has_bounded_size<messages_package::action::MoveItem_Feedback>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, has_bounded_size<messages_package::msg::Coordinates>::value> {};
 
 template<>
 struct is_message<messages_package::action::MoveItem_Feedback>

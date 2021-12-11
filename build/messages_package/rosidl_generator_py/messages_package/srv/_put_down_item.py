@@ -204,18 +204,22 @@ class PutDownItem_Response(metaclass=Metaclass_PutDownItem_Response):
     """Message class 'PutDownItem_Response'."""
 
     __slots__ = [
+        '_success_or_failure',
     ]
 
     _fields_and_field_types = {
+        'success_or_failure': 'boolean',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('boolean'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
+        self.success_or_failure = kwargs.get('success_or_failure', bool())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -246,12 +250,27 @@ class PutDownItem_Response(metaclass=Metaclass_PutDownItem_Response):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
+        if self.success_or_failure != other.success_or_failure:
+            return False
         return True
 
     @classmethod
     def get_fields_and_field_types(cls):
         from copy import copy
         return copy(cls._fields_and_field_types)
+
+    @property
+    def success_or_failure(self):
+        """Message field 'success_or_failure'."""
+        return self._success_or_failure
+
+    @success_or_failure.setter
+    def success_or_failure(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, bool), \
+                "The 'success_or_failure' field must be of type 'bool'"
+        self._success_or_failure = value
 
 
 class Metaclass_PutDownItem(type):

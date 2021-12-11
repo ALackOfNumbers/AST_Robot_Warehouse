@@ -161,7 +161,7 @@ messages_package__srv__PickUpItem_Response__init(messages_package__srv__PickUpIt
   if (!msg) {
     return false;
   }
-  // structure_needs_at_least_one_member
+  // success_or_failure
   return true;
 }
 
@@ -171,7 +171,7 @@ messages_package__srv__PickUpItem_Response__fini(messages_package__srv__PickUpIt
   if (!msg) {
     return;
   }
-  // structure_needs_at_least_one_member
+  // success_or_failure
 }
 
 messages_package__srv__PickUpItem_Response *

@@ -172,10 +172,9 @@ PyObject * messages_package__action__move_item__goal__convert_to_py(void * raw_r
 // already included above
 // #include "messages_package/action/detail/move_item__functions.h"
 
-bool messages_package__msg__coordinates__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * messages_package__msg__coordinates__convert_to_py(void * raw_ros_message);
-bool messages_package__msg__coordinates__convert_from_py(PyObject * _pymsg, void * _ros_message);
-PyObject * messages_package__msg__coordinates__convert_to_py(void * raw_ros_message);
+#include "rosidl_runtime_c/string.h"
+#include "rosidl_runtime_c/string_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool messages_package__action__move_item__result__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -210,26 +209,28 @@ bool messages_package__action__move_item__result__convert_from_py(PyObject * _py
     assert(strncmp("messages_package.action._move_item.MoveItem_Result", full_classname_dest, 50) == 0);
   }
   messages_package__action__MoveItem_Result * ros_message = _ros_message;
-  {  // current_location
-    PyObject * field = PyObject_GetAttrString(_pymsg, "current_location");
+  {  // success_or_failure
+    PyObject * field = PyObject_GetAttrString(_pymsg, "success_or_failure");
     if (!field) {
       return false;
     }
-    if (!messages_package__msg__coordinates__convert_from_py(field, &ros_message->current_location)) {
-      Py_DECREF(field);
-      return false;
-    }
+    assert(PyBool_Check(field));
+    ros_message->success_or_failure = (Py_True == field);
     Py_DECREF(field);
   }
-  {  // target_location
-    PyObject * field = PyObject_GetAttrString(_pymsg, "target_location");
+  {  // failure_reason
+    PyObject * field = PyObject_GetAttrString(_pymsg, "failure_reason");
     if (!field) {
       return false;
     }
-    if (!messages_package__msg__coordinates__convert_from_py(field, &ros_message->target_location)) {
+    assert(PyUnicode_Check(field));
+    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
+    if (!encoded_field) {
       Py_DECREF(field);
       return false;
     }
+    rosidl_runtime_c__String__assign(&ros_message->failure_reason, PyBytes_AS_STRING(encoded_field));
+    Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
 
@@ -254,28 +255,28 @@ PyObject * messages_package__action__move_item__result__convert_to_py(void * raw
     }
   }
   messages_package__action__MoveItem_Result * ros_message = (messages_package__action__MoveItem_Result *)raw_ros_message;
-  {  // current_location
+  {  // success_or_failure
     PyObject * field = NULL;
-    field = messages_package__msg__coordinates__convert_to_py(&ros_message->current_location);
-    if (!field) {
-      return NULL;
-    }
+    field = PyBool_FromLong(ros_message->success_or_failure ? 1 : 0);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "current_location", field);
+      int rc = PyObject_SetAttrString(_pymessage, "success_or_failure", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // target_location
+  {  // failure_reason
     PyObject * field = NULL;
-    field = messages_package__msg__coordinates__convert_to_py(&ros_message->target_location);
+    field = PyUnicode_DecodeUTF8(
+      ros_message->failure_reason.data,
+      strlen(ros_message->failure_reason.data),
+      "strict");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "target_location", field);
+      int rc = PyObject_SetAttrString(_pymessage, "failure_reason", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -301,9 +302,10 @@ PyObject * messages_package__action__move_item__result__convert_to_py(void * raw
 // already included above
 // #include "messages_package/action/detail/move_item__functions.h"
 
-#include "rosidl_runtime_c/string.h"
-#include "rosidl_runtime_c/string_functions.h"
-
+bool messages_package__msg__coordinates__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * messages_package__msg__coordinates__convert_to_py(void * raw_ros_message);
+bool messages_package__msg__coordinates__convert_from_py(PyObject * _pymsg, void * _ros_message);
+PyObject * messages_package__msg__coordinates__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool messages_package__action__move_item__feedback__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -338,28 +340,26 @@ bool messages_package__action__move_item__feedback__convert_from_py(PyObject * _
     assert(strncmp("messages_package.action._move_item.MoveItem_Feedback", full_classname_dest, 52) == 0);
   }
   messages_package__action__MoveItem_Feedback * ros_message = _ros_message;
-  {  // success_or_failure
-    PyObject * field = PyObject_GetAttrString(_pymsg, "success_or_failure");
+  {  // current_location
+    PyObject * field = PyObject_GetAttrString(_pymsg, "current_location");
     if (!field) {
       return false;
     }
-    assert(PyBool_Check(field));
-    ros_message->success_or_failure = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // failure_reason
-    PyObject * field = PyObject_GetAttrString(_pymsg, "failure_reason");
-    if (!field) {
-      return false;
-    }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
+    if (!messages_package__msg__coordinates__convert_from_py(field, &ros_message->current_location)) {
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->failure_reason, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
+    Py_DECREF(field);
+  }
+  {  // target_location
+    PyObject * field = PyObject_GetAttrString(_pymsg, "target_location");
+    if (!field) {
+      return false;
+    }
+    if (!messages_package__msg__coordinates__convert_from_py(field, &ros_message->target_location)) {
+      Py_DECREF(field);
+      return false;
+    }
     Py_DECREF(field);
   }
 
@@ -384,28 +384,28 @@ PyObject * messages_package__action__move_item__feedback__convert_to_py(void * r
     }
   }
   messages_package__action__MoveItem_Feedback * ros_message = (messages_package__action__MoveItem_Feedback *)raw_ros_message;
-  {  // success_or_failure
+  {  // current_location
     PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->success_or_failure ? 1 : 0);
+    field = messages_package__msg__coordinates__convert_to_py(&ros_message->current_location);
+    if (!field) {
+      return NULL;
+    }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "success_or_failure", field);
+      int rc = PyObject_SetAttrString(_pymessage, "current_location", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
       }
     }
   }
-  {  // failure_reason
+  {  // target_location
     PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->failure_reason.data,
-      strlen(ros_message->failure_reason.data),
-      "strict");
+    field = messages_package__msg__coordinates__convert_to_py(&ros_message->target_location);
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "failure_reason", field);
+      int rc = PyObject_SetAttrString(_pymessage, "target_location", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

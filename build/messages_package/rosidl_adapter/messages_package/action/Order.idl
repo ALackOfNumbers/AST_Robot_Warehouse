@@ -10,12 +10,12 @@ module messages_package {
       sequence<messages_package::msg::Item> items;
     };
     struct Order_Result {
-      string order_status;
-    };
-    struct Order_Feedback {
       boolean success_or_failure;
 
       string failure_reason;
+    };
+    struct Order_Feedback {
+      string order_status;
     };
   };
 };

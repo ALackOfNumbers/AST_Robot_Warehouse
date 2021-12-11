@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/sam/AST_Robot_Warehouse/install/turtlesim/include/**",
+        "/home/sam/AST_Robot_Warehouse/install/messages_package/include/**",
+        "/opt/ros/foxy/include/**",
+        "/home/sam/AST_Robot_Warehouse/src/messages_package/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

@@ -46,7 +46,7 @@ typedef struct messages_package__srv__PickUpItem_Request__Sequence
 // Struct defined in srv/PickUpItem in the package messages_package.
 typedef struct messages_package__srv__PickUpItem_Response
 {
-  uint8_t structure_needs_at_least_one_member;
+  bool success_or_failure;
 } messages_package__srv__PickUpItem_Response;
 
 // Struct for a sequence of messages_package__srv__PickUpItem_Response.

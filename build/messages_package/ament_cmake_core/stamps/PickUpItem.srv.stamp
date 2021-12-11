@@ -1,3 +1,4 @@
 Item item
 Coordinates location
 ---
+bool success_or_failure

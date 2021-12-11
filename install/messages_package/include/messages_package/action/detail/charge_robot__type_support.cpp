@@ -156,14 +156,14 @@ void ChargeRobot_Result_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember ChargeRobot_Result_message_member_array[1] = {
   {
-    "current_battery_level",  // name
+    "final_battery_level",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::ChargeRobot_Result, current_battery_level),  // bytes offset in struct
+    offsetof(messages_package::action::ChargeRobot_Result, final_battery_level),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -273,14 +273,14 @@ void ChargeRobot_Feedback_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember ChargeRobot_Feedback_message_member_array[1] = {
   {
-    "final_battery_level",  // name
+    "current_battery_level",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::ChargeRobot_Feedback, final_battery_level),  // bytes offset in struct
+    offsetof(messages_package::action::ChargeRobot_Feedback, current_battery_level),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

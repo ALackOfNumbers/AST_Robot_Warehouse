@@ -46,16 +46,14 @@ typedef struct messages_package__action__MoveItem_Goal__Sequence
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'current_location'
-// Member 'target_location'
-// already included above
-// #include "messages_package/msg/detail/coordinates__struct.h"
+// Member 'failure_reason'
+#include "rosidl_runtime_c/string.h"
 
 // Struct defined in action/MoveItem in the package messages_package.
 typedef struct messages_package__action__MoveItem_Result
 {
-  messages_package__msg__Coordinates current_location;
-  messages_package__msg__Coordinates target_location;
+  bool success_or_failure;
+  rosidl_runtime_c__String failure_reason;
 } messages_package__action__MoveItem_Result;
 
 // Struct for a sequence of messages_package__action__MoveItem_Result.
@@ -72,14 +70,16 @@ typedef struct messages_package__action__MoveItem_Result__Sequence
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'failure_reason'
-#include "rosidl_runtime_c/string.h"
+// Member 'current_location'
+// Member 'target_location'
+// already included above
+// #include "messages_package/msg/detail/coordinates__struct.h"
 
 // Struct defined in action/MoveItem in the package messages_package.
 typedef struct messages_package__action__MoveItem_Feedback
 {
-  bool success_or_failure;
-  rosidl_runtime_c__String failure_reason;
+  messages_package__msg__Coordinates current_location;
+  messages_package__msg__Coordinates target_location;
 } messages_package__action__MoveItem_Feedback;
 
 // Struct for a sequence of messages_package__action__MoveItem_Feedback.

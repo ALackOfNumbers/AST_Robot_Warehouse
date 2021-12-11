@@ -148,7 +148,7 @@ messages_package__action__Order_Goal__Sequence__destroy(messages_package__action
 
 
 // Include directives for member types
-// Member `order_status`
+// Member `failure_reason`
 #include "rosidl_runtime_c/string_functions.h"
 
 bool
@@ -157,8 +157,9 @@ messages_package__action__Order_Result__init(messages_package__action__Order_Res
   if (!msg) {
     return false;
   }
-  // order_status
-  if (!rosidl_runtime_c__String__init(&msg->order_status)) {
+  // success_or_failure
+  // failure_reason
+  if (!rosidl_runtime_c__String__init(&msg->failure_reason)) {
     messages_package__action__Order_Result__fini(msg);
     return false;
   }
@@ -171,8 +172,9 @@ messages_package__action__Order_Result__fini(messages_package__action__Order_Res
   if (!msg) {
     return;
   }
-  // order_status
-  rosidl_runtime_c__String__fini(&msg->order_status);
+  // success_or_failure
+  // failure_reason
+  rosidl_runtime_c__String__fini(&msg->failure_reason);
 }
 
 messages_package__action__Order_Result *
@@ -286,7 +288,7 @@ messages_package__action__Order_Result__Sequence__destroy(messages_package__acti
 
 
 // Include directives for member types
-// Member `failure_reason`
+// Member `order_status`
 // already included above
 // #include "rosidl_runtime_c/string_functions.h"
 
@@ -296,9 +298,8 @@ messages_package__action__Order_Feedback__init(messages_package__action__Order_F
   if (!msg) {
     return false;
   }
-  // success_or_failure
-  // failure_reason
-  if (!rosidl_runtime_c__String__init(&msg->failure_reason)) {
+  // order_status
+  if (!rosidl_runtime_c__String__init(&msg->order_status)) {
     messages_package__action__Order_Feedback__fini(msg);
     return false;
   }
@@ -311,9 +312,8 @@ messages_package__action__Order_Feedback__fini(messages_package__action__Order_F
   if (!msg) {
     return;
   }
-  // success_or_failure
-  // failure_reason
-  rosidl_runtime_c__String__fini(&msg->failure_reason);
+  // order_status
+  rosidl_runtime_c__String__fini(&msg->order_status);
 }
 
 messages_package__action__Order_Feedback *

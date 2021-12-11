@@ -147,14 +147,8 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
-// Member `current_location`
-// Member `target_location`
-// already included above
-// #include "messages_package/msg/coordinates.h"
-// Member `current_location`
-// Member `target_location`
-// already included above
-// #include "messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_c.h"
+// Member `failure_reason`
+#include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -177,14 +171,14 @@ void MoveItem_Result__rosidl_typesupport_introspection_c__MoveItem_Result_fini_f
 
 static rosidl_typesupport_introspection_c__MessageMember MoveItem_Result__rosidl_typesupport_introspection_c__MoveItem_Result_message_member_array[2] = {
   {
-    "current_location",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    "success_or_failure",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package__action__MoveItem_Result, current_location),  // bytes offset in struct
+    offsetof(messages_package__action__MoveItem_Result, success_or_failure),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -192,14 +186,14 @@ static rosidl_typesupport_introspection_c__MessageMember MoveItem_Result__rosidl
     NULL  // resize(index) function pointer
   },
   {
-    "target_location",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    "failure_reason",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package__action__MoveItem_Result, target_location),  // bytes offset in struct
+    offsetof(messages_package__action__MoveItem_Result, failure_reason),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -229,10 +223,6 @@ static rosidl_message_type_support_t MoveItem_Result__rosidl_typesupport_introsp
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_messages_package
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, messages_package, action, MoveItem_Result)() {
-  MoveItem_Result__rosidl_typesupport_introspection_c__MoveItem_Result_message_member_array[0].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, messages_package, msg, Coordinates)();
-  MoveItem_Result__rosidl_typesupport_introspection_c__MoveItem_Result_message_member_array[1].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, messages_package, msg, Coordinates)();
   if (!MoveItem_Result__rosidl_typesupport_introspection_c__MoveItem_Result_message_type_support_handle.typesupport_identifier) {
     MoveItem_Result__rosidl_typesupport_introspection_c__MoveItem_Result_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;
@@ -262,8 +252,14 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
-// Member `failure_reason`
-#include "rosidl_runtime_c/string_functions.h"
+// Member `current_location`
+// Member `target_location`
+// already included above
+// #include "messages_package/msg/coordinates.h"
+// Member `current_location`
+// Member `target_location`
+// already included above
+// #include "messages_package/msg/detail/coordinates__rosidl_typesupport_introspection_c.h"
 
 #ifdef __cplusplus
 extern "C"
@@ -286,14 +282,14 @@ void MoveItem_Feedback__rosidl_typesupport_introspection_c__MoveItem_Feedback_fi
 
 static rosidl_typesupport_introspection_c__MessageMember MoveItem_Feedback__rosidl_typesupport_introspection_c__MoveItem_Feedback_message_member_array[2] = {
   {
-    "success_or_failure",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    "current_location",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package__action__MoveItem_Feedback, success_or_failure),  // bytes offset in struct
+    offsetof(messages_package__action__MoveItem_Feedback, current_location),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -301,14 +297,14 @@ static rosidl_typesupport_introspection_c__MessageMember MoveItem_Feedback__rosi
     NULL  // resize(index) function pointer
   },
   {
-    "failure_reason",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    "target_location",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message
+    NULL,  // members of sub message (initialized later)
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package__action__MoveItem_Feedback, failure_reason),  // bytes offset in struct
+    offsetof(messages_package__action__MoveItem_Feedback, target_location),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -338,6 +334,10 @@ static rosidl_message_type_support_t MoveItem_Feedback__rosidl_typesupport_intro
 ROSIDL_TYPESUPPORT_INTROSPECTION_C_EXPORT_messages_package
 const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, messages_package, action, MoveItem_Feedback)() {
+  MoveItem_Feedback__rosidl_typesupport_introspection_c__MoveItem_Feedback_message_member_array[0].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, messages_package, msg, Coordinates)();
+  MoveItem_Feedback__rosidl_typesupport_introspection_c__MoveItem_Feedback_message_member_array[1].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, messages_package, msg, Coordinates)();
   if (!MoveItem_Feedback__rosidl_typesupport_introspection_c__MoveItem_Feedback_message_type_support_handle.typesupport_identifier) {
     MoveItem_Feedback__rosidl_typesupport_introspection_c__MoveItem_Feedback_message_type_support_handle.typesupport_identifier =
       rosidl_typesupport_introspection_c__identifier;

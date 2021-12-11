@@ -94,15 +94,15 @@ namespace action
 namespace builder
 {
 
-class Init_MoveItem_Result_target_location
+class Init_MoveItem_Result_failure_reason
 {
 public:
-  explicit Init_MoveItem_Result_target_location(::messages_package::action::MoveItem_Result & msg)
+  explicit Init_MoveItem_Result_failure_reason(::messages_package::action::MoveItem_Result & msg)
   : msg_(msg)
   {}
-  ::messages_package::action::MoveItem_Result target_location(::messages_package::action::MoveItem_Result::_target_location_type arg)
+  ::messages_package::action::MoveItem_Result failure_reason(::messages_package::action::MoveItem_Result::_failure_reason_type arg)
   {
-    msg_.target_location = std::move(arg);
+    msg_.failure_reason = std::move(arg);
     return std::move(msg_);
   }
 
@@ -110,16 +110,16 @@ private:
   ::messages_package::action::MoveItem_Result msg_;
 };
 
-class Init_MoveItem_Result_current_location
+class Init_MoveItem_Result_success_or_failure
 {
 public:
-  Init_MoveItem_Result_current_location()
+  Init_MoveItem_Result_success_or_failure()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MoveItem_Result_target_location current_location(::messages_package::action::MoveItem_Result::_current_location_type arg)
+  Init_MoveItem_Result_failure_reason success_or_failure(::messages_package::action::MoveItem_Result::_success_or_failure_type arg)
   {
-    msg_.current_location = std::move(arg);
-    return Init_MoveItem_Result_target_location(msg_);
+    msg_.success_or_failure = std::move(arg);
+    return Init_MoveItem_Result_failure_reason(msg_);
   }
 
 private:
@@ -137,7 +137,7 @@ template<>
 inline
 auto build<::messages_package::action::MoveItem_Result>()
 {
-  return messages_package::action::builder::Init_MoveItem_Result_current_location();
+  return messages_package::action::builder::Init_MoveItem_Result_success_or_failure();
 }
 
 }  // namespace messages_package
@@ -152,15 +152,15 @@ namespace action
 namespace builder
 {
 
-class Init_MoveItem_Feedback_failure_reason
+class Init_MoveItem_Feedback_target_location
 {
 public:
-  explicit Init_MoveItem_Feedback_failure_reason(::messages_package::action::MoveItem_Feedback & msg)
+  explicit Init_MoveItem_Feedback_target_location(::messages_package::action::MoveItem_Feedback & msg)
   : msg_(msg)
   {}
-  ::messages_package::action::MoveItem_Feedback failure_reason(::messages_package::action::MoveItem_Feedback::_failure_reason_type arg)
+  ::messages_package::action::MoveItem_Feedback target_location(::messages_package::action::MoveItem_Feedback::_target_location_type arg)
   {
-    msg_.failure_reason = std::move(arg);
+    msg_.target_location = std::move(arg);
     return std::move(msg_);
   }
 
@@ -168,16 +168,16 @@ private:
   ::messages_package::action::MoveItem_Feedback msg_;
 };
 
-class Init_MoveItem_Feedback_success_or_failure
+class Init_MoveItem_Feedback_current_location
 {
 public:
-  Init_MoveItem_Feedback_success_or_failure()
+  Init_MoveItem_Feedback_current_location()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MoveItem_Feedback_failure_reason success_or_failure(::messages_package::action::MoveItem_Feedback::_success_or_failure_type arg)
+  Init_MoveItem_Feedback_target_location current_location(::messages_package::action::MoveItem_Feedback::_current_location_type arg)
   {
-    msg_.success_or_failure = std::move(arg);
-    return Init_MoveItem_Feedback_failure_reason(msg_);
+    msg_.current_location = std::move(arg);
+    return Init_MoveItem_Feedback_target_location(msg_);
   }
 
 private:
@@ -195,7 +195,7 @@ template<>
 inline
 auto build<::messages_package::action::MoveItem_Feedback>()
 {
-  return messages_package::action::builder::Init_MoveItem_Feedback_success_or_failure();
+  return messages_package::action::builder::Init_MoveItem_Feedback_current_location();
 }
 
 }  // namespace messages_package

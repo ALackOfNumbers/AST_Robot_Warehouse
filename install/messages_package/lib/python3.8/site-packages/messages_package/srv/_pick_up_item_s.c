@@ -179,7 +179,15 @@ bool messages_package__srv__pick_up_item__response__convert_from_py(PyObject * _
     assert(strncmp("messages_package.srv._pick_up_item.PickUpItem_Response", full_classname_dest, 54) == 0);
   }
   messages_package__srv__PickUpItem_Response * ros_message = _ros_message;
-  ros_message->structure_needs_at_least_one_member = 0;
+  {  // success_or_failure
+    PyObject * field = PyObject_GetAttrString(_pymsg, "success_or_failure");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->success_or_failure = (Py_True == field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -201,7 +209,18 @@ PyObject * messages_package__srv__pick_up_item__response__convert_to_py(void * r
       return NULL;
     }
   }
-  (void)raw_ros_message;
+  messages_package__srv__PickUpItem_Response * ros_message = (messages_package__srv__PickUpItem_Response *)raw_ros_message;
+  {  // success_or_failure
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->success_or_failure ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "success_or_failure", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
 
   // ownership of _pymessage is transferred to the caller
   return _pymessage;

@@ -152,13 +152,13 @@ bool messages_package__action__charge_robot__result__convert_from_py(PyObject * 
     assert(strncmp("messages_package.action._charge_robot.ChargeRobot_Result", full_classname_dest, 56) == 0);
   }
   messages_package__action__ChargeRobot_Result * ros_message = _ros_message;
-  {  // current_battery_level
-    PyObject * field = PyObject_GetAttrString(_pymsg, "current_battery_level");
+  {  // final_battery_level
+    PyObject * field = PyObject_GetAttrString(_pymsg, "final_battery_level");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->current_battery_level = PyLong_AsLongLong(field);
+    ros_message->final_battery_level = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
 
@@ -183,11 +183,11 @@ PyObject * messages_package__action__charge_robot__result__convert_to_py(void * 
     }
   }
   messages_package__action__ChargeRobot_Result * ros_message = (messages_package__action__ChargeRobot_Result *)raw_ros_message;
-  {  // current_battery_level
+  {  // final_battery_level
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->current_battery_level);
+    field = PyLong_FromLongLong(ros_message->final_battery_level);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "current_battery_level", field);
+      int rc = PyObject_SetAttrString(_pymessage, "final_battery_level", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -247,13 +247,13 @@ bool messages_package__action__charge_robot__feedback__convert_from_py(PyObject 
     assert(strncmp("messages_package.action._charge_robot.ChargeRobot_Feedback", full_classname_dest, 58) == 0);
   }
   messages_package__action__ChargeRobot_Feedback * ros_message = _ros_message;
-  {  // final_battery_level
-    PyObject * field = PyObject_GetAttrString(_pymsg, "final_battery_level");
+  {  // current_battery_level
+    PyObject * field = PyObject_GetAttrString(_pymsg, "current_battery_level");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->final_battery_level = PyLong_AsLongLong(field);
+    ros_message->current_battery_level = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
 
@@ -278,11 +278,11 @@ PyObject * messages_package__action__charge_robot__feedback__convert_to_py(void 
     }
   }
   messages_package__action__ChargeRobot_Feedback * ros_message = (messages_package__action__ChargeRobot_Feedback *)raw_ros_message;
-  {  // final_battery_level
+  {  // current_battery_level
     PyObject * field = NULL;
-    field = PyLong_FromLongLong(ros_message->final_battery_level);
+    field = PyLong_FromLongLong(ros_message->current_battery_level);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "final_battery_level", field);
+      int rc = PyObject_SetAttrString(_pymessage, "current_battery_level", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

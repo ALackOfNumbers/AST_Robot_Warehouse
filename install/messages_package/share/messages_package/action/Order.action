@@ -1,6 +1,6 @@
 Item[] items
 ---
-string order_status
----
 bool success_or_failure
 string failure_reason
+---
+string order_status

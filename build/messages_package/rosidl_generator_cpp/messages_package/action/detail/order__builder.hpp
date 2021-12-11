@@ -62,16 +62,32 @@ namespace action
 namespace builder
 {
 
-class Init_Order_Result_order_status
+class Init_Order_Result_failure_reason
 {
 public:
-  Init_Order_Result_order_status()
+  explicit Init_Order_Result_failure_reason(::messages_package::action::Order_Result & msg)
+  : msg_(msg)
+  {}
+  ::messages_package::action::Order_Result failure_reason(::messages_package::action::Order_Result::_failure_reason_type arg)
+  {
+    msg_.failure_reason = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::messages_package::action::Order_Result msg_;
+};
+
+class Init_Order_Result_success_or_failure
+{
+public:
+  Init_Order_Result_success_or_failure()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::messages_package::action::Order_Result order_status(::messages_package::action::Order_Result::_order_status_type arg)
+  Init_Order_Result_failure_reason success_or_failure(::messages_package::action::Order_Result::_success_or_failure_type arg)
   {
-    msg_.order_status = std::move(arg);
-    return std::move(msg_);
+    msg_.success_or_failure = std::move(arg);
+    return Init_Order_Result_failure_reason(msg_);
   }
 
 private:
@@ -89,7 +105,7 @@ template<>
 inline
 auto build<::messages_package::action::Order_Result>()
 {
-  return messages_package::action::builder::Init_Order_Result_order_status();
+  return messages_package::action::builder::Init_Order_Result_success_or_failure();
 }
 
 }  // namespace messages_package
@@ -104,32 +120,16 @@ namespace action
 namespace builder
 {
 
-class Init_Order_Feedback_failure_reason
+class Init_Order_Feedback_order_status
 {
 public:
-  explicit Init_Order_Feedback_failure_reason(::messages_package::action::Order_Feedback & msg)
-  : msg_(msg)
-  {}
-  ::messages_package::action::Order_Feedback failure_reason(::messages_package::action::Order_Feedback::_failure_reason_type arg)
-  {
-    msg_.failure_reason = std::move(arg);
-    return std::move(msg_);
-  }
-
-private:
-  ::messages_package::action::Order_Feedback msg_;
-};
-
-class Init_Order_Feedback_success_or_failure
-{
-public:
-  Init_Order_Feedback_success_or_failure()
+  Init_Order_Feedback_order_status()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_Order_Feedback_failure_reason success_or_failure(::messages_package::action::Order_Feedback::_success_or_failure_type arg)
+  ::messages_package::action::Order_Feedback order_status(::messages_package::action::Order_Feedback::_order_status_type arg)
   {
-    msg_.success_or_failure = std::move(arg);
-    return Init_Order_Feedback_failure_reason(msg_);
+    msg_.order_status = std::move(arg);
+    return std::move(msg_);
   }
 
 private:
@@ -147,7 +147,7 @@ template<>
 inline
 auto build<::messages_package::action::Order_Feedback>()
 {
-  return messages_package::action::builder::Init_Order_Feedback_success_or_failure();
+  return messages_package::action::builder::Init_Order_Feedback_order_status();
 }
 
 }  // namespace messages_package

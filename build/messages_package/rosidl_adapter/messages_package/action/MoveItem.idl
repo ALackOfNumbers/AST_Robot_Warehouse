@@ -15,14 +15,14 @@ module messages_package {
       messages_package::msg::Coordinates final_location;
     };
     struct MoveItem_Result {
-      messages_package::msg::Coordinates current_location;
-
-      messages_package::msg::Coordinates target_location;
-    };
-    struct MoveItem_Feedback {
       boolean success_or_failure;
 
       string failure_reason;
+    };
+    struct MoveItem_Feedback {
+      messages_package::msg::Coordinates current_location;
+
+      messages_package::msg::Coordinates target_location;
     };
   };
 };

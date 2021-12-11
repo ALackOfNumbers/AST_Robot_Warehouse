@@ -41,13 +41,14 @@ typedef struct messages_package__action__Order_Goal__Sequence
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'order_status'
+// Member 'failure_reason'
 #include "rosidl_runtime_c/string.h"
 
 // Struct defined in action/Order in the package messages_package.
 typedef struct messages_package__action__Order_Result
 {
-  rosidl_runtime_c__String order_status;
+  bool success_or_failure;
+  rosidl_runtime_c__String failure_reason;
 } messages_package__action__Order_Result;
 
 // Struct for a sequence of messages_package__action__Order_Result.
@@ -64,15 +65,14 @@ typedef struct messages_package__action__Order_Result__Sequence
 // Constants defined in the message
 
 // Include directives for member types
-// Member 'failure_reason'
+// Member 'order_status'
 // already included above
 // #include "rosidl_runtime_c/string.h"
 
 // Struct defined in action/Order in the package messages_package.
 typedef struct messages_package__action__Order_Feedback
 {
-  bool success_or_failure;
-  rosidl_runtime_c__String failure_reason;
+  rosidl_runtime_c__String order_status;
 } messages_package__action__Order_Feedback;
 
 // Struct for a sequence of messages_package__action__Order_Feedback.

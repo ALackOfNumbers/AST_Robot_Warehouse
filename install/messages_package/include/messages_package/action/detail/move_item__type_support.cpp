@@ -186,14 +186,14 @@ void MoveItem_Result_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveItem_Result_message_member_array[2] = {
   {
-    "current_location",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    "success_or_failure",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<messages_package::msg::Coordinates>(),  // members of sub message
+    nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::MoveItem_Result, current_location),  // bytes offset in struct
+    offsetof(messages_package::action::MoveItem_Result, success_or_failure),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -201,14 +201,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveItem_Resu
     nullptr  // resize(index) function pointer
   },
   {
-    "target_location",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    "failure_reason",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<messages_package::msg::Coordinates>(),  // members of sub message
+    nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::MoveItem_Result, target_location),  // bytes offset in struct
+    offsetof(messages_package::action::MoveItem_Result, failure_reason),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -318,14 +318,14 @@ void MoveItem_Feedback_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveItem_Feedback_message_member_array[2] = {
   {
-    "success_or_failure",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    "current_location",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<messages_package::msg::Coordinates>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::MoveItem_Feedback, success_or_failure),  // bytes offset in struct
+    offsetof(messages_package::action::MoveItem_Feedback, current_location),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -333,14 +333,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember MoveItem_Feed
     nullptr  // resize(index) function pointer
   },
   {
-    "failure_reason",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    "target_location",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
-    nullptr,  // members of sub message
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<messages_package::msg::Coordinates>(),  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::MoveItem_Feedback, failure_reason),  // bytes offset in struct
+    offsetof(messages_package::action::MoveItem_Feedback, target_location),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

@@ -147,30 +147,41 @@ struct Order_Result_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->order_status = "";
+      this->success_or_failure = false;
+      this->failure_reason = "";
     }
   }
 
   explicit Order_Result_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : order_status(_alloc)
+  : failure_reason(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->order_status = "";
+      this->success_or_failure = false;
+      this->failure_reason = "";
     }
   }
 
   // field types and members
-  using _order_status_type =
+  using _success_or_failure_type =
+    bool;
+  _success_or_failure_type success_or_failure;
+  using _failure_reason_type =
     std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
-  _order_status_type order_status;
+  _failure_reason_type failure_reason;
 
   // setters for named parameter idiom
-  Type & set__order_status(
+  Type & set__success_or_failure(
+    const bool & _arg)
+  {
+    this->success_or_failure = _arg;
+    return *this;
+  }
+  Type & set__failure_reason(
     const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
-    this->order_status = _arg;
+    this->failure_reason = _arg;
     return *this;
   }
 
@@ -216,7 +227,10 @@ struct Order_Result_
   // comparison operators
   bool operator==(const Order_Result_ & other) const
   {
-    if (this->order_status != other.order_status) {
+    if (this->success_or_failure != other.success_or_failure) {
+      return false;
+    }
+    if (this->failure_reason != other.failure_reason) {
       return false;
     }
     return true;
@@ -261,41 +275,30 @@ struct Order_Feedback_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->success_or_failure = false;
-      this->failure_reason = "";
+      this->order_status = "";
     }
   }
 
   explicit Order_Feedback_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : failure_reason(_alloc)
+  : order_status(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->success_or_failure = false;
-      this->failure_reason = "";
+      this->order_status = "";
     }
   }
 
   // field types and members
-  using _success_or_failure_type =
-    bool;
-  _success_or_failure_type success_or_failure;
-  using _failure_reason_type =
+  using _order_status_type =
     std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
-  _failure_reason_type failure_reason;
+  _order_status_type order_status;
 
   // setters for named parameter idiom
-  Type & set__success_or_failure(
-    const bool & _arg)
-  {
-    this->success_or_failure = _arg;
-    return *this;
-  }
-  Type & set__failure_reason(
+  Type & set__order_status(
     const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
-    this->failure_reason = _arg;
+    this->order_status = _arg;
     return *this;
   }
 
@@ -341,10 +344,7 @@ struct Order_Feedback_
   // comparison operators
   bool operator==(const Order_Feedback_ & other) const
   {
-    if (this->success_or_failure != other.success_or_failure) {
-      return false;
-    }
-    if (this->failure_reason != other.failure_reason) {
+    if (this->order_status != other.order_status) {
       return false;
     }
     return true;

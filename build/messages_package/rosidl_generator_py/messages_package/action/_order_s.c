@@ -197,8 +197,17 @@ bool messages_package__action__order__result__convert_from_py(PyObject * _pymsg,
     assert(strncmp("messages_package.action._order.Order_Result", full_classname_dest, 43) == 0);
   }
   messages_package__action__Order_Result * ros_message = _ros_message;
-  {  // order_status
-    PyObject * field = PyObject_GetAttrString(_pymsg, "order_status");
+  {  // success_or_failure
+    PyObject * field = PyObject_GetAttrString(_pymsg, "success_or_failure");
+    if (!field) {
+      return false;
+    }
+    assert(PyBool_Check(field));
+    ros_message->success_or_failure = (Py_True == field);
+    Py_DECREF(field);
+  }
+  {  // failure_reason
+    PyObject * field = PyObject_GetAttrString(_pymsg, "failure_reason");
     if (!field) {
       return false;
     }
@@ -208,7 +217,7 @@ bool messages_package__action__order__result__convert_from_py(PyObject * _pymsg,
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->order_status, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->failure_reason, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -234,17 +243,28 @@ PyObject * messages_package__action__order__result__convert_to_py(void * raw_ros
     }
   }
   messages_package__action__Order_Result * ros_message = (messages_package__action__Order_Result *)raw_ros_message;
-  {  // order_status
+  {  // success_or_failure
+    PyObject * field = NULL;
+    field = PyBool_FromLong(ros_message->success_or_failure ? 1 : 0);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "success_or_failure", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // failure_reason
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->order_status.data,
-      strlen(ros_message->order_status.data),
+      ros_message->failure_reason.data,
+      strlen(ros_message->failure_reason.data),
       "strict");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "order_status", field);
+      int rc = PyObject_SetAttrString(_pymessage, "failure_reason", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -309,17 +329,8 @@ bool messages_package__action__order__feedback__convert_from_py(PyObject * _pyms
     assert(strncmp("messages_package.action._order.Order_Feedback", full_classname_dest, 45) == 0);
   }
   messages_package__action__Order_Feedback * ros_message = _ros_message;
-  {  // success_or_failure
-    PyObject * field = PyObject_GetAttrString(_pymsg, "success_or_failure");
-    if (!field) {
-      return false;
-    }
-    assert(PyBool_Check(field));
-    ros_message->success_or_failure = (Py_True == field);
-    Py_DECREF(field);
-  }
-  {  // failure_reason
-    PyObject * field = PyObject_GetAttrString(_pymsg, "failure_reason");
+  {  // order_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "order_status");
     if (!field) {
       return false;
     }
@@ -329,7 +340,7 @@ bool messages_package__action__order__feedback__convert_from_py(PyObject * _pyms
       Py_DECREF(field);
       return false;
     }
-    rosidl_runtime_c__String__assign(&ros_message->failure_reason, PyBytes_AS_STRING(encoded_field));
+    rosidl_runtime_c__String__assign(&ros_message->order_status, PyBytes_AS_STRING(encoded_field));
     Py_DECREF(encoded_field);
     Py_DECREF(field);
   }
@@ -355,28 +366,17 @@ PyObject * messages_package__action__order__feedback__convert_to_py(void * raw_r
     }
   }
   messages_package__action__Order_Feedback * ros_message = (messages_package__action__Order_Feedback *)raw_ros_message;
-  {  // success_or_failure
-    PyObject * field = NULL;
-    field = PyBool_FromLong(ros_message->success_or_failure ? 1 : 0);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "success_or_failure", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // failure_reason
+  {  // order_status
     PyObject * field = NULL;
     field = PyUnicode_DecodeUTF8(
-      ros_message->failure_reason.data,
-      strlen(ros_message->failure_reason.data),
+      ros_message->order_status.data,
+      strlen(ros_message->order_status.data),
       "strict");
     if (!field) {
       return NULL;
     }
     {
-      int rc = PyObject_SetAttrString(_pymessage, "failure_reason", field);
+      int rc = PyObject_SetAttrString(_pymessage, "order_status", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

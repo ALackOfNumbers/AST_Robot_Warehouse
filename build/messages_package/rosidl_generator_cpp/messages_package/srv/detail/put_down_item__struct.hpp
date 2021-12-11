@@ -164,7 +164,7 @@ struct PutDownItem_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->success_or_failure = false;
     }
   }
 
@@ -174,15 +174,22 @@ struct PutDownItem_Response_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->structure_needs_at_least_one_member = 0;
+      this->success_or_failure = false;
     }
   }
 
   // field types and members
-  using _structure_needs_at_least_one_member_type =
-    uint8_t;
-  _structure_needs_at_least_one_member_type structure_needs_at_least_one_member;
+  using _success_or_failure_type =
+    bool;
+  _success_or_failure_type success_or_failure;
 
+  // setters for named parameter idiom
+  Type & set__success_or_failure(
+    const bool & _arg)
+  {
+    this->success_or_failure = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -226,7 +233,7 @@ struct PutDownItem_Response_
   // comparison operators
   bool operator==(const PutDownItem_Response_ & other) const
   {
-    if (this->structure_needs_at_least_one_member != other.structure_needs_at_least_one_member) {
+    if (this->success_or_failure != other.success_or_failure) {
       return false;
     }
     return true;

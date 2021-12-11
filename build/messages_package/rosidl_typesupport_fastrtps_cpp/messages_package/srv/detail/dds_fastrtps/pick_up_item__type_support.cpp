@@ -294,8 +294,8 @@ cdr_serialize(
   const messages_package::srv::PickUpItem_Response & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr << ros_message.structure_needs_at_least_one_member;
+  // Member: success_or_failure
+  cdr << (ros_message.success_or_failure ? true : false);
   return true;
 }
 
@@ -305,8 +305,12 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   messages_package::srv::PickUpItem_Response & ros_message)
 {
-  // Member: structure_needs_at_least_one_member
-  cdr >> ros_message.structure_needs_at_least_one_member;
+  // Member: success_or_failure
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.success_or_failure = tmp ? true : false;
+  }
 
   return true;
 }
@@ -324,9 +328,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: structure_needs_at_least_one_member
+  // Member: success_or_failure
   {
-    size_t item_size = sizeof(ros_message.structure_needs_at_least_one_member);
+    size_t item_size = sizeof(ros_message.success_or_failure);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -349,7 +353,7 @@ max_serialized_size_PickUpItem_Response(
   (void)full_bounded;
 
 
-  // Member: structure_needs_at_least_one_member
+  // Member: success_or_failure
   {
     size_t array_size = 1;
 

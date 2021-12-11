@@ -325,52 +325,6 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
-namespace messages_package
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const messages_package::msg::Coordinates &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  messages_package::msg::Coordinates &);
-size_t get_serialized_size(
-  const messages_package::msg::Coordinates &,
-  size_t current_alignment);
-size_t
-max_serialized_size_Coordinates(
-  bool & full_bounded,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace messages_package
-
-namespace messages_package
-{
-namespace msg
-{
-namespace typesupport_fastrtps_cpp
-{
-bool cdr_serialize(
-  const messages_package::msg::Coordinates &,
-  eprosima::fastcdr::Cdr &);
-bool cdr_deserialize(
-  eprosima::fastcdr::Cdr &,
-  messages_package::msg::Coordinates &);
-size_t get_serialized_size(
-  const messages_package::msg::Coordinates &,
-  size_t current_alignment);
-size_t
-max_serialized_size_Coordinates(
-  bool & full_bounded,
-  size_t current_alignment);
-}  // namespace typesupport_fastrtps_cpp
-}  // namespace msg
-}  // namespace messages_package
-
 
 namespace messages_package
 {
@@ -387,14 +341,10 @@ cdr_serialize(
   const messages_package::action::MoveItem_Result & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: current_location
-  messages_package::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.current_location,
-    cdr);
-  // Member: target_location
-  messages_package::msg::typesupport_fastrtps_cpp::cdr_serialize(
-    ros_message.target_location,
-    cdr);
+  // Member: success_or_failure
+  cdr << (ros_message.success_or_failure ? true : false);
+  // Member: failure_reason
+  cdr << ros_message.failure_reason;
   return true;
 }
 
@@ -404,13 +354,15 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   messages_package::action::MoveItem_Result & ros_message)
 {
-  // Member: current_location
-  messages_package::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.current_location);
+  // Member: success_or_failure
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.success_or_failure = tmp ? true : false;
+  }
 
-  // Member: target_location
-  messages_package::msg::typesupport_fastrtps_cpp::cdr_deserialize(
-    cdr, ros_message.target_location);
+  // Member: failure_reason
+  cdr >> ros_message.failure_reason;
 
   return true;
 }
@@ -428,16 +380,16 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: current_location
-
-  current_alignment +=
-    messages_package::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.current_location, current_alignment);
-  // Member: target_location
-
-  current_alignment +=
-    messages_package::msg::typesupport_fastrtps_cpp::get_serialized_size(
-    ros_message.target_location, current_alignment);
+  // Member: success_or_failure
+  {
+    size_t item_size = sizeof(ros_message.success_or_failure);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: failure_reason
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message.failure_reason.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -457,27 +409,22 @@ max_serialized_size_MoveItem_Result(
   (void)full_bounded;
 
 
-  // Member: current_location
+  // Member: success_or_failure
   {
     size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        messages_package::msg::typesupport_fastrtps_cpp::max_serialized_size_Coordinates(
-        full_bounded, current_alignment);
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
 
-  // Member: target_location
+  // Member: failure_reason
   {
     size_t array_size = 1;
 
-
+    full_bounded = false;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        messages_package::msg::typesupport_fastrtps_cpp::max_serialized_size_Coordinates(
-        full_bounded, current_alignment);
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
 
@@ -586,6 +533,52 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_cp
 
 
 // forward declaration of message dependencies and their conversion functions
+namespace messages_package
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const messages_package::msg::Coordinates &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  messages_package::msg::Coordinates &);
+size_t get_serialized_size(
+  const messages_package::msg::Coordinates &,
+  size_t current_alignment);
+size_t
+max_serialized_size_Coordinates(
+  bool & full_bounded,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace messages_package
+
+namespace messages_package
+{
+namespace msg
+{
+namespace typesupport_fastrtps_cpp
+{
+bool cdr_serialize(
+  const messages_package::msg::Coordinates &,
+  eprosima::fastcdr::Cdr &);
+bool cdr_deserialize(
+  eprosima::fastcdr::Cdr &,
+  messages_package::msg::Coordinates &);
+size_t get_serialized_size(
+  const messages_package::msg::Coordinates &,
+  size_t current_alignment);
+size_t
+max_serialized_size_Coordinates(
+  bool & full_bounded,
+  size_t current_alignment);
+}  // namespace typesupport_fastrtps_cpp
+}  // namespace msg
+}  // namespace messages_package
+
 
 namespace messages_package
 {
@@ -602,10 +595,14 @@ cdr_serialize(
   const messages_package::action::MoveItem_Feedback & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: success_or_failure
-  cdr << (ros_message.success_or_failure ? true : false);
-  // Member: failure_reason
-  cdr << ros_message.failure_reason;
+  // Member: current_location
+  messages_package::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.current_location,
+    cdr);
+  // Member: target_location
+  messages_package::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.target_location,
+    cdr);
   return true;
 }
 
@@ -615,15 +612,13 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   messages_package::action::MoveItem_Feedback & ros_message)
 {
-  // Member: success_or_failure
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.success_or_failure = tmp ? true : false;
-  }
+  // Member: current_location
+  messages_package::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.current_location);
 
-  // Member: failure_reason
-  cdr >> ros_message.failure_reason;
+  // Member: target_location
+  messages_package::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.target_location);
 
   return true;
 }
@@ -641,16 +636,16 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: success_or_failure
-  {
-    size_t item_size = sizeof(ros_message.success_or_failure);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: failure_reason
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.failure_reason.size() + 1);
+  // Member: current_location
+
+  current_alignment +=
+    messages_package::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.current_location, current_alignment);
+  // Member: target_location
+
+  current_alignment +=
+    messages_package::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.target_location, current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -670,22 +665,27 @@ max_serialized_size_MoveItem_Feedback(
   (void)full_bounded;
 
 
-  // Member: success_or_failure
+  // Member: current_location
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        messages_package::msg::typesupport_fastrtps_cpp::max_serialized_size_Coordinates(
+        full_bounded, current_alignment);
+    }
   }
 
-  // Member: failure_reason
+  // Member: target_location
   {
     size_t array_size = 1;
 
-    full_bounded = false;
+
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
+      current_alignment +=
+        messages_package::msg::typesupport_fastrtps_cpp::max_serialized_size_Coordinates(
+        full_bounded, current_alignment);
     }
   }
 

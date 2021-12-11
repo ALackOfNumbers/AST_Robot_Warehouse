@@ -2,8 +2,8 @@ Item item
 Coordinates initial_location
 Coordinates final_location
 ---
-Coordinates current_location
-Coordinates target_location
----
 bool success_or_failure
 string failure_reason 
+---
+Coordinates current_location
+Coordinates target_location

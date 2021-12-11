@@ -156,12 +156,6 @@ using MoveItem_Goal =
 }  // namespace messages_package
 
 
-// Include directives for member types
-// Member 'current_location'
-// Member 'target_location'
-// already included above
-// #include "messages_package/msg/detail/coordinates__struct.hpp"
-
 #ifndef _WIN32
 # define DEPRECATED__messages_package__action__MoveItem_Result __attribute__((deprecated))
 #else
@@ -181,38 +175,45 @@ struct MoveItem_Result_
   using Type = MoveItem_Result_<ContainerAllocator>;
 
   explicit MoveItem_Result_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : current_location(_init),
-    target_location(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->success_or_failure = false;
+      this->failure_reason = "";
+    }
   }
 
   explicit MoveItem_Result_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : current_location(_alloc, _init),
-    target_location(_alloc, _init)
+  : failure_reason(_alloc)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->success_or_failure = false;
+      this->failure_reason = "";
+    }
   }
 
   // field types and members
-  using _current_location_type =
-    messages_package::msg::Coordinates_<ContainerAllocator>;
-  _current_location_type current_location;
-  using _target_location_type =
-    messages_package::msg::Coordinates_<ContainerAllocator>;
-  _target_location_type target_location;
+  using _success_or_failure_type =
+    bool;
+  _success_or_failure_type success_or_failure;
+  using _failure_reason_type =
+    std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
+  _failure_reason_type failure_reason;
 
   // setters for named parameter idiom
-  Type & set__current_location(
-    const messages_package::msg::Coordinates_<ContainerAllocator> & _arg)
+  Type & set__success_or_failure(
+    const bool & _arg)
   {
-    this->current_location = _arg;
+    this->success_or_failure = _arg;
     return *this;
   }
-  Type & set__target_location(
-    const messages_package::msg::Coordinates_<ContainerAllocator> & _arg)
+  Type & set__failure_reason(
+    const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
   {
-    this->target_location = _arg;
+    this->failure_reason = _arg;
     return *this;
   }
 
@@ -258,10 +259,10 @@ struct MoveItem_Result_
   // comparison operators
   bool operator==(const MoveItem_Result_ & other) const
   {
-    if (this->current_location != other.current_location) {
+    if (this->success_or_failure != other.success_or_failure) {
       return false;
     }
-    if (this->target_location != other.target_location) {
+    if (this->failure_reason != other.failure_reason) {
       return false;
     }
     return true;
@@ -283,6 +284,12 @@ using MoveItem_Result =
 }  // namespace messages_package
 
 
+// Include directives for member types
+// Member 'current_location'
+// Member 'target_location'
+// already included above
+// #include "messages_package/msg/detail/coordinates__struct.hpp"
+
 #ifndef _WIN32
 # define DEPRECATED__messages_package__action__MoveItem_Feedback __attribute__((deprecated))
 #else
@@ -302,45 +309,38 @@ struct MoveItem_Feedback_
   using Type = MoveItem_Feedback_<ContainerAllocator>;
 
   explicit MoveItem_Feedback_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : current_location(_init),
+    target_location(_init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->success_or_failure = false;
-      this->failure_reason = "";
-    }
+    (void)_init;
   }
 
   explicit MoveItem_Feedback_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : failure_reason(_alloc)
+  : current_location(_alloc, _init),
+    target_location(_alloc, _init)
   {
-    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
-      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
-    {
-      this->success_or_failure = false;
-      this->failure_reason = "";
-    }
+    (void)_init;
   }
 
   // field types and members
-  using _success_or_failure_type =
-    bool;
-  _success_or_failure_type success_or_failure;
-  using _failure_reason_type =
-    std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
-  _failure_reason_type failure_reason;
+  using _current_location_type =
+    messages_package::msg::Coordinates_<ContainerAllocator>;
+  _current_location_type current_location;
+  using _target_location_type =
+    messages_package::msg::Coordinates_<ContainerAllocator>;
+  _target_location_type target_location;
 
   // setters for named parameter idiom
-  Type & set__success_or_failure(
-    const bool & _arg)
+  Type & set__current_location(
+    const messages_package::msg::Coordinates_<ContainerAllocator> & _arg)
   {
-    this->success_or_failure = _arg;
+    this->current_location = _arg;
     return *this;
   }
-  Type & set__failure_reason(
-    const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
+  Type & set__target_location(
+    const messages_package::msg::Coordinates_<ContainerAllocator> & _arg)
   {
-    this->failure_reason = _arg;
+    this->target_location = _arg;
     return *this;
   }
 
@@ -386,10 +386,10 @@ struct MoveItem_Feedback_
   // comparison operators
   bool operator==(const MoveItem_Feedback_ & other) const
   {
-    if (this->success_or_failure != other.success_or_failure) {
+    if (this->current_location != other.current_location) {
       return false;
     }
-    if (this->failure_reason != other.failure_reason) {
+    if (this->target_location != other.target_location) {
       return false;
     }
     return true;

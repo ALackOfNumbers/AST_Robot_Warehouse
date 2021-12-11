@@ -245,8 +245,8 @@ cdr_serialize(
   const messages_package::action::ChargeRobot_Result & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: current_battery_level
-  cdr << ros_message.current_battery_level;
+  // Member: final_battery_level
+  cdr << ros_message.final_battery_level;
   return true;
 }
 
@@ -256,8 +256,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   messages_package::action::ChargeRobot_Result & ros_message)
 {
-  // Member: current_battery_level
-  cdr >> ros_message.current_battery_level;
+  // Member: final_battery_level
+  cdr >> ros_message.final_battery_level;
 
   return true;
 }
@@ -275,9 +275,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: current_battery_level
+  // Member: final_battery_level
   {
-    size_t item_size = sizeof(ros_message.current_battery_level);
+    size_t item_size = sizeof(ros_message.final_battery_level);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -300,7 +300,7 @@ max_serialized_size_ChargeRobot_Result(
   (void)full_bounded;
 
 
-  // Member: current_battery_level
+  // Member: final_battery_level
   {
     size_t array_size = 1;
 
@@ -429,8 +429,8 @@ cdr_serialize(
   const messages_package::action::ChargeRobot_Feedback & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: final_battery_level
-  cdr << ros_message.final_battery_level;
+  // Member: current_battery_level
+  cdr << ros_message.current_battery_level;
   return true;
 }
 
@@ -440,8 +440,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   messages_package::action::ChargeRobot_Feedback & ros_message)
 {
-  // Member: final_battery_level
-  cdr >> ros_message.final_battery_level;
+  // Member: current_battery_level
+  cdr >> ros_message.current_battery_level;
 
   return true;
 }
@@ -459,9 +459,9 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: final_battery_level
+  // Member: current_battery_level
   {
-    size_t item_size = sizeof(ros_message.final_battery_level);
+    size_t item_size = sizeof(ros_message.current_battery_level);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -484,7 +484,7 @@ max_serialized_size_ChargeRobot_Feedback(
   (void)full_bounded;
 
 
-  // Member: final_battery_level
+  // Member: current_battery_level
   {
     size_t array_size = 1;
 

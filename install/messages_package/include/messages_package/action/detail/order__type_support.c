@@ -140,7 +140,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
-// Member `order_status`
+// Member `failure_reason`
 #include "rosidl_runtime_c/string_functions.h"
 
 #ifdef __cplusplus
@@ -162,16 +162,31 @@ void Order_Result__rosidl_typesupport_introspection_c__Order_Result_fini_functio
   messages_package__action__Order_Result__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember Order_Result__rosidl_typesupport_introspection_c__Order_Result_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember Order_Result__rosidl_typesupport_introspection_c__Order_Result_message_member_array[2] = {
   {
-    "order_status",  // name
+    "success_or_failure",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(messages_package__action__Order_Result, success_or_failure),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "failure_reason",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package__action__Order_Result, order_status),  // bytes offset in struct
+    offsetof(messages_package__action__Order_Result, failure_reason),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -183,7 +198,7 @@ static rosidl_typesupport_introspection_c__MessageMember Order_Result__rosidl_ty
 static const rosidl_typesupport_introspection_c__MessageMembers Order_Result__rosidl_typesupport_introspection_c__Order_Result_message_members = {
   "messages_package__action",  // message namespace
   "Order_Result",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(messages_package__action__Order_Result),
   Order_Result__rosidl_typesupport_introspection_c__Order_Result_message_member_array,  // message members
   Order_Result__rosidl_typesupport_introspection_c__Order_Result_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -230,7 +245,7 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
 
 
 // Include directives for member types
-// Member `failure_reason`
+// Member `order_status`
 // already included above
 // #include "rosidl_runtime_c/string_functions.h"
 
@@ -253,31 +268,16 @@ void Order_Feedback__rosidl_typesupport_introspection_c__Order_Feedback_fini_fun
   messages_package__action__Order_Feedback__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember Order_Feedback__rosidl_typesupport_introspection_c__Order_Feedback_message_member_array[2] = {
+static rosidl_typesupport_introspection_c__MessageMember Order_Feedback__rosidl_typesupport_introspection_c__Order_Feedback_message_member_array[1] = {
   {
-    "success_or_failure",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(messages_package__action__Order_Feedback, success_or_failure),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "failure_reason",  // name
+    "order_status",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package__action__Order_Feedback, failure_reason),  // bytes offset in struct
+    offsetof(messages_package__action__Order_Feedback, order_status),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -289,7 +289,7 @@ static rosidl_typesupport_introspection_c__MessageMember Order_Feedback__rosidl_
 static const rosidl_typesupport_introspection_c__MessageMembers Order_Feedback__rosidl_typesupport_introspection_c__Order_Feedback_message_members = {
   "messages_package__action",  // message namespace
   "Order_Feedback",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(messages_package__action__Order_Feedback),
   Order_Feedback__rosidl_typesupport_introspection_c__Order_Feedback_message_member_array,  // message members
   Order_Feedback__rosidl_typesupport_introspection_c__Order_Feedback_init_function,  // function to initialize message memory (memory has to be allocated)

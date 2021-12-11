@@ -13,7 +13,7 @@ module messages_package {
       messages_package::msg::Coordinates location;
     };
     struct PutDownItem_Response {
-      uint8 structure_needs_at_least_one_member;
+      boolean success_or_failure;
     };
   };
 };

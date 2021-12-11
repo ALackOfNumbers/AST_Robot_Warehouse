@@ -246,9 +246,9 @@ static bool _ChargeRobot_Result__cdr_serialize(
     return false;
   }
   const _ChargeRobot_Result__ros_msg_type * ros_message = static_cast<const _ChargeRobot_Result__ros_msg_type *>(untyped_ros_message);
-  // Field name: current_battery_level
+  // Field name: final_battery_level
   {
-    cdr << ros_message->current_battery_level;
+    cdr << ros_message->final_battery_level;
   }
 
   return true;
@@ -263,9 +263,9 @@ static bool _ChargeRobot_Result__cdr_deserialize(
     return false;
   }
   _ChargeRobot_Result__ros_msg_type * ros_message = static_cast<_ChargeRobot_Result__ros_msg_type *>(untyped_ros_message);
-  // Field name: current_battery_level
+  // Field name: final_battery_level
   {
-    cdr >> ros_message->current_battery_level;
+    cdr >> ros_message->final_battery_level;
   }
 
   return true;
@@ -285,9 +285,9 @@ size_t get_serialized_size_messages_package__action__ChargeRobot_Result(
   (void)padding;
   (void)wchar_size;
 
-  // field.name current_battery_level
+  // field.name final_battery_level
   {
-    size_t item_size = sizeof(ros_message->current_battery_level);
+    size_t item_size = sizeof(ros_message->final_battery_level);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -315,7 +315,7 @@ size_t max_serialized_size_messages_package__action__ChargeRobot_Result(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: current_battery_level
+  // member: final_battery_level
   {
     size_t array_size = 1;
 
@@ -412,9 +412,9 @@ static bool _ChargeRobot_Feedback__cdr_serialize(
     return false;
   }
   const _ChargeRobot_Feedback__ros_msg_type * ros_message = static_cast<const _ChargeRobot_Feedback__ros_msg_type *>(untyped_ros_message);
-  // Field name: final_battery_level
+  // Field name: current_battery_level
   {
-    cdr << ros_message->final_battery_level;
+    cdr << ros_message->current_battery_level;
   }
 
   return true;
@@ -429,9 +429,9 @@ static bool _ChargeRobot_Feedback__cdr_deserialize(
     return false;
   }
   _ChargeRobot_Feedback__ros_msg_type * ros_message = static_cast<_ChargeRobot_Feedback__ros_msg_type *>(untyped_ros_message);
-  // Field name: final_battery_level
+  // Field name: current_battery_level
   {
-    cdr >> ros_message->final_battery_level;
+    cdr >> ros_message->current_battery_level;
   }
 
   return true;
@@ -451,9 +451,9 @@ size_t get_serialized_size_messages_package__action__ChargeRobot_Feedback(
   (void)padding;
   (void)wchar_size;
 
-  // field.name final_battery_level
+  // field.name current_battery_level
   {
-    size_t item_size = sizeof(ros_message->final_battery_level);
+    size_t item_size = sizeof(ros_message->current_battery_level);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -481,7 +481,7 @@ size_t max_serialized_size_messages_package__action__ChargeRobot_Feedback(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: final_battery_level
+  // member: current_battery_level
   {
     size_t array_size = 1;
 

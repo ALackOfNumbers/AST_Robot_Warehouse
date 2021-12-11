@@ -181,16 +181,31 @@ void Order_Result_fini_function(void * message_memory)
   typed_message->~Order_Result();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Order_Result_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Order_Result_message_member_array[2] = {
   {
-    "order_status",  // name
+    "success_or_failure",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(messages_package::action::Order_Result, success_or_failure),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "failure_reason",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::Order_Result, order_status),  // bytes offset in struct
+    offsetof(messages_package::action::Order_Result, failure_reason),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -202,7 +217,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Order_Result_
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Order_Result_message_members = {
   "messages_package::action",  // message namespace
   "Order_Result",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(messages_package::action::Order_Result),
   Order_Result_message_member_array,  // message members
   Order_Result_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -298,31 +313,16 @@ void Order_Feedback_fini_function(void * message_memory)
   typed_message->~Order_Feedback();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Order_Feedback_message_member_array[2] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Order_Feedback_message_member_array[1] = {
   {
-    "success_or_failure",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_BOOLEAN,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(messages_package::action::Order_Feedback, success_or_failure),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "failure_reason",  // name
+    "order_status",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(messages_package::action::Order_Feedback, failure_reason),  // bytes offset in struct
+    offsetof(messages_package::action::Order_Feedback, order_status),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -334,7 +334,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Order_Feedbac
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Order_Feedback_message_members = {
   "messages_package::action",  // message namespace
   "Order_Feedback",  // message name
-  2,  // number of fields
+  1,  // number of fields
   sizeof(messages_package::action::Order_Feedback),
   Order_Feedback_message_member_array,  // message members
   Order_Feedback_init_function,  // function to initialize message memory (memory has to be allocated)

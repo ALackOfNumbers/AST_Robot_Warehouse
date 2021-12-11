@@ -270,8 +270,10 @@ cdr_serialize(
   const messages_package::action::Order_Result & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: order_status
-  cdr << ros_message.order_status;
+  // Member: success_or_failure
+  cdr << (ros_message.success_or_failure ? true : false);
+  // Member: failure_reason
+  cdr << ros_message.failure_reason;
   return true;
 }
 
@@ -281,8 +283,15 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   messages_package::action::Order_Result & ros_message)
 {
-  // Member: order_status
-  cdr >> ros_message.order_status;
+  // Member: success_or_failure
+  {
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message.success_or_failure = tmp ? true : false;
+  }
+
+  // Member: failure_reason
+  cdr >> ros_message.failure_reason;
 
   return true;
 }
@@ -300,10 +309,16 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: order_status
+  // Member: success_or_failure
+  {
+    size_t item_size = sizeof(ros_message.success_or_failure);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: failure_reason
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.order_status.size() + 1);
+    (ros_message.failure_reason.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -323,7 +338,14 @@ max_serialized_size_Order_Result(
   (void)full_bounded;
 
 
-  // Member: order_status
+  // Member: success_or_failure
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint8_t);
+  }
+
+  // Member: failure_reason
   {
     size_t array_size = 1;
 
@@ -456,10 +478,8 @@ cdr_serialize(
   const messages_package::action::Order_Feedback & ros_message,
   eprosima::fastcdr::Cdr & cdr)
 {
-  // Member: success_or_failure
-  cdr << (ros_message.success_or_failure ? true : false);
-  // Member: failure_reason
-  cdr << ros_message.failure_reason;
+  // Member: order_status
+  cdr << ros_message.order_status;
   return true;
 }
 
@@ -469,15 +489,8 @@ cdr_deserialize(
   eprosima::fastcdr::Cdr & cdr,
   messages_package::action::Order_Feedback & ros_message)
 {
-  // Member: success_or_failure
-  {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message.success_or_failure = tmp ? true : false;
-  }
-
-  // Member: failure_reason
-  cdr >> ros_message.failure_reason;
+  // Member: order_status
+  cdr >> ros_message.order_status;
 
   return true;
 }
@@ -495,16 +508,10 @@ get_serialized_size(
   (void)padding;
   (void)wchar_size;
 
-  // Member: success_or_failure
-  {
-    size_t item_size = sizeof(ros_message.success_or_failure);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // Member: failure_reason
+  // Member: order_status
   current_alignment += padding +
     eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.failure_reason.size() + 1);
+    (ros_message.order_status.size() + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -524,14 +531,7 @@ max_serialized_size_Order_Feedback(
   (void)full_bounded;
 
 
-  // Member: success_or_failure
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-
-  // Member: failure_reason
+  // Member: order_status
   {
     size_t array_size = 1;
 

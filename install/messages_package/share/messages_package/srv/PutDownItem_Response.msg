@@ -1,0 +1,2 @@
+
+bool success_or_failure

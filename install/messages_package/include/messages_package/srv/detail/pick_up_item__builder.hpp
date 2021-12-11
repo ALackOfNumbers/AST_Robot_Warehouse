@@ -75,6 +75,26 @@ namespace messages_package
 namespace srv
 {
 
+namespace builder
+{
+
+class Init_PickUpItem_Response_success_or_failure
+{
+public:
+  Init_PickUpItem_Response_success_or_failure()
+  : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
+  {}
+  ::messages_package::srv::PickUpItem_Response success_or_failure(::messages_package::srv::PickUpItem_Response::_success_or_failure_type arg)
+  {
+    msg_.success_or_failure = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::messages_package::srv::PickUpItem_Response msg_;
+};
+
+}  // namespace builder
 
 }  // namespace srv
 
@@ -85,7 +105,7 @@ template<>
 inline
 auto build<::messages_package::srv::PickUpItem_Response>()
 {
-  return ::messages_package::srv::PickUpItem_Response(rosidl_runtime_cpp::MessageInitialization::ZERO);
+  return messages_package::srv::builder::Init_PickUpItem_Response_success_or_failure();
 }
 
 }  // namespace messages_package

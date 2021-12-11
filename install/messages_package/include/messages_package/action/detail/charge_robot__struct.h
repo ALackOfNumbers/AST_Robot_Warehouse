@@ -43,7 +43,7 @@ typedef struct messages_package__action__ChargeRobot_Goal__Sequence
 // Struct defined in action/ChargeRobot in the package messages_package.
 typedef struct messages_package__action__ChargeRobot_Result
 {
-  int64_t current_battery_level;
+  int64_t final_battery_level;
 } messages_package__action__ChargeRobot_Result;
 
 // Struct for a sequence of messages_package__action__ChargeRobot_Result.
@@ -62,7 +62,7 @@ typedef struct messages_package__action__ChargeRobot_Result__Sequence
 // Struct defined in action/ChargeRobot in the package messages_package.
 typedef struct messages_package__action__ChargeRobot_Feedback
 {
-  int64_t final_battery_level;
+  int64_t current_battery_level;
 } messages_package__action__ChargeRobot_Feedback;
 
 // Struct for a sequence of messages_package__action__ChargeRobot_Feedback.

@@ -4,7 +4,7 @@ from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 
 #Import custom messages
-import messages_package.msg as mp
+import messages_package.msg as mpmsg
 
 class Beacon(Node):
 
@@ -19,7 +19,7 @@ class Beacon(Node):
         self.callback_group = ReentrantCallbackGroup()
 
         #Create a publisher for the beacon distance
-        self.publisher_ = self.create_publisher(mp.RobotDistance, 'beacon_distance', 10)
+        self.publisher_ = self.create_publisher(mpmsg.RobotDistance, 'beacon_distance', 10)
 
         #Period defined for the timer
         timer_period = 0.5  # seconds
@@ -39,7 +39,7 @@ class Beacon(Node):
 
         #Publish test message
         #Create message
-        msg = mp.RobotDistance()
+        msg = mpmsg.RobotDistance()
         #Assign values to the message
         msg.robot_number = 1
         msg.robot_distance = 0.0+self.i
@@ -50,7 +50,7 @@ class Beacon(Node):
         self.get_logger().info('Transmitting distance: "%i"' % msg.robot_distance )
 
         #Create message
-        msg = mp.RobotDistance()
+        msg = mpmsg.RobotDistance()
         #Assign values to the message
         msg.robot_number = 2
         msg.robot_distance = 0.4+self.i

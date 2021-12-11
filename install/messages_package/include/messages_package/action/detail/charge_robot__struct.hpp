@@ -148,7 +148,7 @@ struct ChargeRobot_Result_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->current_battery_level = 0ll;
+      this->final_battery_level = 0ll;
     }
   }
 
@@ -158,20 +158,20 @@ struct ChargeRobot_Result_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->current_battery_level = 0ll;
+      this->final_battery_level = 0ll;
     }
   }
 
   // field types and members
-  using _current_battery_level_type =
+  using _final_battery_level_type =
     int64_t;
-  _current_battery_level_type current_battery_level;
+  _final_battery_level_type final_battery_level;
 
   // setters for named parameter idiom
-  Type & set__current_battery_level(
+  Type & set__final_battery_level(
     const int64_t & _arg)
   {
-    this->current_battery_level = _arg;
+    this->final_battery_level = _arg;
     return *this;
   }
 
@@ -217,7 +217,7 @@ struct ChargeRobot_Result_
   // comparison operators
   bool operator==(const ChargeRobot_Result_ & other) const
   {
-    if (this->current_battery_level != other.current_battery_level) {
+    if (this->final_battery_level != other.final_battery_level) {
       return false;
     }
     return true;
@@ -262,7 +262,7 @@ struct ChargeRobot_Feedback_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->final_battery_level = 0ll;
+      this->current_battery_level = 0ll;
     }
   }
 
@@ -272,20 +272,20 @@ struct ChargeRobot_Feedback_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->final_battery_level = 0ll;
+      this->current_battery_level = 0ll;
     }
   }
 
   // field types and members
-  using _final_battery_level_type =
+  using _current_battery_level_type =
     int64_t;
-  _final_battery_level_type final_battery_level;
+  _current_battery_level_type current_battery_level;
 
   // setters for named parameter idiom
-  Type & set__final_battery_level(
+  Type & set__current_battery_level(
     const int64_t & _arg)
   {
-    this->final_battery_level = _arg;
+    this->current_battery_level = _arg;
     return *this;
   }
 
@@ -331,7 +331,7 @@ struct ChargeRobot_Feedback_
   // comparison operators
   bool operator==(const ChargeRobot_Feedback_ & other) const
   {
-    if (this->final_battery_level != other.final_battery_level) {
+    if (this->current_battery_level != other.current_battery_level) {
       return false;
     }
     return true;

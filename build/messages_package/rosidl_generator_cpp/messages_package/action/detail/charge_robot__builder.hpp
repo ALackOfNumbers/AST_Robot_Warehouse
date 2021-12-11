@@ -62,15 +62,15 @@ namespace action
 namespace builder
 {
 
-class Init_ChargeRobot_Result_current_battery_level
+class Init_ChargeRobot_Result_final_battery_level
 {
 public:
-  Init_ChargeRobot_Result_current_battery_level()
+  Init_ChargeRobot_Result_final_battery_level()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::messages_package::action::ChargeRobot_Result current_battery_level(::messages_package::action::ChargeRobot_Result::_current_battery_level_type arg)
+  ::messages_package::action::ChargeRobot_Result final_battery_level(::messages_package::action::ChargeRobot_Result::_final_battery_level_type arg)
   {
-    msg_.current_battery_level = std::move(arg);
+    msg_.final_battery_level = std::move(arg);
     return std::move(msg_);
   }
 
@@ -89,7 +89,7 @@ template<>
 inline
 auto build<::messages_package::action::ChargeRobot_Result>()
 {
-  return messages_package::action::builder::Init_ChargeRobot_Result_current_battery_level();
+  return messages_package::action::builder::Init_ChargeRobot_Result_final_battery_level();
 }
 
 }  // namespace messages_package
@@ -104,15 +104,15 @@ namespace action
 namespace builder
 {
 
-class Init_ChargeRobot_Feedback_final_battery_level
+class Init_ChargeRobot_Feedback_current_battery_level
 {
 public:
-  Init_ChargeRobot_Feedback_final_battery_level()
+  Init_ChargeRobot_Feedback_current_battery_level()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::messages_package::action::ChargeRobot_Feedback final_battery_level(::messages_package::action::ChargeRobot_Feedback::_final_battery_level_type arg)
+  ::messages_package::action::ChargeRobot_Feedback current_battery_level(::messages_package::action::ChargeRobot_Feedback::_current_battery_level_type arg)
   {
-    msg_.final_battery_level = std::move(arg);
+    msg_.current_battery_level = std::move(arg);
     return std::move(msg_);
   }
 
@@ -131,7 +131,7 @@ template<>
 inline
 auto build<::messages_package::action::ChargeRobot_Feedback>()
 {
-  return messages_package::action::builder::Init_ChargeRobot_Feedback_final_battery_level();
+  return messages_package::action::builder::Init_ChargeRobot_Feedback_current_battery_level();
 }
 
 }  // namespace messages_package

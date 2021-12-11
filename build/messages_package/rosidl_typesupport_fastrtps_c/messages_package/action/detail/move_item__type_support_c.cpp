@@ -328,20 +328,10 @@ extern "C"
 {
 #endif
 
-// already included above
-// #include "messages_package/msg/detail/coordinates__functions.h"  // current_location, target_location
+#include "rosidl_runtime_c/string.h"  // failure_reason
+#include "rosidl_runtime_c/string_functions.h"  // failure_reason
 
 // forward declare type support functions
-size_t get_serialized_size_messages_package__msg__Coordinates(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-size_t max_serialized_size_messages_package__msg__Coordinates(
-  bool & full_bounded,
-  size_t current_alignment);
-
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates)();
 
 
 using _MoveItem_Result__ros_msg_type = messages_package__action__MoveItem_Result;
@@ -355,32 +345,23 @@ static bool _MoveItem_Result__cdr_serialize(
     return false;
   }
   const _MoveItem_Result__ros_msg_type * ros_message = static_cast<const _MoveItem_Result__ros_msg_type *>(untyped_ros_message);
-  // Field name: current_location
+  // Field name: success_or_failure
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->current_location, cdr))
-    {
-      return false;
-    }
+    cdr << (ros_message->success_or_failure ? true : false);
   }
 
-  // Field name: target_location
+  // Field name: failure_reason
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->target_location, cdr))
-    {
+    const rosidl_runtime_c__String * str = &ros_message->failure_reason;
+    if (str->capacity == 0 || str->capacity <= str->size) {
+      fprintf(stderr, "string capacity not greater than size\n");
       return false;
     }
+    if (str->data[str->size] != '\0') {
+      fprintf(stderr, "string not null-terminated\n");
+      return false;
+    }
+    cdr << str->data;
   }
 
   return true;
@@ -395,30 +376,25 @@ static bool _MoveItem_Result__cdr_deserialize(
     return false;
   }
   _MoveItem_Result__ros_msg_type * ros_message = static_cast<_MoveItem_Result__ros_msg_type *>(untyped_ros_message);
-  // Field name: current_location
+  // Field name: success_or_failure
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->current_location))
-    {
-      return false;
-    }
+    uint8_t tmp;
+    cdr >> tmp;
+    ros_message->success_or_failure = tmp ? true : false;
   }
 
-  // Field name: target_location
+  // Field name: failure_reason
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->target_location))
-    {
+    std::string tmp;
+    cdr >> tmp;
+    if (!ros_message->failure_reason.data) {
+      rosidl_runtime_c__String__init(&ros_message->failure_reason);
+    }
+    bool succeeded = rosidl_runtime_c__String__assign(
+      &ros_message->failure_reason,
+      tmp.c_str());
+    if (!succeeded) {
+      fprintf(stderr, "failed to assign string into field 'failure_reason'\n");
       return false;
     }
   }
@@ -440,14 +416,16 @@ size_t get_serialized_size_messages_package__action__MoveItem_Result(
   (void)padding;
   (void)wchar_size;
 
-  // field.name current_location
-
-  current_alignment += get_serialized_size_messages_package__msg__Coordinates(
-    &(ros_message->current_location), current_alignment);
-  // field.name target_location
-
-  current_alignment += get_serialized_size_messages_package__msg__Coordinates(
-    &(ros_message->target_location), current_alignment);
+  // field.name success_or_failure
+  {
+    size_t item_size = sizeof(ros_message->success_or_failure);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name failure_reason
+  current_alignment += padding +
+    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+    (ros_message->failure_reason.size + 1);
 
   return current_alignment - initial_alignment;
 }
@@ -472,26 +450,21 @@ size_t max_serialized_size_messages_package__action__MoveItem_Result(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: current_location
+  // member: success_or_failure
   {
     size_t array_size = 1;
 
-
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        max_serialized_size_messages_package__msg__Coordinates(
-        full_bounded, current_alignment);
-    }
+    current_alignment += array_size * sizeof(uint8_t);
   }
-  // member: target_location
+  // member: failure_reason
   {
     size_t array_size = 1;
 
-
+    full_bounded = false;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment +=
-        max_serialized_size_messages_package__msg__Coordinates(
-        full_bounded, current_alignment);
+      current_alignment += padding +
+        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
+        1;
     }
   }
 
@@ -569,10 +542,20 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // failure_reason
-#include "rosidl_runtime_c/string_functions.h"  // failure_reason
+// already included above
+// #include "messages_package/msg/detail/coordinates__functions.h"  // current_location, target_location
 
 // forward declare type support functions
+size_t get_serialized_size_messages_package__msg__Coordinates(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+size_t max_serialized_size_messages_package__msg__Coordinates(
+  bool & full_bounded,
+  size_t current_alignment);
+
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates)();
 
 
 using _MoveItem_Feedback__ros_msg_type = messages_package__action__MoveItem_Feedback;
@@ -586,23 +569,32 @@ static bool _MoveItem_Feedback__cdr_serialize(
     return false;
   }
   const _MoveItem_Feedback__ros_msg_type * ros_message = static_cast<const _MoveItem_Feedback__ros_msg_type *>(untyped_ros_message);
-  // Field name: success_or_failure
+  // Field name: current_location
   {
-    cdr << (ros_message->success_or_failure ? true : false);
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->current_location, cdr))
+    {
+      return false;
+    }
   }
 
-  // Field name: failure_reason
+  // Field name: target_location
   {
-    const rosidl_runtime_c__String * str = &ros_message->failure_reason;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->target_location, cdr))
+    {
       return false;
     }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
   }
 
   return true;
@@ -617,25 +609,30 @@ static bool _MoveItem_Feedback__cdr_deserialize(
     return false;
   }
   _MoveItem_Feedback__ros_msg_type * ros_message = static_cast<_MoveItem_Feedback__ros_msg_type *>(untyped_ros_message);
-  // Field name: success_or_failure
+  // Field name: current_location
   {
-    uint8_t tmp;
-    cdr >> tmp;
-    ros_message->success_or_failure = tmp ? true : false;
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->current_location))
+    {
+      return false;
+    }
   }
 
-  // Field name: failure_reason
+  // Field name: target_location
   {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->failure_reason.data) {
-      rosidl_runtime_c__String__init(&ros_message->failure_reason);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->failure_reason,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'failure_reason'\n");
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, messages_package, msg, Coordinates
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->target_location))
+    {
       return false;
     }
   }
@@ -657,16 +654,14 @@ size_t get_serialized_size_messages_package__action__MoveItem_Feedback(
   (void)padding;
   (void)wchar_size;
 
-  // field.name success_or_failure
-  {
-    size_t item_size = sizeof(ros_message->success_or_failure);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name failure_reason
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->failure_reason.size + 1);
+  // field.name current_location
+
+  current_alignment += get_serialized_size_messages_package__msg__Coordinates(
+    &(ros_message->current_location), current_alignment);
+  // field.name target_location
+
+  current_alignment += get_serialized_size_messages_package__msg__Coordinates(
+    &(ros_message->target_location), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -691,21 +686,26 @@ size_t max_serialized_size_messages_package__action__MoveItem_Feedback(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: success_or_failure
+  // member: current_location
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint8_t);
-  }
-  // member: failure_reason
-  {
-    size_t array_size = 1;
 
-    full_bounded = false;
     for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
+      current_alignment +=
+        max_serialized_size_messages_package__msg__Coordinates(
+        full_bounded, current_alignment);
+    }
+  }
+  // member: target_location
+  {
+    size_t array_size = 1;
+
+
+    for (size_t index = 0; index < array_size; ++index) {
+      current_alignment +=
+        max_serialized_size_messages_package__msg__Coordinates(
+        full_bounded, current_alignment);
     }
   }
 

@@ -165,10 +165,8 @@ messages_package__action__MoveItem_Goal__Sequence__destroy(messages_package__act
 
 
 // Include directives for member types
-// Member `current_location`
-// Member `target_location`
-// already included above
-// #include "messages_package/msg/detail/coordinates__functions.h"
+// Member `failure_reason`
+#include "rosidl_runtime_c/string_functions.h"
 
 bool
 messages_package__action__MoveItem_Result__init(messages_package__action__MoveItem_Result * msg)
@@ -176,13 +174,9 @@ messages_package__action__MoveItem_Result__init(messages_package__action__MoveIt
   if (!msg) {
     return false;
   }
-  // current_location
-  if (!messages_package__msg__Coordinates__init(&msg->current_location)) {
-    messages_package__action__MoveItem_Result__fini(msg);
-    return false;
-  }
-  // target_location
-  if (!messages_package__msg__Coordinates__init(&msg->target_location)) {
+  // success_or_failure
+  // failure_reason
+  if (!rosidl_runtime_c__String__init(&msg->failure_reason)) {
     messages_package__action__MoveItem_Result__fini(msg);
     return false;
   }
@@ -195,10 +189,9 @@ messages_package__action__MoveItem_Result__fini(messages_package__action__MoveIt
   if (!msg) {
     return;
   }
-  // current_location
-  messages_package__msg__Coordinates__fini(&msg->current_location);
-  // target_location
-  messages_package__msg__Coordinates__fini(&msg->target_location);
+  // success_or_failure
+  // failure_reason
+  rosidl_runtime_c__String__fini(&msg->failure_reason);
 }
 
 messages_package__action__MoveItem_Result *
@@ -312,8 +305,10 @@ messages_package__action__MoveItem_Result__Sequence__destroy(messages_package__a
 
 
 // Include directives for member types
-// Member `failure_reason`
-#include "rosidl_runtime_c/string_functions.h"
+// Member `current_location`
+// Member `target_location`
+// already included above
+// #include "messages_package/msg/detail/coordinates__functions.h"
 
 bool
 messages_package__action__MoveItem_Feedback__init(messages_package__action__MoveItem_Feedback * msg)
@@ -321,9 +316,13 @@ messages_package__action__MoveItem_Feedback__init(messages_package__action__Move
   if (!msg) {
     return false;
   }
-  // success_or_failure
-  // failure_reason
-  if (!rosidl_runtime_c__String__init(&msg->failure_reason)) {
+  // current_location
+  if (!messages_package__msg__Coordinates__init(&msg->current_location)) {
+    messages_package__action__MoveItem_Feedback__fini(msg);
+    return false;
+  }
+  // target_location
+  if (!messages_package__msg__Coordinates__init(&msg->target_location)) {
     messages_package__action__MoveItem_Feedback__fini(msg);
     return false;
   }
@@ -336,9 +335,10 @@ messages_package__action__MoveItem_Feedback__fini(messages_package__action__Move
   if (!msg) {
     return;
   }
-  // success_or_failure
-  // failure_reason
-  rosidl_runtime_c__String__fini(&msg->failure_reason);
+  // current_location
+  messages_package__msg__Coordinates__fini(&msg->current_location);
+  // target_location
+  messages_package__msg__Coordinates__fini(&msg->target_location);
 }
 
 messages_package__action__MoveItem_Feedback *

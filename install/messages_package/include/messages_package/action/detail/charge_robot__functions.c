@@ -153,7 +153,7 @@ messages_package__action__ChargeRobot_Result__init(messages_package__action__Cha
   if (!msg) {
     return false;
   }
-  // current_battery_level
+  // final_battery_level
   return true;
 }
 
@@ -163,7 +163,7 @@ messages_package__action__ChargeRobot_Result__fini(messages_package__action__Cha
   if (!msg) {
     return;
   }
-  // current_battery_level
+  // final_battery_level
 }
 
 messages_package__action__ChargeRobot_Result *
@@ -282,7 +282,7 @@ messages_package__action__ChargeRobot_Feedback__init(messages_package__action__C
   if (!msg) {
     return false;
   }
-  // final_battery_level
+  // current_battery_level
   return true;
 }
 
@@ -292,7 +292,7 @@ messages_package__action__ChargeRobot_Feedback__fini(messages_package__action__C
   if (!msg) {
     return;
   }
-  // final_battery_level
+  // current_battery_level
 }
 
 messages_package__action__ChargeRobot_Feedback *
