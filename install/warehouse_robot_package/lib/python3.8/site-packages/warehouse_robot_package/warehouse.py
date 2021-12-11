@@ -94,7 +94,7 @@ class Warehouse(Node):
         #Publish the message
         self.publisher_.publish(msg)
         #Log the message that was published
-        self.get_logger().info('%s' % msg.map_array)
+        #self.get_logger().info('%s' % msg.map_array)
         #Increase the iterator value
         self.i += 1
 
@@ -145,10 +145,10 @@ class Warehouse(Node):
     def goal_response_callback_charge_robot(self, future):
         goal_handle = future.result()
         if not goal_handle.accepted:
-            self.get_logger().info('Charge robot rejected :(')
+            self.get_logger().info('Charge robot rejected')
             return
 
-        self.get_logger().info('Charge robot accepted :)')
+        self.get_logger().info('Charge robot accepted')
 
         self._get_result_future = goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback_charge_robot)
@@ -161,8 +161,7 @@ class Warehouse(Node):
 
     #Feedback callback for charge robot action
     def feedback_callback_charge_robot(self, feedback_msg):
-        current_battery = feedback_msg.current_battery_level
-        self.get_logger().info('Current robot battery level: %i'% current_battery)
+        self.get_logger().info('Current robot battery level: %i'% feedback_msg.feedback.current_battery_level)
 
 def main(args=None):
     #Initialize rclpy

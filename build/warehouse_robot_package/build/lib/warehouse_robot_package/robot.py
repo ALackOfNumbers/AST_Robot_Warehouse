@@ -153,6 +153,7 @@ class Robot(Node):
 
         result = mpaction.ChargeRobot.Result()
         result.final_battery_level = self.current_battery
+        self.get_logger().info('Final battery level: %i'%(result.final_battery_level))
         return result
 
 def main(args=None):
