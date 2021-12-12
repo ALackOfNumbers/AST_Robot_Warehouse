@@ -1,0 +1,22 @@
+[0.632s] Invoking command in '/home/sam/AST_Robot_Warehouse/src/py_srvcli': PYTHONPATH=/home/sam/AST_Robot_Warehouse/install/py_srvcli/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/sam/AST_Robot_Warehouse/build/py_srvcli/build install --prefix /home/sam/AST_Robot_Warehouse/install/py_srvcli --record /home/sam/AST_Robot_Warehouse/build/py_srvcli/install.log --single-version-externally-managed
+[0.991s] running egg_info
+[0.992s] writing ../../build/py_srvcli/py_srvcli.egg-info/PKG-INFO
+[0.992s] writing dependency_links to ../../build/py_srvcli/py_srvcli.egg-info/dependency_links.txt
+[0.992s] writing entry points to ../../build/py_srvcli/py_srvcli.egg-info/entry_points.txt
+[0.993s] writing requirements to ../../build/py_srvcli/py_srvcli.egg-info/requires.txt
+[0.993s] writing top-level names to ../../build/py_srvcli/py_srvcli.egg-info/top_level.txt
+[1.032s] reading manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[1.033s] writing manifest file '../../build/py_srvcli/py_srvcli.egg-info/SOURCES.txt'
+[1.033s] running build
+[1.033s] running build_py
+[1.033s] running install
+[1.034s] running install_lib
+[1.036s] running install_data
+[1.037s] running install_egg_info
+[1.041s] removing '/home/sam/AST_Robot_Warehouse/install/py_srvcli/lib/python3.8/site-packages/py_srvcli-0.0.0-py3.8.egg-info' (and everything under it)
+[1.041s] Copying ../../build/py_srvcli/py_srvcli.egg-info to /home/sam/AST_Robot_Warehouse/install/py_srvcli/lib/python3.8/site-packages/py_srvcli-0.0.0-py3.8.egg-info
+[1.043s] running install_scripts
+[1.067s] Installing client script to /home/sam/AST_Robot_Warehouse/install/py_srvcli/lib/py_srvcli
+[1.067s] Installing service script to /home/sam/AST_Robot_Warehouse/install/py_srvcli/lib/py_srvcli
+[1.068s] writing list of installed files to '/home/sam/AST_Robot_Warehouse/build/py_srvcli/install.log'
+[1.094s] Invoked command in '/home/sam/AST_Robot_Warehouse/src/py_srvcli' returned '0': PYTHONPATH=/home/sam/AST_Robot_Warehouse/install/py_srvcli/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/py_srvcli build --build-base /home/sam/AST_Robot_Warehouse/build/py_srvcli/build install --prefix /home/sam/AST_Robot_Warehouse/install/py_srvcli --record /home/sam/AST_Robot_Warehouse/build/py_srvcli/install.log --single-version-externally-managed

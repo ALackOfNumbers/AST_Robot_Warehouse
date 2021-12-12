@@ -31,11 +31,11 @@ class Robot(Node):
         #Define the robot's spawn location
         self.location = [0,0]
         if self.serial_number == 1:
-            self.location = [10,7]
+            self.location = [2,7]
         if self.serial_number == 2:
-            self.location = [10,8]
+            self.location = [2,8]
         if self.serial_number == 3:
-            self.location = [10,9]
+            self.location = [2,9]
         #Define the robot's held item
         self.held_item = None
         #Store the distances to each beacon
@@ -147,11 +147,13 @@ class Robot(Node):
             if self.beacon1 != None and self.beacon2 != None:
                 x_coordinate = (self.beacon2**2 - self.beacon1**2-82**2)/(-2*82)
                 y_coordinate = np.sqrt(abs(self.beacon1**2-x_coordinate**2))
+            # beacon1 and beacon4 are given
+            elif self.beacon1 != None and self.beacon4 != None:
+                y_coordinate = (self.beacon1**2 - self.beacon4**2 + 15**2) / 30
+                x_coordinate = np.sqrt(self.beacon1**2 - y_coordinate**2)
             else:
-                x_coordinate = 30
-                y_coordinate = 16
-
-            #TODO Make the robot calculate its coordinates using other beacons
+                x_coordinate = self.location[0]
+                y_coordinate = self.location[1]
 
             #Create message
             msg = mpmsg.RobotLocation()
@@ -189,12 +191,11 @@ class Robot(Node):
 
     #Callback for the charge_robot action
     def callback_charge_robot(self, goal_handle):
-        #Set state to busy
-        self.state = 'busy'
         self.get_logger().info('Sending robot to charger...')
 
-        #Sleep while robot moves to charger (Done in warehouse client)
-        time.sleep(10)
+        #Wait for the robot to reach the charger
+        while abs(self.location[0] - goal_handle.request.charger_location.x > 1) and abs(self.location[1] - goal_handle.request.charger_location.x > 1):
+            time.sleep(1)
 
         #Create the feedback
         feedback_msg = mpaction.ChargeRobot.Feedback()
@@ -218,14 +219,20 @@ class Robot(Node):
         #Set the final battery level
         result.final_battery_level = self.current_battery
         self.get_logger().info('Final battery level: %i'%(result.final_battery_level))
-        #Return state to idle
-        self.state = 'idle'
         return result
 
     #Callback for the move_item action
     def callback_move_item(self, goal_handle):
 
-        #TODO Check the current battery and abort goal if battery is below critical
+        #Check the current battery and abort goal if battery is below critical
+        if self.current_battery < self.critical_battery:
+            
+            #TODO Abort goal
+
+            goal_handle.abort()
+
+        #Set state to busy
+        self.state = 'busy'
 
         self.get_logger().info('Going to starting location...')
 
@@ -235,17 +242,25 @@ class Robot(Node):
         goal_handle.publish_feedback(feedback_msg)
         self.get_logger().info('Target location: %i,%i'%(feedback_msg.target_location.x,feedback_msg.target_location.y))
 
-        #TODO Move to the initial location by polling current location from the beacon. Update the target location when the initial location is reached.
-        
+        #Wait while the robot moves to the initial location
+        while abs(self.location[0]-goal_handle.request.initial_location.x) > 1 and abs(self.location[1]-goal_handle.request.initial_location.y)>1:
+            time.sleep(1)
+
         feedback_msg.target_location = goal_handle.request.final_location
         goal_handle.publish_feedback(feedback_msg)
         self.get_logger().info('Target location: %i,%i'%(feedback_msg.target_location.x,feedback_msg.target_location.y))
 
-        #TODO Robot picks up the item using the service
+        #Robot picks up the item using the service
+        if goal_handle.request.item.name != 'None':
+            self.send_request_pick_up_item(self, goal_handle.request.item, goal_handle.request.initial_location)
 
-        #TODO Move robot to the final location
+        #Wait while the robot moves to the final location
+        while abs(self.location[0]-goal_handle.request.final_location.x) > 1 and abs(self.location[1]-goal_handle.request.final_location.y)>1:
+            time.sleep(1)
 
-        #TODO Robot places the item using the service
+        #Robot places the item using the service
+        if goal_handle.request.item.name != 'None':
+            self.send_request_put_down_item(self, goal_handle.request.item, goal_handle.request.final_location)
 
         goal_handle.succeed()
 
@@ -253,6 +268,11 @@ class Robot(Node):
         result.success_or_failure = True
         result.failure_reason = 'None'
         self.get_logger().info('Item moved: %s Failure: %s'%(result.success_or_failure,result.failure_reason))
+
+        #Reduce the battery by 10 per move_item action
+        self.current_battery -= 10
+        #Return state to idle
+        self.state = 'idle'
         return result
 
 def main(args=None):
@@ -316,6 +336,7 @@ def main(args=None):
                     robot_instance.get_logger().info('Item placed down: Name: %s Coordinates: %i,%i '% (robot_instance.req_put_down_item.item.name,robot_instance.req_put_down_item.item.location.x,robot_instance.req_put_down_item.item.location.y))
                     robot_instance.get_logger().info('Result of placing item: %s' % response_put_down_item.success_or_failure)
                     put_down_item_flag = 1
+
     #"Spins" the node so callbacks are called
     #rclpy.spin(robot_instance, executor)
 

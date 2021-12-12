@@ -46,12 +46,10 @@ class OrderConsole(Node):
 
     #Send delivery service request       
     def send_request(self):
+        print('Entering delivery:')
         more_items = 1
         items_list = []
         current_time = float(time.time())
-        #TODO Create real delivery location for items
-        delivery_x = 1
-        delivery_y = 1
         #Loop while there are items to input
         while more_items > 0:
             #Create item
@@ -63,23 +61,44 @@ class OrderConsole(Node):
             #Calculate item age
             item.age = float(current_time)
             #Determine item starting location
-            item.location.x = float(delivery_x)
-            item.location.y = float(delivery_y)
+            item.location.x = 0.0
+            item.location.y = 0.0
             #Add item to items list
             items_list.append(item)
             #Ask user if they have more items
             more_items = int(input('1 to continue, 0 for no more items: '))
         #Create the request
         self.req.delivery_contents.items = items_list
-        self.req.delivery_contents.location.x = float(delivery_x)
-        self.req.delivery_contents.location.y = float(delivery_y)
+        self.req.delivery_contents.location.x = 0.0
+        self.req.delivery_contents.location.y = 0.0
         self.req.delivery_contents.time = float(current_time)
         self.future_delivery = self.client_delivery.call_async(self.req)
 
     #Send goal for the order action
-    def send_goal_order(self, items):
+    def send_goal_order(self):
+        print('Entering order:')
+        more_items = 1
+        items_list = []
+        current_time = float(time.time())
+        #Loop while there are items to input
+        while more_items > 0:
+            #Create item
+            item = mpmsg.Item()
+            #Get item name
+            item.name = str(input('Enter item name: '))
+            #Get item quantity
+            item.quantity = int(input('Enter item quantity: '))
+            #Calculate item age
+            item.age = float(current_time)
+            #Determine item starting location
+            item.location.x = 0.0
+            item.location.y = 0.0
+            #Add item to items list
+            items_list.append(item)
+            #Ask user if they have more items
+            more_items = int(input('1 to continue, 0 for no more items: '))
         goal_msg = mpaction.Order.Goal()
-        goal_msg.items = items
+        goal_msg.items = items_list
 
         self._action_client_order.wait_for_server()
 
@@ -118,14 +137,11 @@ def main(args=None):
     #Create a multithreading executor
     executor = MultiThreadedExecutor()
 
-    #TODO allow multiple orders
-    #Send a single order 
-    item = mpmsg.Item(name='Chicken',age=time.time(),location=mpmsg.Coordinates(x=8.0,y=2.0),quantity=2)
-    order_console_instance.send_goal_order([item])
-
-    #TODO allow multiple deliveries
     #Send the request once
     order_console_instance.send_request()
+
+    #Send a single order 
+    order_console_instance.send_goal_order()
 
     #Flag for printing delivery results once
     delivery_handled = 0

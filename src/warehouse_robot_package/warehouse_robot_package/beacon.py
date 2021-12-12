@@ -33,7 +33,7 @@ class Beacon(Node):
             callback_group=self.callback_group)
 
         #Period defined for the timer
-        timer_period = 1  # seconds
+        timer_period = 0.5  # seconds
         #Timer is created with a callback, and the callback is assigned the callback group
         self.timer = self.create_timer(timer_period, self.timer_callback,callback_group=self.callback_group)
 
@@ -63,7 +63,6 @@ class Beacon(Node):
                         self.publisher_.publish(msg)
                         #Log the message that was published
                         self.get_logger().info('Transmitting distance: %f' % msg.robot_distance )
-                        self.get_logger().info('X: %i Y: %i'%(col_index,row_index))
         
     #Listener callback for the map
     def listener_callback_map(self,msg):

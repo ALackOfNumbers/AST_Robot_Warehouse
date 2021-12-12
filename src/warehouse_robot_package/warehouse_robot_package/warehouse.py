@@ -18,7 +18,13 @@ class Warehouse(Node):
         #Calls the node classes contructor and passes a node name
         super().__init__('warehouse_instance')
 
+        #Store the robot states in a dictionary
+        self.robot_states = {}
         #Define the map as a string
+        '''
+        The explanation of the map symbols is given in the map.py file in the src folder.
+        '''
+
         self.string_map = """#######################################@###########################################
 #B    { }{ }{ }                                                 #                B#
 #      -  -  -                                                  #                 #
@@ -26,9 +32,9 @@ class Warehouse(Node):
 #                           [ ] [ ] [ ] [ ] [ ] [ ]             #                 #
 #                           [ ] [ ] [ ] [ ] [ ] [ ]                               #
 #                           [ ] [ ] [ ] [ ] [ ] [ ]             #                 #
-#C        1                 [ ] [ ] [ ] [ ] [ ] [ ]             ###########  ######
-#C        2                 [ ] [ ] [ ] [ ] [ ] [ ]                               @
-#C        3                 [ ] [ ] [ ] [ ] [ ] [ ]             ###########  ######
+#C1                         [ ] [ ] [ ] [ ] [ ] [ ]             ###########  ######
+#C2                         [ ] [ ] [ ] [ ] [ ] [ ]                               @
+#C3                         [ ] [ ] [ ] [ ] [ ] [ ]             ###########  ######
 #                           [ ] [ ] [ ] [ ] [ ] [ ]             #                 #
 #                           [ ] [ ] [ ] [ ] [ ] [ ]                               #
 #                                                               #                 #
@@ -39,7 +45,12 @@ class Warehouse(Node):
         #Define the warehouse's stock
         self.stock = []
         #Define the warehouse's map locations
-        self.map_locations = {'delivery1':[7,1],'delivery2':[10,1],'delivery3':[13,1],'charger1':[1,7],'charger2:':[1,8],'charger3':[1,9],'dispatch1':[8,14],'dispatch2':[11,14]}
+        self.map_locations = {'delivery1':[7,2],'delivery2':[10,2],'delivery3':[13,2],'charger1':[2,7],'charger2:':[2,8],'charger3':[2,9],'dispatch1':[8,13],'dispatch2':[11,13]}
+        #Define the coordinates of all shelves
+        self.shelf_coords=[]
+        for x in range(3,12):
+            for y in range(29,50,4):
+                self.shelf_coords.append([x,y])
         #Define the warehouse's maximum stock size
         self.max_stock = 54
         #Define the default warehouse map
@@ -107,11 +118,16 @@ class Warehouse(Node):
         
     #Callback from the timer
     def timer_callback(self):
-        #TODO Remove this test
+        pass
+
+        '''
+        To test the update_map function remove the comments below and comment out the pass above.
+        '''
+        
         #Test update map function
-        self.update_map(add=[['1',7,6]],remove=[['',7,10]])
-        time.sleep(2)
-        self.update_map(add=[['1',7,10]],remove=[['',7,6]])
+        #self.update_map(add=[['1',7,6]],remove=[['',7,10]])
+        #time.sleep(2)
+        #self.update_map(add=[['1',7,10]],remove=[['',7,6]])
 
     #Function for updating the map and publishing it
     def update_map(self,add=None,remove=None):
@@ -119,9 +135,9 @@ class Warehouse(Node):
         Function for updating the map
         Parameters
         ----------
-        add : [[symbol, x_coordinate, y_coordinate]]
+        add : [[str(symbol), int(row), int(column)]]
             List of symbols to add to the map
-        remove : [[symbol, x_coordinate, y_coordinate]]
+        remove : [[str(symbol), int(row), int(column)]]
             Lit of symbols to remove from the map
         '''
         updated_map = self.current_map
@@ -171,24 +187,66 @@ class Warehouse(Node):
     def get_robot_location(self, robot_number):
         for row in self.current_map:
             for col in row:
-                if col == robot_number:
+                if col == str(robot_number):
                     return [row,col]
 
     #Listener callback for the robot locations
     def listener_callback_location(self, msg):
+        pass
         self.get_logger().info('Robot number: %i X coordinate: %f Y coordinate: %f' % (msg.robot_number,msg.robot_location.x,msg.robot_location.y))
 
     #Listener callback for the robot states
     def listener_callback_state(self, msg):
+        #Update the robot states dictionary
+        self.robot_states[msg.robot_number] = msg.robot_state
+        #Log the robot state
         self.get_logger().info('Robot: %i State: %s' % (msg.robot_number,msg.robot_state))
 
     #Service callback for the delivery server
     def callback_delivery(self, request, response):
-        #TODO make real success/failure response
-        #TODO make a robot process the delivery
+        #Print the default map
+        self.update_map(add=[['1',7,2]])
+
+        #Return failure if no delivery ports are available
+        if self.current_map[self.map_locations['delivery1'][0]-1][self.map_locations['delivery1'][1]] != ' ' and self.current_map[self.map_locations['delivery2'][0]-1][self.map_locations['delivery2'][1]] != ' ':
+            response.success_or_failure = False
+            return response
+
+        #Iterate through robot states
+        for key in self.robot_states:
+            #Assign an idle robot
+            if self.robot_states[key] == 'idle':
+                assigned_robot = str(key)
+                break
+
+        #Move robot from charger to delivery port
+        self.update_map(add=[['1',2,7]],remove=[['',7,2]])
+        time.sleep(1)
+
+        #Loop through items in delivery, move them to shelves
+        #for item in range(len(request.delivery_contents)):
+            #Nested action/service calls are not working
+            #self.send_goal_move_item(item,mpmsg.Coordinates(x=2.0,y=7.0),mpmsg.Coordinates(x=11.0,y=27.0))
+
+        #Move from delivery port to shelves
+        self.update_map(add=[['1',11,27]],remove=[['',2,7]])
+        time.sleep(1)
+
+        #Charge the robot
+        self.update_map(add=[['1',7,2]],remove=[['',11,27]])
+
+        #Nested action/service calls are not working
+        #self.send_goal_charge_robot(mpmsg.Coordinates(x=7.0,y =2.0))
+
+        #Empty the delivery port on the map
+        self.update_map(remove=[["",1,8]])
+
         response.success_or_failure = True
-        #Log all items in the delivery 
+        #Iterate through all items in the delivery 
         for item in request.delivery_contents.items:
+            #Add the items to the stock
+            self.stock.append(item)
+            #Log the item
             self.get_logger().info('Delivery: Name: %s Age: %f Location: %i,%i Quantity: %i ' % (item.name,item.age,item.location.x,item.location.y,item.quantity))
         return response
 
@@ -226,7 +284,10 @@ class Warehouse(Node):
 
         self.get_logger().info('Charge robot accepted')
 
-        #TODO Move robot to charger
+        #TODO Move robot to charger without teleporting
+        robot_location = self.get_robot_location(1)
+        self.update_map(remove=[['',robot_location[0],robot_location[1]]],add=[['1',7,2]])
+        time.sleep(1)
 
         self._get_result_future = goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback_charge_robot)
@@ -274,23 +335,54 @@ class Warehouse(Node):
 
     #Feedback callback for move item action
     def feedback_callback_move_item(self, feedback_msg):
+
         #TODO Move the robot from the current location towards the target location
+        robot_location = self.get_robot_location(1)
+        self.update_map(add=[['1',feedback_msg.feedback.target_location.y,feedback_msg.feedback.target_location.x]], remove=[["",robot_location[0],robot_location[1]]])
+        time.sleep(1)
+
         self.get_logger().info('Current robot location: %i,%i Target robot location: %i,%i'% (feedback_msg.feedback.current_location.x,feedback_msg.feedback.current_location.y,feedback_msg.feedback.target_location.x,feedback_msg.feedback.target_location.y))
 
     #Callback for the order action
     def callback_order(self, goal_handle):
         self.get_logger().info('Processing order...')
 
+        #Check if all the order items are in stock
+        for item in goal_handle.request.items:
+            available = False
+            for in_stock in self.stock:
+                if in_stock.name == item.name:
+                    available = True
+            #If an item is not available, abort the order
+            if available == False:
+                
+                result = mpaction.Order.Result()
+                result.success_or_failure = False
+                result.failure_reason = 'Items not in stock'
+                return result       
+
         feedback_msg = mpaction.Order.Feedback()
         feedback_msg.order_status = 'Assigning robot'
         goal_handle.publish_feedback(feedback_msg)
 
-        #TODO Get available robot
+        #Iterate through robot states
+        for key in self.robot_states:
+            #Assign an idle robot
+            if self.robot_states[key] == 'idle':
+                assigned_robot = key
+                break
 
         feedback_msg.order_status = 'Robot assigned'
         goal_handle.publish_feedback(feedback_msg)
         
-        #TODO Loop move items from shelves to dispatch
+        #TODO Loop move items from shelves to dispatch, populate the dispatch
+        self.update_map(add=[['1',11,27]],remove=[['',7,2]]) #Move from charger to shelf
+        time.sleep(1)
+        self.update_map(add=[['1',13,8]],remove=[['1',11,27]]) #Move from shelf to dispatch
+        time.sleep(1)
+        
+
+        #TODO Update item locations in the stock
         
         feedback_msg.order_status = 'Taking items to dispatch'
         goal_handle.publish_feedback(feedback_msg)
@@ -301,6 +393,14 @@ class Warehouse(Node):
         result.success_or_failure = True
         result.failure_reason = 'None'
         self.get_logger().info('Order shipped: %s Failure reason: %s'%(result.success_or_failure,result.failure_reason))
+
+        #Charge the robot
+        self.update_map(add=[['1',7,2]],remove=[['1',13,8]]) #Move from dispatch to charger
+        #self.send_goal_charge_robot(mpmsg.Coordinates(x=float(self.map_locations['charger1'][0]),y = float(self.map_locations['charger1'][1])))
+
+        #Empty the dispatch to show that the order was sent
+        #self.update_map(remove=[["",self.map_locations['dispatch1'][0]+1,self.map_locations['dispatch1'][1]]])
+
         return result
 
 def main(args=None):
@@ -312,15 +412,17 @@ def main(args=None):
     #Create a multithreading executor
     executor = MultiThreadedExecutor()
 
-    #TODO Remove test
-    #Test charge robot action
-    warehouse_instance.send_goal_charge_robot(mpmsg.Coordinates(x=7.0,y = 18.0))
+    '''
+    Uncomment the below line to test the charge_robot action
+    '''
+    #warehouse_instance.send_goal_charge_robot(mpmsg.Coordinates(x=7.0,y = 18.0))
 
-    #TODO Remove test
-    #Test move item action
-    location = mpmsg.Coordinates(x=6.0,y=9.0)
-    location2 = mpmsg.Coordinates(x=15.0,y=32.0)
-    warehouse_instance.send_goal_move_item(mpmsg.Item(name='Cheese',age=7.0,location=location,quantity=10),location,location2)
+    '''
+    Uncomment the beloew lines to test the send_goal_move_item action
+    '''
+    #location = mpmsg.Coordinates(x=6.0,y=9.0)
+    #location2 = mpmsg.Coordinates(x=15.0,y=32.0)
+    #warehouse_instance.send_goal_move_item(mpmsg.Item(name='Cheese',age=7.0,location=location,quantity=10),location,location2)
 
     #"Spins" the node so callbacks are called
     rclpy.spin(warehouse_instance, executor)
