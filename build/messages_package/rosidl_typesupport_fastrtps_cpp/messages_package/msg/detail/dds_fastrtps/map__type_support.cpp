@@ -57,7 +57,7 @@ cdr_serialize(
 {
   // Member: map_array
   {
-    for (size_t i = 0; i < 5; i++) {
+    for (size_t i = 0; i < 16; i++) {
       messages_package::msg::typesupport_fastrtps_cpp::cdr_serialize(
         ros_message.map_array[i],
         cdr);
@@ -74,7 +74,7 @@ cdr_deserialize(
 {
   // Member: map_array
   {
-    for (size_t i = 0; i < 5; i++) {
+    for (size_t i = 0; i < 16; i++) {
       messages_package::msg::typesupport_fastrtps_cpp::cdr_deserialize(
         cdr,
         ros_message.map_array[i]);
@@ -99,7 +99,7 @@ get_serialized_size(
 
   // Member: map_array
   {
-    size_t array_size = 5;
+    size_t array_size = 16;
 
     for (size_t index = 0; index < array_size; ++index) {
       current_alignment +=
@@ -128,7 +128,7 @@ max_serialized_size_Map(
 
   // Member: map_array
   {
-    size_t array_size = 5;
+    size_t array_size = 16;
 
 
     for (size_t index = 0; index < array_size; ++index) {

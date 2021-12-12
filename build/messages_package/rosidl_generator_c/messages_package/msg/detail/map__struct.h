@@ -24,7 +24,7 @@ extern "C"
 // Struct defined in msg/Map in the package messages_package.
 typedef struct messages_package__msg__Map
 {
-  messages_package__msg__Row map_array[5];
+  messages_package__msg__Row map_array[16];
 } messages_package__msg__Map;
 
 // Struct for a sequence of messages_package__msg__Map.

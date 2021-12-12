@@ -61,11 +61,11 @@ class Map(metaclass=Metaclass_Map):
     ]
 
     _fields_and_field_types = {
-        'map_array': 'messages_package/Row[5]',
+        'map_array': 'messages_package/Row[16]',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.Array(rosidl_parser.definition.NamespacedType(['messages_package', 'msg'], 'Row'), 5),  # noqa: E501
+        rosidl_parser.definition.Array(rosidl_parser.definition.NamespacedType(['messages_package', 'msg'], 'Row'), 16),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -75,7 +75,7 @@ class Map(metaclass=Metaclass_Map):
         from messages_package.msg import Row
         self.map_array = kwargs.get(
             'map_array',
-            [Row() for x in range(5)]
+            [Row() for x in range(16)]
         )
 
     def __repr__(self):
@@ -135,8 +135,8 @@ class Map(metaclass=Metaclass_Map):
                   isinstance(value, UserList)) and
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
-                 len(value) == 5 and
+                 len(value) == 16 and
                  all(isinstance(v, Row) for v in value) and
                  True), \
-                "The 'map_array' field must be a set or sequence with length 5 and each value of type 'Row'"
+                "The 'map_array' field must be a set or sequence with length 16 and each value of type 'Row'"
         self._map_array = value

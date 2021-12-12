@@ -68,7 +68,7 @@ bool messages_package__msg__map__convert_from_py(PyObject * _pymsg, void * _ros_
       Py_DECREF(field);
       return false;
     }
-    Py_ssize_t size = 5;
+    Py_ssize_t size = 16;
     messages_package__msg__Row * dest = ros_message->map_array;
     for (Py_ssize_t i = 0; i < size; ++i) {
       if (!messages_package__msg__row__convert_from_py(PySequence_Fast_GET_ITEM(seq_field, i), &dest[i])) {
@@ -104,7 +104,7 @@ PyObject * messages_package__msg__map__convert_to_py(void * raw_ros_message)
   messages_package__msg__Map * ros_message = (messages_package__msg__Map *)raw_ros_message;
   {  // map_array
     PyObject * field = NULL;
-    size_t size = 5;
+    size_t size = 16;
     field = PyList_New(size);
     if (!field) {
       return NULL;

@@ -41,7 +41,7 @@ size_t Map__rosidl_typesupport_introspection_c__size_function__Row__map_array(
   const void * untyped_member)
 {
   (void)untyped_member;
-  return 5;
+  return 16;
 }
 
 const void * Map__rosidl_typesupport_introspection_c__get_const_function__Row__map_array(
@@ -67,7 +67,7 @@ static rosidl_typesupport_introspection_c__MessageMember Map__rosidl_typesupport
     0,  // upper bound of string
     NULL,  // members of sub message (initialized later)
     true,  // is array
-    5,  // array size
+    16,  // array size
     false,  // is upper bound
     offsetof(messages_package__msg__Map, map_array),  // bytes offset in struct
     NULL,  // default value

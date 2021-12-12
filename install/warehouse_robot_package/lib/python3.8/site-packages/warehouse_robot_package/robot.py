@@ -5,6 +5,7 @@ from rclpy.action import ActionClient
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
 import time
+import numpy as np
 
 #Import custom messages
 import messages_package.msg as mpmsg
@@ -13,21 +14,35 @@ import messages_package.action as mpaction
 
 class Robot(Node):
 
-    def __init__(self, robot_number):
+    def __init__(self):
         super().__init__('robot_instance')
 
+        robot_number = input('Enter the robot serial number: ')
         #Define the robots serial number
-        self.serial_number = robot_number
+        self.serial_number = int(robot_number)
         #Define the robots starting state
         self.state = 'idle'
         #Define the robot's held item
         self.item = None
         #Define the robot's current battery level
-        self.current_battery = 60
+        self.current_battery = 80
         #Define the robot's critical battery level
         self.critical_battery = 30
-        #Define the robot's location
-        self.location = [1,1]
+        #Define the robot's spawn location
+        self.location = [0,0]
+        if self.serial_number == 1:
+            self.location = [10,7]
+        if self.serial_number == 2:
+            self.location = [10,8]
+        if self.serial_number == 3:
+            self.location = [10,9]
+        #Define the robot's held item
+        self.held_item = None
+        #Store the distances to each beacon
+        self.beacon1 = None
+        self.beacon2 = None
+        self.beacon3 = None
+        self.beacon4 = None
 
         #Create a callback group
         self.callback_group = ReentrantCallbackGroup()
@@ -39,6 +54,7 @@ class Robot(Node):
             self.listener_callback_beacon,
             10,
             callback_group=self.callback_group)
+
         #Create a subscriber for the map
         self.subscriber_map = self.create_subscription(
             mpmsg.Map,
@@ -53,8 +69,8 @@ class Robot(Node):
         self.publisher_state = self.create_publisher(mpmsg.RobotState, 'robot_state', 10)
 
         #Period defined for the timer
-        timer_period = 5 # seconds
-        #Timer is created with a callback that is executed every 0.5 seconds, and the callback is assigned the callback group
+        timer_period = 1 # seconds
+        #Timer is created with a callback, and the callback is assigned the callback group
         self.timer = self.create_timer(timer_period, self.timer_callback,callback_group=self.callback_group)
 
         #Create a client for the pick_up_item service
@@ -85,22 +101,27 @@ class Robot(Node):
             self.callback_move_item,
             callback_group=self.callback_group)
 
-        #Iterator used in the callback
-        self.i = 0
-
     def timer_callback(self):
         '''
-        The timer callback publishs the robot's state.
+        The timer callback publishs the robot's state and location
         '''
         #Create message
         msg = mpmsg.RobotState()
-        #Assign values to the emssage
+        #Assign values to the message
         msg.robot_number = self.serial_number
         msg.robot_state = self.state
         #Publish the message
         self.publisher_state.publish(msg)
+
+        #Create message
+        msg = mpmsg.RobotLocation()
+        #Assign values to the message
+        msg.robot_number = self.serial_number
+        msg.robot_location = mpmsg.Coordinates(x=float(self.location[0]),y=float(self.location[1]))
+        #Publish the message
+        self.publisher_location.publish(msg)
         #Log that the message was published
-        self.get_logger().info('Robot number: %i State %s'% (msg.robot_number,msg.robot_state))
+        #self.get_logger().info('Robot number: %i State %s'% (msg.robot_number,msg.robot_state))
 
     #Listener callback for the beacon distance
     def listener_callback_beacon(self, msg):
@@ -108,23 +129,39 @@ class Robot(Node):
         The beacon distance listener callback should publish the robots coordinates. The coordinates do not need to be published with the timer. The formula should be hardcoded.
         '''
         if msg.robot_number == self.serial_number:
-            self.get_logger().info('Beacon numer: "%i" Distance: %f' % (msg.beacon_number, msg.robot_distance))
+            #self.get_logger().info('Beacon number: "%i" Distance: %f' % (msg.beacon_number, msg.robot_distance))
+            #Update the beacon distances
+            if msg.beacon_number == 1:
+                #self.get_logger().info('Received beacon1')
+                self.beacon1 = msg.robot_distance
+            if msg.beacon_number == 2:
+                #self.get_logger().info('Received beacon2')
+                self.beacon2 = msg.robot_distance
+            if msg.beacon_number == 3:
+                #self.get_logger().info('Received beacon3')
+                self.beacon3 = msg.robot_distance
+            if msg.beacon_number == 4:
+                #self.get_logger().info('Received beacon4')
+                self.beacon4 = msg.robot_distance
+            #Calculate the x and y coordinate from the beacon distances
+            if self.beacon1 != None and self.beacon2 != None:
+                x_coordinate = (self.beacon2**2 - self.beacon1**2-82**2)/(-2*82)
+                y_coordinate = np.sqrt(abs(self.beacon1**2-x_coordinate**2))
+            else:
+                x_coordinate = 30
+                y_coordinate = 16
 
-            #TODO publish correct robot location
+            #TODO Make the robot calculate its coordinates using other beacons
 
-            #Publish test message
             #Create message
             msg = mpmsg.RobotLocation()
             #Assign values to the message
             msg.robot_number = self.serial_number
-            msg.robot_location = mpmsg.Coordinates(x = 13.58+self.i, y = 27.62+self.i)
+            msg.robot_location = mpmsg.Coordinates(x = float(x_coordinate), y = float(y_coordinate))
             #Publish the message
             self.publisher_location.publish(msg)
             #Log the message that was published
-            self.get_logger().info('%f'% msg.robot_location.x)
-            self.get_logger().info('%f'% msg.robot_location.y)
-            #Increase the iterator value
-            self.i += 1
+            self.get_logger().info('Current location: %f,%f'% (msg.robot_location.x,msg.robot_location.y))
 
     #Listener callback for the map
     def listener_callback_map(self,msg):
@@ -132,22 +169,34 @@ class Robot(Node):
 
     #Send pick_up_item service request       
     def send_request_pick_up_item(self, picked_item, location):
+        #Create the service request
         self.req_pick_up_item.item = picked_item
         self.req_pick_up_item.location = location
+        #Send the service request
         self.future_pick_up_item = self.client_pick_up_item.call_async(self.req_pick_up_item)
+        #Set the robot's held item
+        self.held_item = picked_item
 
     #Send put_down_item service request       
     def send_request_put_down_item(self, placed_item, location):
+        #Create the service request
         self.req_put_down_item.item = placed_item
         self.req_put_down_item.location = location
+        #Send the service request
         self.future_put_down_item = self.client_put_down_item.call_async(self.req_put_down_item)
+        #Set the robot's held item
+        self.held_item = None
 
     #Callback for the charge_robot action
     def callback_charge_robot(self, goal_handle):
+        #Set state to busy
+        self.state = 'busy'
         self.get_logger().info('Sending robot to charger...')
 
-        #TODO Move robot to charger
+        #Sleep while robot moves to charger (Done in warehouse client)
+        time.sleep(10)
 
+        #Create the feedback
         feedback_msg = mpaction.ChargeRobot.Feedback()
         feedback_msg.current_battery_level = self.current_battery
         
@@ -155,15 +204,22 @@ class Robot(Node):
         while self.current_battery < 100:
             #self.get_logger().info('Current battery level: %i'%(feedback_msg.current_battery_level))
             goal_handle.publish_feedback(feedback_msg)
+            #Increment the battery level
             self.current_battery += 10
+            #Set the battery level for the feedback
             feedback_msg.current_battery_level = self.current_battery
+            #Sleep
             time.sleep(1)
-
+        #Set the goal handle to success after charging is done
         goal_handle.succeed()
 
+        #Create the result
         result = mpaction.ChargeRobot.Result()
+        #Set the final battery level
         result.final_battery_level = self.current_battery
         self.get_logger().info('Final battery level: %i'%(result.final_battery_level))
+        #Return state to idle
+        self.state = 'idle'
         return result
 
     #Callback for the move_item action
@@ -203,11 +259,8 @@ def main(args=None):
     #Initialize rcply
     rclpy.init(args=args)
 
-    #Get user input for the robot serial number
-    print("Enter robot serial number:")
-    serial_number = input()
     #Create the node
-    robot_instance = Robot(int(serial_number))
+    robot_instance = Robot()
     #Create a multithreading executor
     executor = MultiThreadedExecutor()
 

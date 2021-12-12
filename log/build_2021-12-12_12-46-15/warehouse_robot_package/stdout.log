@@ -1,0 +1,28 @@
+running egg_info
+writing ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/PKG-INFO
+writing dependency_links to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/dependency_links.txt
+writing entry points to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/entry_points.txt
+writing requirements to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/requires.txt
+writing top-level names to ../../build/warehouse_robot_package/warehouse_robot_package.egg-info/top_level.txt
+reading manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'
+writing manifest file '../../build/warehouse_robot_package/warehouse_robot_package.egg-info/SOURCES.txt'
+running build
+running build_py
+copying warehouse_robot_package/warehouse.py -> /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package
+copying warehouse_robot_package/beacon.py -> /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package
+running install
+running install_lib
+copying /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package/warehouse.py -> /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package
+copying /home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/build/lib/warehouse_robot_package/beacon.py -> /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package
+byte-compiling /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/warehouse.py to warehouse.cpython-38.pyc
+byte-compiling /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package/beacon.py to beacon.cpython-38.pyc
+running install_data
+running install_egg_info
+removing '/home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info' (and everything under it)
+Copying ../../build/warehouse_robot_package/warehouse_robot_package.egg-info to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/python3.8/site-packages/warehouse_robot_package-0.0.0-py3.8.egg-info
+running install_scripts
+Installing beacon script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package
+Installing order_console script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package
+Installing robot script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package
+Installing warehouse script to /home/sam/AST_Robot_Warehouse/install/warehouse_robot_package/lib/warehouse_robot_package
+writing list of installed files to '/home/sam/AST_Robot_Warehouse/build/warehouse_robot_package/install.log'

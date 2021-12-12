@@ -67,7 +67,7 @@ static bool _Map__cdr_serialize(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
         rosidl_typesupport_fastrtps_c, messages_package, msg, Row
       )()->data);
-    size_t size = 5;
+    size_t size = 16;
     auto array_ptr = ros_message->map_array;
     for (size_t i = 0; i < size; ++i) {
       if (!callbacks->cdr_serialize(
@@ -97,7 +97,7 @@ static bool _Map__cdr_deserialize(
       ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
         rosidl_typesupport_fastrtps_c, messages_package, msg, Row
       )()->data);
-    size_t size = 5;
+    size_t size = 16;
     auto array_ptr = ros_message->map_array;
     for (size_t i = 0; i < size; ++i) {
       if (!callbacks->cdr_deserialize(
@@ -127,7 +127,7 @@ size_t get_serialized_size_messages_package__msg__Map(
 
   // field.name map_array
   {
-    size_t array_size = 5;
+    size_t array_size = 16;
     auto array_ptr = ros_message->map_array;
 
     for (size_t index = 0; index < array_size; ++index) {
@@ -161,7 +161,7 @@ size_t max_serialized_size_messages_package__msg__Map(
 
   // member: map_array
   {
-    size_t array_size = 5;
+    size_t array_size = 16;
 
 
     for (size_t index = 0; index < array_size; ++index) {

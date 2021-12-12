@@ -7,9 +7,9 @@
 module messages_package {
   module msg {
     typedef messages_package::msg::Row messages_package__msg__Row;
-    typedef messages_package__msg__Row messages_package__msg__Row__5[5];
+    typedef messages_package__msg__Row messages_package__msg__Row__16[16];
     struct Map {
-      messages_package__msg__Row__5 map_array;
+      messages_package__msg__Row__16 map_array;
     };
   };
 };

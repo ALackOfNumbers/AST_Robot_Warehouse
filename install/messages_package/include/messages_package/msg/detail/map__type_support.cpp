@@ -40,20 +40,20 @@ void Map_fini_function(void * message_memory)
 size_t size_function__Map__map_array(const void * untyped_member)
 {
   (void)untyped_member;
-  return 5;
+  return 16;
 }
 
 const void * get_const_function__Map__map_array(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::array<messages_package::msg::Row, 5> *>(untyped_member);
+    *reinterpret_cast<const std::array<messages_package::msg::Row, 16> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__Map__map_array(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::array<messages_package::msg::Row, 5> *>(untyped_member);
+    *reinterpret_cast<std::array<messages_package::msg::Row, 16> *>(untyped_member);
   return &member[index];
 }
 
@@ -64,7 +64,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Map_message_m
     0,  // upper bound of string
     ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<messages_package::msg::Row>(),  // members of sub message
     true,  // is array
-    5,  // array size
+    16,  // array size
     false,  // is upper bound
     offsetof(messages_package::msg::Map, map_array),  // bytes offset in struct
     nullptr,  // default value

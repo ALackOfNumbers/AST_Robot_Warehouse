@@ -20,7 +20,7 @@ messages_package__msg__Map__init(messages_package__msg__Map * msg)
     return false;
   }
   // map_array
-  for (size_t i = 0; i < 5; ++i) {
+  for (size_t i = 0; i < 16; ++i) {
     if (!messages_package__msg__Row__init(&msg->map_array[i])) {
       messages_package__msg__Map__fini(msg);
       return false;
@@ -36,7 +36,7 @@ messages_package__msg__Map__fini(messages_package__msg__Map * msg)
     return;
   }
   // map_array
-  for (size_t i = 0; i < 5; ++i) {
+  for (size_t i = 0; i < 16; ++i) {
     messages_package__msg__Row__fini(&msg->map_array[i]);
   }
 }

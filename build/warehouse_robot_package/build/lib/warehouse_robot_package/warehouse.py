@@ -4,6 +4,8 @@ from rclpy.action import ActionServer
 from rclpy.action import ActionClient
 from rclpy.callback_groups import ReentrantCallbackGroup
 from rclpy.executors import MultiThreadedExecutor
+import copy 
+import time
 
 #Import custom messages
 import messages_package.msg as mpmsg
@@ -16,16 +18,42 @@ class Warehouse(Node):
         #Calls the node classes contructor and passes a node name
         super().__init__('warehouse_instance')
 
+        #Define the map as a string
+        self.string_map = """#######################################@###########################################
+#B    { }{ }{ }                                                 #                B#
+#      -  -  -                                                  #                 #
+#                           [ ] [ ] [ ] [ ] [ ] [ ]             #                 #
+#                           [ ] [ ] [ ] [ ] [ ] [ ]             #                 #
+#                           [ ] [ ] [ ] [ ] [ ] [ ]                               #
+#                           [ ] [ ] [ ] [ ] [ ] [ ]             #                 #
+#C        1                 [ ] [ ] [ ] [ ] [ ] [ ]             ###########  ######
+#C        2                 [ ] [ ] [ ] [ ] [ ] [ ]                               @
+#C        3                 [ ] [ ] [ ] [ ] [ ] [ ]             ###########  ######
+#                           [ ] [ ] [ ] [ ] [ ] [ ]             #                 #
+#                           [ ] [ ] [ ] [ ] [ ] [ ]                               #
+#                                                               #                 #
+#       -  -                                                    #                 #
+#B     < >< >                                                   #                B#
+#######################################@###########################################
+"""
         #Define the warehouse's stock
         self.stock = []
         #Define the warehouse's map locations
-        #TODO define map locations
-        self.map_locations = {}
+        self.map_locations = {'delivery1':[7,1],'delivery2':[10,1],'delivery3':[13,1],'charger1':[1,7],'charger2:':[1,8],'charger3':[1,9],'dispatch1':[8,14],'dispatch2':[11,14]}
         #Define the warehouse's maximum stock size
-        self.max_stock = 30
+        self.max_stock = 54
         #Define the default warehouse map
-        #TODO define the default map
-        self.map = None
+        row = []
+        self.default_map = []
+        for char in self.string_map:
+            if char != '\n':
+                row.append(char)
+            else:
+                self.default_map.append(row)
+                row = []
+
+        #Store the current map
+        self.current_map = copy.deepcopy(self.default_map)
 
         #Create a callback group
         self.callback_group = ReentrantCallbackGroup()
@@ -50,8 +78,8 @@ class Warehouse(Node):
         self.publisher_ = self.create_publisher(mpmsg.Map, 'map', 10)
 
         #Period defined for the timer
-        timer_period = 3  # seconds
-        #Timer is created with a callback that is executed every 0.5 seconds
+        timer_period = 4  # seconds
+        #Timer is created with a callback
         self.timer = self.create_timer(timer_period, self.timer_callback,callback_group=self.callback_group)
 
         #Create a server for the delivery service 
@@ -75,43 +103,80 @@ class Warehouse(Node):
             mpaction.Order,
             'order',
             self.callback_order,
-            callback_group=self.callback_group)
-
-        #Iterator used in the callback
-        self.i = 0
-
-        
+            callback_group=self.callback_group)    
         
     #Callback from the timer
     def timer_callback(self):
+        #TODO Remove this test
+        #Test update map function
+        self.update_map(add=[['1',7,6]],remove=[['',7,10]])
+        time.sleep(2)
+        self.update_map(add=[['1',7,10]],remove=[['',7,6]])
+
+    #Function for updating the map and publishing it
+    def update_map(self,add=None,remove=None):
         '''
-        The timer callback updates and publishes the map
+        Function for updating the map
+        Parameters
+        ----------
+        add : [[symbol, x_coordinate, y_coordinate]]
+            List of symbols to add to the map
+        remove : [[symbol, x_coordinate, y_coordinate]]
+            Lit of symbols to remove from the map
         '''
-
-        #TODO Update the map
-
-        #TODO Publish the map
-
-        #Publish test message
-        #Create message string
+        updated_map = self.current_map
+        #Go through all objects to add
+        if add != None:
+            for object in add:
+                for row_index, row in enumerate(updated_map):
+                    for col_index, col in enumerate(row):
+                        #If the coordinates match, place the symbol on the map
+                        if row_index == object[1] and col_index == object[2]:
+                            updated_map[row_index][col_index] = object[0]
+        #Go through all objects to remove
+        if remove != None:
+            for object in remove:
+                for row_index, row in enumerate(updated_map):
+                    for col_index, col in enumerate(row):
+                        #If the coordinates match, place the default symbol on the map
+                        if row_index == object[1] and col_index == object[2]:
+                            if self.default_map[row_index][col_index] == '1' or self.default_map[row_index][col_index] == '2' or self.default_map[row_index][col_index] == '3':
+                                updated_map[row_index][col_index] = ' '
+                            else:
+                                updated_map[row_index][col_index] = self.default_map[row_index][col_index]
+        #Update the current map
+        self.current_map = updated_map
+        #Create a message with the current map
         msg = mpmsg.Map()
-        #Add data to the string
-        row1 = mpmsg.Row(row = '-----')
-        row2 = mpmsg.Row(row = '|R[]|')
-        row3 = mpmsg.Row(row = '| C |')
-        row4 = mpmsg.Row(row = '|D D|')
-        row5 = mpmsg.Row(row = '-----')
-        msg.map_array = [row1,row2,row3,row4,row5]
+        #Store rows in a list
+        rows = []
+        #Iterate through rows in the map
+        for row_index, row in enumerate(updated_map):
+            #Create empty string to store row
+            row_string = ''
+            #Iterate through columns in row
+            for col_index, col in enumerate(row):
+                #Append columns to the row string, so that the row string contains the entire row as a single string
+                row_string+=updated_map[row_index][col_index]
+            #Add the row to the list of rows after converting it to a row message
+            rows.append(mpmsg.Row(row=row_string))
+        #Create a map_array message
+        msg.map_array = rows
         #Publish the message
         self.publisher_.publish(msg)
         #Log the message that was published
         #self.get_logger().info('%s' % msg.map_array)
-        #Increase the iterator value
-        self.i += 1
+    
+    #Function for getting the location of a robot from the map
+    def get_robot_location(self, robot_number):
+        for row in self.current_map:
+            for col in row:
+                if col == robot_number:
+                    return [row,col]
 
     #Listener callback for the robot locations
     def listener_callback_location(self, msg):
-        self.get_logger().info('Robot number: %i,X coordinate: %f,Y coordinate: %f' % (msg.robot_number,msg.robot_location.x,msg.robot_location.y))
+        self.get_logger().info('Robot number: %i X coordinate: %f Y coordinate: %f' % (msg.robot_number,msg.robot_location.x,msg.robot_location.y))
 
     #Listener callback for the robot states
     def listener_callback_state(self, msg):
@@ -129,14 +194,14 @@ class Warehouse(Node):
 
     #Service callback for the pick_up_item server
     def callback_pick_up_item(self, request, response):
-        #TODO Update map
+        self.update_map(remove=['',request.location.x,request.location.y])
         self.get_logger().info('Item %s picked up at %i,%i' %(request.item.name,request.location.x,request.location.y))
         response.success_or_failure = True
         return response
 
     #Service callback for the put_down_item server
     def callback_put_down_item(self, request, response):
-        #TODO Update map
+        self.update_map(add=['I',request.location.x,request.location.y])
         self.get_logger().info('Item %s placed at %i,%i' %(request.item.name,request.location.x,request.location.y))
         response.success_or_failure = True
         return response
@@ -160,6 +225,8 @@ class Warehouse(Node):
             return
 
         self.get_logger().info('Charge robot accepted')
+
+        #TODO Move robot to charger
 
         self._get_result_future = goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback_charge_robot)
@@ -207,6 +274,7 @@ class Warehouse(Node):
 
     #Feedback callback for move item action
     def feedback_callback_move_item(self, feedback_msg):
+        #TODO Move the robot from the current location towards the target location
         self.get_logger().info('Current robot location: %i,%i Target robot location: %i,%i'% (feedback_msg.feedback.current_location.x,feedback_msg.feedback.current_location.y,feedback_msg.feedback.target_location.x,feedback_msg.feedback.target_location.y))
 
     #Callback for the order action
@@ -223,6 +291,7 @@ class Warehouse(Node):
         goal_handle.publish_feedback(feedback_msg)
         
         #TODO Loop move items from shelves to dispatch
+        
         feedback_msg.order_status = 'Taking items to dispatch'
         goal_handle.publish_feedback(feedback_msg)
 
@@ -243,9 +312,11 @@ def main(args=None):
     #Create a multithreading executor
     executor = MultiThreadedExecutor()
 
+    #TODO Remove test
     #Test charge robot action
     warehouse_instance.send_goal_charge_robot(mpmsg.Coordinates(x=7.0,y = 18.0))
 
+    #TODO Remove test
     #Test move item action
     location = mpmsg.Coordinates(x=6.0,y=9.0)
     location2 = mpmsg.Coordinates(x=15.0,y=32.0)

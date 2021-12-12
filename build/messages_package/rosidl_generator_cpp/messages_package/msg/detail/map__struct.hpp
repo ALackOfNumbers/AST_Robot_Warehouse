@@ -57,12 +57,12 @@ struct Map_
 
   // field types and members
   using _map_array_type =
-    std::array<messages_package::msg::Row_<ContainerAllocator>, 5>;
+    std::array<messages_package::msg::Row_<ContainerAllocator>, 16>;
   _map_array_type map_array;
 
   // setters for named parameter idiom
   Type & set__map_array(
-    const std::array<messages_package::msg::Row_<ContainerAllocator>, 5> & _arg)
+    const std::array<messages_package::msg::Row_<ContainerAllocator>, 16> & _arg)
   {
     this->map_array = _arg;
     return *this;
